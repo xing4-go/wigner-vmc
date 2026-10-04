@@ -1,0 +1,44 @@
+# PRODUCTION budget -- the confirmed protocol.
+#
+# Every number here is the frozen campaign's own, transcribed from
+# `scripts/bench_rs75.py:PROTOCOL["regression"]`, which took them from the
+# legacy notebook (`_CONV_STEPS`/`_CONV_SWEEPS` = 120/400 and the 1500/400
+# production walk).  Nothing here was chosen by me and nothing was tuned:
+# if a number cannot be traced to the record, it does not belong in this file.
+name: production
+provenance: legacy-notebook (frozen campaign protocol)
+
+protocol:
+  sr_steps: 120        # SR iterations
+  sr_sweeps: 400       # Metropolis sweeps per SR iteration
+  sr_equil: 150        # equilibration sweeps discarded per SR iteration
+  sr_snap: 4           # snapshots per SR iteration
+
+  meas_sweeps: 1500    # production walk, total sweeps
+  meas_equil: 400      # production walk, equilibration sweeps discarded
+
+sr:
+  sigma: 0.3           # initial Metropolis step; adapted toward target_acc
+  target_acc: 0.4      # the adaptation target (see sampler.sample)
+
+crystal_measure:
+  seed: 17             # rng seed for the crystal production walk
+  sigma: 0.3           # crystal walk step size
+
+liquid_measure:
+  seed: 11             # rng seed for the liquid production walk
+  sigma: 0.4           # liquid walk step size
+
+# `init_id` indexes THIS list.  It is not a random seed.
+#
+# These five values are the campaign's five fixed Jastrow widths `_L0S`
+# (`_diag/part1_scan.py`).  Two consequences worth knowing before you use them:
+# they are the ONLY source of seed-to-seed spread in the campaign's nested
+# results, and they are NOT five independent random starts -- the seed index IS
+# the width by construction.  See D4 in STAGE3_PLAN.md.
+inits:
+  - { init_id: 0, L0: 0.30 }
+  - { init_id: 1, L0: 0.45 }
+  - { init_id: 2, L0: 0.50 }
+  - { init_id: 3, L0: 0.60 }
+  - { init_id: 4, L0: 0.80 }

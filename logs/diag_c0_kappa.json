@@ -1,0 +1,179 @@
+{
+ "L0_08_legacy_bit_identical_to_temp_oracle": true,
+ "_L0S": [
+  0.3,
+  0.45,
+  0.5,
+  0.6,
+  0.8
+ ],
+ "cache": "purged before every call; all ten calls are recomputations",
+ "frozen_by_L0": {
+  "0.30": "cadd5d6a",
+  "0.45": "46d9bf1e",
+  "0.50": "eba63d0f",
+  "0.60": "7f284e09",
+  "0.80": "6d38078f"
+ },
+ "frozen_tree": "unchanged (readonly_frozen re-fingerprints on exit)",
+ "kappa_clean": 53.03300858899106,
+ "kappa_legacy": 53.033,
+ "kappa_rel_diff": 1.6195559477936344e-07,
+ "legacy_matches_frozen_count": 5,
+ "nearest_kappa": 48.0,
+ "rs": 75.0,
+ "seeds": [
+  {
+   "L0": 0.3,
+   "c0_bit_identical": false,
+   "c0_clean": [
+    -6.560542609097172,
+    -1.1111112594625627,
+    -0.784400116460979,
+    0.3711042624410846,
+    -0.24553284411606788
+   ],
+   "c0_legacy": [
+    -6.560541655331182,
+    -1.111110848065913,
+    -0.7843999191556005,
+    0.37110435551609866,
+    -0.24553279593130728
+   ],
+   "c0_max_abs_diff": 9.537659897418393e-07,
+   "c0_rel_diff": 1.4537915310190838e-07,
+   "clean_matches_frozen": false,
+   "digest_clean": "4380bceb",
+   "digest_frozen": "cadd5d6a",
+   "digest_legacy": "cadd5d6a",
+   "frozen_source": "llcryst_nb2_k53.033_p1conv0 / p1fast0",
+   "legacy_matches_frozen": true,
+   "si": 0,
+   "tied_digest_legacy_equals_clean": false
+  },
+  {
+   "L0": 0.45,
+   "c0_bit_identical": false,
+   "c0_clean": [
+    -8.056762171934531,
+    -2.9206529066934923,
+    -1.2850289463913704,
+    -0.3017451058819868,
+    -0.28389025873534446
+   ],
+   "c0_legacy": [
+    -8.056761084778595,
+    -2.9206524078299485,
+    -1.285028718420903,
+    -0.3017450054148991,
+    -0.2838902119095913
+   ],
+   "c0_max_abs_diff": 1.0871559368297312e-06,
+   "c0_rel_diff": 1.3493709511675398e-07,
+   "clean_matches_frozen": false,
+   "digest_clean": "5c12cfbe",
+   "digest_frozen": "46d9bf1e",
+   "digest_legacy": "46d9bf1e",
+   "frozen_source": "llcryst_nb2_k53.033_p1conv1",
+   "legacy_matches_frozen": true,
+   "si": 1,
+   "tied_digest_legacy_equals_clean": false
+  },
+  {
+   "L0": 0.5,
+   "c0_bit_identical": false,
+   "c0_clean": [
+    -8.360016356465483,
+    -3.058693725735547,
+    -1.2793935005842825,
+    -0.32212966242519375,
+    -0.220734571514045
+   ],
+   "c0_legacy": [
+    -8.36001527721483,
+    -3.058693239261145,
+    -1.279393288863057,
+    -0.3221295712530999,
+    -0.22073453311594937
+   ],
+   "c0_max_abs_diff": 1.079250653290842e-06,
+   "c0_rel_diff": 1.2909673218329313e-07,
+   "clean_matches_frozen": false,
+   "digest_clean": "b0e13b26",
+   "digest_frozen": "eba63d0f",
+   "digest_legacy": "eba63d0f",
+   "frozen_source": "llcryst_nb2_k53.033_p1conv2",
+   "legacy_matches_frozen": true,
+   "si": 2,
+   "tied_digest_legacy_equals_clean": false
+  },
+  {
+   "L0": 0.6,
+   "c0_bit_identical": false,
+   "c0_clean": [
+    -9.274508570688692,
+    -3.7384687908014547,
+    -1.622872787687936,
+    -0.5368222790927364,
+    -0.3285126260482984
+   ],
+   "c0_legacy": [
+    -9.274507374158489,
+    -3.738468231809133,
+    -1.6228725328143427,
+    -0.5368221641114028,
+    -0.328512570674049
+   ],
+   "c0_max_abs_diff": 1.1965302029182112e-06,
+   "c0_rel_diff": 1.2901280409265693e-07,
+   "clean_matches_frozen": false,
+   "digest_clean": "b9d3cf7e",
+   "digest_frozen": "7f284e09",
+   "digest_legacy": "7f284e09",
+   "frozen_source": "llcryst_nb2_k53.033_p1conv3",
+   "legacy_matches_frozen": true,
+   "si": 3,
+   "tied_digest_legacy_equals_clean": false
+  },
+  {
+   "L0": 0.8,
+   "c0_bit_identical": false,
+   "c0_clean": [
+    -9.837303166210448,
+    -4.121304955410734,
+    -1.7029851155652487,
+    -0.5870474466514274,
+    -0.3145333331222861
+   ],
+   "c0_legacy": [
+    -9.837301961029251,
+    -4.121304373846473,
+    -1.7029848727246566,
+    -0.5870473496402807,
+    -0.3145332908917838
+   ],
+   "c0_max_abs_diff": 1.205181197505567e-06,
+   "c0_rel_diff": 1.225113554793709e-07,
+   "clean_matches_frozen": false,
+   "digest_clean": "186d86ff",
+   "digest_frozen": "6d38078f",
+   "digest_legacy": "6d38078f",
+   "frozen_source": "llcryst_nb2_k53.033_p1fast1 / p1conv4 (%TEMP%)",
+   "legacy_matches_frozen": true,
+   "si": 4,
+   "tied_digest_legacy_equals_clean": false
+  }
+ ],
+ "temp_value_oracle": {
+  "L0": 0.8,
+  "c": [
+   -9.837301961029251,
+   -4.121304373846473,
+   -1.7029848727246566,
+   -0.5870473496402807,
+   -0.3145332908917838
+  ],
+  "pkl_sha16": "951d1440a9b87178"
+ },
+ "with_oracle": 5
+}

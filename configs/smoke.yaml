@@ -1,0 +1,37 @@
+# SMOKE budget -- the fastest protocol that still exercises every stage.
+#
+# NOT LEGACY NUMBERS, and NOT converged.  Like `quick`, this is the clean
+# package's own short protocol (`scripts/bench_rs75.py:PROTOCOL["smoke"]`).
+# Its whole purpose is to prove the pipeline RUNS -- starting point, SR, nest,
+# production walk -- in a couple of minutes, and it is what the API's own tests
+# use.  Never quote an energy from it.
+name: smoke
+provenance: clean-package (NOT converged, NOT comparable to published numbers)
+
+protocol:
+  sr_steps: 2
+  sr_sweeps: 20
+  sr_equil: 6
+  sr_snap: 1
+
+  meas_sweeps: 200
+  meas_equil: 60
+
+sr:
+  sigma: 0.3
+  target_acc: 0.4
+
+crystal_measure:
+  seed: 17
+  sigma: 0.3
+
+liquid_measure:
+  seed: 11
+  sigma: 0.4
+
+inits:
+  - { init_id: 0, L0: 0.30 }
+  - { init_id: 1, L0: 0.45 }
+  - { init_id: 2, L0: 0.50 }
+  - { init_id: 3, L0: 0.60 }
+  - { init_id: 4, L0: 0.80 }

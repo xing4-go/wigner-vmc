@@ -1,0 +1,48 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Generated VMC outputs
+results/
+figures/
+
+# Temporary diagnostics
+_diag/
+tmp/
+temp/
+
+# Logs
+*.log
+
+# Serialized runtime states / checkpoints
+*.pkl
+*.pickle
+*.ckpt
+
+# Local Claude state
+.claude/

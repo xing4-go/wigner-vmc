@@ -1,0 +1,109 @@
+{
+ "cases": [
+  {
+   "L0": 0.6,
+   "attempts": [
+    {
+     "L0": 0.6,
+     "kappa": 53.033,
+     "meta_byte_exact": true,
+     "meta_sha256": "56480d7fd45b037ecc0f931cd1c20dbe2648c908248be63e47e2f235bbf059a2",
+     "meta_tag": "v1|ne36|LU30|J5|crystal|k53.033|L0.6|st8|n150|sig0.3|w-7.49|sr1",
+     "pkl_byte_exact": true,
+     "pkl_sha256": "680d52e685a6cc7e883282699da6c2bb00c780ba7b96ab8d8996f44470a24d6c",
+     "warm_note": "campaign rounded kappa"
+    },
+    {
+     "L0": 0.6,
+     "kappa": 53.03300858899106,
+     "meta_byte_exact": true,
+     "meta_sha256": "56480d7fd45b037ecc0f931cd1c20dbe2648c908248be63e47e2f235bbf059a2",
+     "meta_tag": "v1|ne36|LU30|J5|crystal|k53.033|L0.6|st8|n150|sig0.3|w-7.49|sr1",
+     "pkl_byte_exact": false,
+     "pkl_sha256": "e14c47dd3106832341b96392b6912f8258a5b1f4484eaad352cc8a44a60ccc9b",
+     "warm_note": "physical kappa (tag-invisible)"
+    }
+   ],
+   "byte_exact_kappas": [
+    53.033
+   ],
+   "case": "A_ckpt_rebuild_L0.6",
+   "kind": "crystal",
+   "label": "A. curated pre-incident      (L0=0.6)",
+   "target_meta_sha256": "56480d7fd45b037ecc0f931cd1c20dbe2648c908248be63e47e2f235bbf059a2",
+   "target_meta_tag": "v1|ne36|LU30|J5|crystal|k53.033|L0.6|st8|n150|sig0.3|w-7.49|sr1",
+   "target_pkl_sha256": "680d52e685a6cc7e883282699da6c2bb00c780ba7b96ab8d8996f44470a24d6c"
+  },
+  {
+   "L0": 0.8,
+   "attempts": [
+    {
+     "L0": 0.8,
+     "kappa": 53.033,
+     "meta_byte_exact": true,
+     "meta_sha256": "2062be9ff013d6cb5a803c663577b3d397ab0627dc5a80c842cb24bbbe329841",
+     "meta_tag": "v1|ne36|LU30|J5|crystal|k53.033|L0.8|st8|n150|sig0.3|w-7.49|sr1",
+     "pkl_byte_exact": true,
+     "pkl_sha256": "951d1440a9b87178f7d87757695161d63a041d3186d22a47e79a032642708540",
+     "warm_note": "campaign rounded kappa"
+    },
+    {
+     "L0": 0.8,
+     "kappa": 53.03300858899106,
+     "meta_byte_exact": true,
+     "meta_sha256": "2062be9ff013d6cb5a803c663577b3d397ab0627dc5a80c842cb24bbbe329841",
+     "meta_tag": "v1|ne36|LU30|J5|crystal|k53.033|L0.8|st8|n150|sig0.3|w-7.49|sr1",
+     "pkl_byte_exact": false,
+     "pkl_sha256": "f4d1f4f42e1aebe1deb0381d0ddb6323bcc0076c22875f32d76766ec0c9d71b0",
+     "warm_note": "physical kappa (tag-invisible)"
+    }
+   ],
+   "byte_exact_kappas": [
+    53.033
+   ],
+   "case": "B_temp_L0.8",
+   "kind": "crystal",
+   "label": "B. %TEMP%, incident-UNTOUCHED (L0=0.8)",
+   "target_meta_sha256": "2062be9ff013d6cb5a803c663577b3d397ab0627dc5a80c842cb24bbbe329841",
+   "target_meta_tag": "v1|ne36|LU30|J5|crystal|k53.033|L0.8|st8|n150|sig0.3|w-7.49|sr1",
+   "target_pkl_sha256": "951d1440a9b87178f7d87757695161d63a041d3186d22a47e79a032642708540"
+  },
+  {
+   "L0": null,
+   "attempts": [
+    {
+     "L0": null,
+     "kappa": 53.033,
+     "meta_byte_exact": true,
+     "meta_sha256": "38ff3e6e209dcb88d600a71c5f5abeea7cd888a2cf0c1ada938cd0faa79a5c17",
+     "meta_tag": "v1|ne36|LU30|J5|liquid|k53.033|L--|st8|n150|sig0.4|w-12.38|sr1",
+     "pkl_byte_exact": true,
+     "pkl_sha256": "973574421e14ac3331d8659e17bf3924a1765d6639431eb582fd21575298ac9e",
+     "warm_note": "campaign rounded kappa"
+    },
+    {
+     "L0": null,
+     "kappa": 53.03300858899106,
+     "meta_byte_exact": true,
+     "meta_sha256": "38ff3e6e209dcb88d600a71c5f5abeea7cd888a2cf0c1ada938cd0faa79a5c17",
+     "meta_tag": "v1|ne36|LU30|J5|liquid|k53.033|L--|st8|n150|sig0.4|w-12.38|sr1",
+     "pkl_byte_exact": false,
+     "pkl_sha256": "edc4475ce0176e8bad6a55230af3d563804d9e5473b1a3c8ca0df1b9fc59e6b6",
+     "warm_note": "physical kappa (tag-invisible)"
+    }
+   ],
+   "byte_exact_kappas": [
+    53.033
+   ],
+   "case": "C_ckpt_rebuild_liquid",
+   "kind": "liquid",
+   "label": "C. curated LIQUID, L0=None -- kappa is the ONLY hidden input",
+   "target_meta_sha256": "38ff3e6e209dcb88d600a71c5f5abeea7cd888a2cf0c1ada938cd0faa79a5c17",
+   "target_meta_tag": "v1|ne36|LU30|J5|liquid|k53.033|L--|st8|n150|sig0.4|w-12.38|sr1",
+   "target_pkl_sha256": "973574421e14ac3331d8659e17bf3924a1765d6639431eb582fd21575298ac9e"
+  }
+ ],
+ "kappa_clean": 53.03300858899106,
+ "kappa_legacy": 53.033,
+ "rs": 75.0
+}

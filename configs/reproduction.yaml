@@ -1,0 +1,76 @@
+# REPRODUCTION budget -- the protocol behind the historical fig06.
+#
+# Every number here is traced to the frozen notebook, and each line says where.
+# Nothing was chosen by me and nothing was tuned.
+#
+#   SR     : `WignerCrystal_to_HallLiquid.ipynb` cell 22, `jastrow_opt`:
+#            SR_STEPS = 8, SR_SWEEPS = 150, equil = sweeps // 3 = 50,
+#            snapshot_every = 3.  This is the SR that produced `J_OPT`, the
+#            optimised Jastrow the fig06 states actually carry.
+#   walk   : the same notebook's cell 28, `struct_walk`: nsweep = 1500,
+#            equil = 500.  With its `snapshot_every = 4` that walk stored 250
+#            snapshots; the clean `vmc.measure.measure_decomposed` takes a
+#            snapshot every sweep, so this budget stores 1000.  More samples of
+#            the SAME walk, not a longer one -- see the note at the end.
+#   seeds  : cell 28 passes sigma/seed per state -- liquid sigma 0.4 seed 11,
+#            crystal sigma 0.2 seed 13.  Both are reproduced exactly below.
+#
+# Deviations from the legacy cell, none of them physical, all recorded in
+# `run_metadata.json` by `examples/figure_construction/structure_slice.py`:
+#   * the SR seed: the notebook used SR_SEED = 91; the clean driver takes the
+#     run's `rng_seed` (default 0).  The RNG stream therefore differs.
+#   * the SR step size: the notebook used 0.4 for the liquid and 0.3 for the
+#     crystal; the clean budget carries one `sr.sigma` for both.
+#   * `snapshot_every` is not a budget field -- `measure_decomposed` fixes it at 1.
+#
+# WHY NOT `production.yaml` HERE.  `production.yaml` is the 120x400 SR ladder of
+# `_diag/part1_scan.py`, which is the protocol the `r_s = 75` energy reproduction
+# was validated against.  fig06 is a different study: it sampled states optimised
+# by the notebook's own 8x150 SR.  Using one for the other would put a converged
+# state behind a figure that never had one.
+#
+# The walk numbers that live in a budget do not move the physics, and this file
+# was not tuned toward any target: it is a transcription, and if a number here
+# cannot be traced to the record it does not belong.
+name: reproduction
+provenance: legacy-notebook (fig06 cell 28 walk + cell 22 SR)
+
+protocol:
+  sr_steps: 8          # notebook cell 22: SR_STEPS
+  sr_sweeps: 150       # notebook cell 22: SR_SWEEPS
+  sr_equil: 50         # notebook cell 22: equil = sweeps // 3
+  sr_snap: 3           # notebook cell 22: snapshot_every
+
+  meas_sweeps: 1500    # notebook cell 28: nsweep
+  meas_equil: 500      # notebook cell 28: equil
+
+sr:
+  sigma: 0.3           # clean default; legacy used 0.4 (liquid) / 0.3 (crystal)
+  target_acc: 0.4
+
+crystal_measure:
+  seed: 13             # notebook cell 28, the crystal struct_walk call
+  sigma: 0.2           # notebook cell 28
+
+liquid_measure:
+  seed: 11             # notebook cell 28, the liquid struct_walk call
+  sigma: 0.4           # notebook cell 28
+
+# `init_id` indexes THIS list and is not a random seed.
+#
+# `init_id: 0` is L0 = 0.40 because that is the width fig06's crystal was built
+# at: cell 28 takes `L0_best = L0_optJ[KAPPAS.index(64.0)]`, and the frozen
+# checkpoint that records it is `crystalJ_k64_L0.4`.  0.40 is one of the
+# notebook's own seven-width grid (`L0_GRID_9`, cell 18) and NOT one of the
+# campaign's five `_L0S` widths that `smoke`/`quick`/`production` share -- so this
+# list is deliberately fig06's, and `init_id` does NOT mean the same thing here
+# as it does in those three budgets.  The rest of the grid is carried for
+# completeness and is not used by the recipe.
+inits:
+  - { init_id: 0, L0: 0.40 }
+  - { init_id: 1, L0: 0.30 }
+  - { init_id: 2, L0: 0.45 }
+  - { init_id: 3, L0: 0.50 }
+  - { init_id: 4, L0: 0.60 }
+  - { init_id: 5, L0: 0.70 }
+  - { init_id: 6, L0: 0.80 }

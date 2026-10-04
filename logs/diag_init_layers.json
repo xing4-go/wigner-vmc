@@ -1,0 +1,118 @@
+{
+ "_L0S": [
+  0.3,
+  0.45,
+  0.5,
+  0.6,
+  0.8
+ ],
+ "frozen_tree": "unchanged (readonly_frozen re-fingerprinted on exit)",
+ "geometry": {
+  "CToCart == column_stack([A1, A2])": true,
+  "LUMAX": 30.0,
+  "LUMAX_LL": 16.0,
+  "NMAX_STAGE_B": 2,
+  "_lints8 #vectors (Gaussian-overlap lattice)": 13,
+  "_llb8B class attrs": [
+   "a_cart",
+   "cart_to_lat",
+   "lat_to_cart",
+   "mesh",
+   "n_max",
+   "na",
+   "nk",
+   "phase_a"
+  ],
+  "_llb8B.a_cart": [
+   121,
+   2
+  ],
+  "_llb8B.n_max": 8,
+  "_llb8B.nk": 36,
+  "|A1| (primitive)": 2.693547374177197,
+  "|L1| (simulation supercell)": 16.161284245063182
+ },
+ "kappa_clean": 53.03300858899106,
+ "kappa_legacy": 53.033,
+ "nearest_kappa": 48.0,
+ "rs": 75.0,
+ "seeds": [
+  {
+   "L0": 0.5,
+   "c0_bit_identical": true,
+   "c0_max_abs_diff": 0.0,
+   "c0_rel_diff": 0.0,
+   "clean_matches_frozen": false,
+   "digest_clean": "b0e13b26",
+   "digest_frozen": "eba63d0f",
+   "digest_legacy": "b0e13b26",
+   "legacy_matches_frozen": false,
+   "ov_bit_identical": true,
+   "si": 2,
+   "v0_bit_identical": true
+  },
+  {
+   "L0": 0.3,
+   "c0_bit_identical": false,
+   "c0_max_abs_diff": 9.537659897418393e-07,
+   "c0_rel_diff": 1.4537915310190838e-07,
+   "clean_matches_frozen": false,
+   "digest_clean": "4380bceb",
+   "digest_frozen": "cadd5d6a",
+   "digest_legacy": "cadd5d6a",
+   "legacy_matches_frozen": true,
+   "ov_bit_identical": true,
+   "si": 0,
+   "v0_bit_identical": true
+  },
+  {
+   "L0": 0.45,
+   "c0_bit_identical": false,
+   "c0_max_abs_diff": 1.0871559368297312e-06,
+   "c0_rel_diff": 1.3493709511675398e-07,
+   "clean_matches_frozen": false,
+   "digest_clean": "5c12cfbe",
+   "digest_frozen": "46d9bf1e",
+   "digest_legacy": "46d9bf1e",
+   "legacy_matches_frozen": true,
+   "ov_bit_identical": true,
+   "si": 1,
+   "v0_bit_identical": true
+  },
+  {
+   "L0": 0.6,
+   "c0_bit_identical": false,
+   "c0_max_abs_diff": 1.1965302029182112e-06,
+   "c0_rel_diff": 1.2901280409265693e-07,
+   "clean_matches_frozen": false,
+   "digest_clean": "b9d3cf7e",
+   "digest_frozen": "7f284e09",
+   "digest_legacy": "7f284e09",
+   "legacy_matches_frozen": true,
+   "ov_bit_identical": true,
+   "si": 3,
+   "v0_bit_identical": true
+  },
+  {
+   "L0": 0.8,
+   "c0_bit_identical": false,
+   "c0_max_abs_diff": 1.205181197505567e-06,
+   "c0_rel_diff": 1.225113554793709e-07,
+   "clean_matches_frozen": null,
+   "digest_clean": "186d86ff",
+   "digest_frozen": null,
+   "digest_legacy": "6d38078f",
+   "legacy_matches_frozen": null,
+   "ov_bit_identical": true,
+   "si": 4,
+   "v0_bit_identical": true
+  }
+ ],
+ "seeds_probed": [
+  2,
+  0,
+  1,
+  3,
+  4
+ ]
+}

@@ -1,0 +1,41 @@
+# QUICK budget -- for running the pipeline end to end while you explore.
+#
+# THESE ARE NOT LEGACY NUMBERS.  `smoke` and `quick` are the clean package's
+# own short protocols (`scripts/bench_rs75.py:PROTOCOL`).  They exercise every
+# stage -- starting point, SR, nest, production walk -- but they are NOT
+# converged, and no energy they produce may be compared against a published
+# number or quoted as a result.  `production.yaml` is the one that reproduces
+# the campaign.
+name: quick
+provenance: clean-package (NOT converged, NOT comparable to published numbers)
+
+protocol:
+  sr_steps: 10
+  sr_sweeps: 40
+  sr_equil: 13
+  sr_snap: 2
+
+  meas_sweeps: 400
+  meas_equil: 150
+
+sr:
+  sigma: 0.3
+  target_acc: 0.4
+
+crystal_measure:
+  seed: 17
+  sigma: 0.3
+
+liquid_measure:
+  seed: 11
+  sigma: 0.4
+
+# Same five campaign widths as production.yaml -- `init_id` means the same
+# thing in both budgets, so a quick run and a production run at the same
+# `init_id` start from the same state and differ only in how long they sample.
+inits:
+  - { init_id: 0, L0: 0.30 }
+  - { init_id: 1, L0: 0.45 }
+  - { init_id: 2, L0: 0.50 }
+  - { init_id: 3, L0: 0.60 }
+  - { init_id: 4, L0: 0.80 }
