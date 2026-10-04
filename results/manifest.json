@@ -1,0 +1,73 @@
+{
+ "schema": "wigner_vmc_clean/results/manifest",
+ "entries": [
+  {
+   "artifact": "legacy_llrot+legacy_gaussian states",
+   "written_utc": null,
+   "sources": [
+    {
+     "path": "_diag/part1",
+     "pattern": "*.json",
+     "n_files": 140,
+     "combined_sha256": "afc642d35573010cf5abdff9bebca6a149a89aba357254433a3a6fe9ac8e8f5a",
+     "size": 597959,
+     "role": "part1_scan_records",
+     "note": "the transition scan; PRIMARY energy source"
+    }
+   ],
+   "reference_tables": {
+    "energy_scan": {
+     "path": "_diag/energy_scan.json",
+     "sha256": "96d347700c8cc529720ccdaf2baf9d3c8016c02e5617ba574babd4e3c069369d",
+     "size": 15882,
+     "role": "legacy derived scan; REGRESSION TARGET",
+     "note": ""
+    },
+    "p1_report": {
+     "path": "_diag/p1_report.json",
+     "sha256": "427c7559f16b6ad7d77c4b5c192cb2514ff5ea0f9bcc62280c7d0b6d47fa2f13",
+     "size": 13868,
+     "role": "legacy per-coupling report",
+     "note": ""
+    },
+    "pn_table": {
+     "path": "_diag/pn_table.json",
+     "sha256": "d835686d24bf7108750100aebe5bcefbb80b06a20512e0e8b6bc6c8b79918f51",
+     "size": 13977,
+     "role": "legacy band-occupation table",
+     "note": ""
+    },
+    "mech_probe": {
+     "path": "_diag/mech_probe.json",
+     "sha256": "c9e46dbcb317b882d230b2ce54655cae5caabaab9609eb22b5aa0dbfbfb120e8",
+     "size": 1359,
+     "role": "legacy mechanism probe",
+     "note": ""
+    },
+    "reweight": {
+     "path": "_diag/reweight.json",
+     "sha256": "a7036b09f05c36e8d5ae19e5d44bcedae001292e847dc29514f6a28aea9df760",
+     "size": 3116,
+     "role": "legacy correlated-vs-independent errors",
+     "note": ""
+    },
+    "partv": {
+     "path": "_diag/llrot_diag/llrot_partV_summary.json",
+     "sha256": "fd47f328d3697c9c4212e29015161089be1c604a4ec65f505e88bf8d411a53eb",
+     "size": 42507,
+     "role": "legacy Part V summary",
+     "note": ""
+    },
+    "proto_sq": {
+     "path": "_diag/proto_sq.json",
+     "sha256": "a46d2f44acf7511cea91e52e635a0c1e3939ab8e053facc492ff901e41af5773",
+     "size": 28045,
+     "role": "Gaussian S(q) shell data",
+     "note": ""
+    }
+   },
+   "conversion_problems": []
+  }
+ ],
+ "written_utc": "2026-10-01T12:41:13+00:00"
+}

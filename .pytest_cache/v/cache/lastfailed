@@ -1,0 +1,13 @@
+{
+  "tests/test_magnetic_cell_against_legacy.py::TestMagneticTranslationPhase::test_the_flux_factor_is_not_optional": true,
+  "tests/test_magnetic_cell_against_legacy.py::TestFold::test_half_cell_edges_go_to_the_lower_representative": true,
+  "tests/test_landau_basis_against_legacy.py::TestThePhysicsTheBasisMustSatisfy::test_constant_norm_is_not_assumed_but_recorded": true,
+  "tests/test_units_and_conventions.py::TestTheLockedRelation::test_rejects_a_non_positive_coupling": true,
+  "tests/test_units_and_conventions.py::TestTheCleanGeometryIsTheFrozenGeometry::test_vectors": true,
+  "tests/test_gaussian_against_legacy.py::TestItsOwnPhysics::test_the_orbital_is_periodic_under_a_supercell_translation": true,
+  "tests/test_ll_rotation_against_legacy.py::TestTheWavefunctionState::test_move_ratio_and_accept_match": true,
+  "tests/test_sr_against_legacy.py::TestGaussianOverlapSeed::test_the_seed_agrees": true,
+  "tests/test_sr_against_legacy.py::TestGaussianOverlapSeed::test_the_slice_from_a_wider_basis_is_what_runs": true,
+  "tests/test_phase_competition_contract.py::TestTheWindowShowsTheGridItWasGiven::test_the_historical_window_is_exactly_the_historical_window": true,
+  "tests/test_magnetoplasmon_contract.py::TestTheCouplingFlags::test_the_two_flags_differ_only_in_order": true
+}

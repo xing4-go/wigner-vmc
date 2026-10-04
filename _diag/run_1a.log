@@ -1,0 +1,34 @@
+==============================================================================
+crystal_seed_search -- Haar-random crystal seed at large r_s (wigner_vmc 0.1.0)
+==============================================================================
+  budget           quick   (clean-package (NOT converged, NOT comparable to published numbers))
+  N                36   nk = 36
+  r_s              90   kappa = 63.63961031
+  n_max            1   n_bands = 2
+  len(theta)       77
+  random measure   Haar on the CP1 orbital manifold (no scale knob)
+  trials           4
+  seed base        20261004
+  references       liquid (disordered null) + Gaussian seed (known WC)
+  BLAS threads     pinned: OMP_NUM_THREADS=1, OPENBLAS_NUM_THREADS=1, MKL_NUM_THREADS=1, numpy=2.3.5
+  gate             bragg >= 3x liquid;  c6_residual <= 0.1;  contrast >= 2
+  results          results\phase_competition_2\crystal_seed_search
+  figures          figures\phase_competition_2\crystal_seed_search
+==============================================================================
+  root r_s note    the paper gives no numeric seeding coupling, only 'at large r_s'; r_s = 90 is this recipe's choice
+==============================================================================
+  bragg set        6 first-shell vectors
+  background set   120 momenta
+
+    SR   0  E/ne =  -43.38092 +- 0.16368   acc 0.690   |f| 2.409e+01   tau 2.00e-02
+    SR   1  E/ne =  -44.53214 +- 0.08545   acc 0.652   |f| 9.726e+00   tau 1.67e-02
+    SR   2  E/ne =  -45.11015 +- 0.06320   acc 0.669   |f| 6.598e+00   tau 1.43e-02
+    SR   3  E/ne =  -45.34752 +- 0.11691   acc 0.624   |f| 2.681e+01   tau 1.25e-02
+    SR   4  E/ne =  -45.50993 +- 0.07948   acc 0.606   |f| 1.116e+01   tau 1.11e-02
+    SR   5  E/ne =  -45.45983 +- 0.05290   acc 0.589   |f| 6.410e+00   tau 1.00e-02
+    SR   6  E/ne =  -45.50604 +- 0.07889   acc 0.556   |f| 1.236e+01   tau 9.09e-03
+    SR   7  E/ne =  -45.51323 +- 0.07045   acc 0.551   |f| 8.829e+00   tau 8.33e-03
+    SR   8  E/ne =  -45.60837 +- 0.06080   acc 0.517   |f| 9.937e+00   tau 7.69e-03
+    SR   9  E/ne =  -45.54232 +- 0.06250   acc 0.497   |f| 7.635e+00   tau 7.14e-03
+  liquid      E -45.400620  bragg=  1.109  c6=2.56e-14  ctr= 0.95
+  reference   E -45.743463  bragg=  9.265  c6=2.09e-01  ctr= 5.25

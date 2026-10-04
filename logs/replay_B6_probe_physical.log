@@ -1,0 +1,38 @@
+==============================================================================
+  Blocker B / B6 -- crystal SR replay at r_s = 75
+==============================================================================
+  seed 0  L0 = 0.3  frozen digest cadd5d6a  frozen state in: frozen
+  init  E:\physics notes\condensed matter physics\quantum neural network\wigner_vmc_clean\results\bench_rs75\initial_conditions.json
+  kappa artifact 53.03300858899106  kappa_init 53.033
+  kappa legacy   53.033   kappa physical 53.033008588991
+  budget regression: SR 1x400 equil 150 snap 4 sigma 0.3 target_acc 0.4
+  comparable steps: 1  (STEP 0 ONLY -- this run is 1 x 400, not 120 x 400, and tau_i = tau/(1+xi*i/steps) makes every later step a different schedule.  Step 0 has tau_0 = tau in both)
+
+  frozen pkl: E:\physics notes\condensed matter physics\quantum neural network\_diag\ckpt_rebuild\llcryst_nb2_k53.033_p1conv0.pkl
+    hist 120 steps   theta (77,)   stored kappa np.float64(53.033)   n_band 2
+    campaign reporter: present  E_perpart -37.775219
+
+  --- arm 'physical'  kappa = 53.03300858899106 ---
+    [physical] SR 1x400 in 61s   E_start -35.734779 -> E_final -35.734779
+      vs the campaign reporter (independent oracle):
+        E_start      dev 5.998613e-06   clean -35.734778919   legacy -35.734772920
+        E_final      not comparable at this run length
+        E_min        not comparable at this run length
+        force_first  dev 4.591352e-06   clean +33.663291392   legacy +33.663286801
+        force_final  not comparable at this run length
+        cond_final   not comparable at this run length
+        theta_final  not comparable at this run length
+      vs the frozen pkl trajectory (1 step(s) compared, keys identical: True):
+        field        dev@step0      max dev  @step
+        E            2.160e-04    2.160e-04      0
+        E_err        4.840e-07    4.840e-07      0
+        acc          0.000e+00    0.000e+00      0
+        sigma        0.000e+00    0.000e+00      0
+        force        4.591e-06    4.591e-06      0
+        tau          0.000e+00    0.000e+00      0
+        cond         2.534e-09    2.534e-09      0
+        eig_min      3.017e-17    3.017e-17      0
+        eig_max      1.759e-13    1.759e-13      0
+        theta        2.833e-07    2.833e-07      0   (shape [77] vs [77])
+
+  wrote logs/replay_B6_probe_physical.json

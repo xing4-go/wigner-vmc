@@ -1,0 +1,25 @@
+resolved configuration
+  N                      36
+  phase                  all
+  rs                     75.0
+  kappa                  53.03300858899106
+  nmax                   1
+  n_bands                2
+  init seed              0
+  L0                     0.3
+  budget                 regression
+  SR steps               120
+  SR sweeps              400
+  SR equil               150
+  SR sigma               0.3
+  SR target_acc          0.4
+  measurement sweeps     1500
+  measurement equil      400
+  crystal walk seed      17
+  liquid walk seed       11
+  out                    E:\physics notes\condensed matter physics\quantum neural network\wigner_vmc_clean\results\bench_rs75
+
+[liquid]
+    walk E -35.676633 +- 0.241415  n=1100 acc=0.416  sigma=0.2769
+    liquid: clean -35.676633 +- 0.241415   legacy -37.751496 +- 0.010846   diff +2.074863  z=8.59
+[crystal nmax=1]

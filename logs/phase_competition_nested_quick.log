@@ -1,0 +1,2777 @@
+phase_competition -- clean VMC, from scratch   (wigner_vmc 0.1.0)
+==============================================================================
+  budget           quick   (clean-package (NOT converged, NOT comparable to published numbers))
+  N                36
+  crystal ansatz   ll_rotation
+  construction     nested   (each n_max grown from the completed rung below it)
+  BLAS threads     pinned: OMP_NUM_THREADS=1, OPENBLAS_NUM_THREADS=1, MKL_NUM_THREADS=1, NUMEXPR_NUM_THREADS=1, VECLIB_MAXIMUM_THREADS=1, numpy=2.3.5
+  ladder couplings 10 kappa values
+  competition      50 (r_s, tier) points
+  delta_E window   r_s = 24 .. 91
+  results          results\figure_construction\phase_competition\N36__llrot__quick__l01__nested
+  figures          figures\figure_construction\phase_competition\N36__llrot__quick__l01__nested
+==============================================================================
+
+  plan: 95 VMC runs (33 liquid, 62 crystal)
+        construction: nested
+        crystal widths per point: [0]
+        run as parents but NOT drawn: r_s = 82.500, 87.500 (n_max = 1)
+
+  RUN     liquid  r_s=  2.828 nmax=1 init=0 ...
+    SR   0  E/ne =   -0.74077 +- 0.01049   acc 0.838   |f| 1.056e+00   tau 2.00e-02
+    SR   1  E/ne =   -0.76461 +- 0.00797   acc 0.830   |f| 1.689e+00   tau 1.67e-02
+    SR   2  E/ne =   -0.78203 +- 0.00634   acc 0.835   |f| 1.149e+00   tau 1.43e-02
+    SR   3  E/ne =   -0.78663 +- 0.00857   acc 0.806   |f| 1.326e+00   tau 1.25e-02
+    SR   4  E/ne =   -0.78772 +- 0.00723   acc 0.820   |f| 7.777e-01   tau 1.11e-02
+    SR   5  E/ne =   -0.76649 +- 0.00614   acc 0.791   |f| 9.708e-01   tau 1.00e-02
+    SR   6  E/ne =   -0.80267 +- 0.00595   acc 0.807   |f| 1.007e+00   tau 9.09e-03
+    SR   7  E/ne =   -0.77471 +- 0.00938   acc 0.796   |f| 1.929e+00   tau 8.33e-03
+    SR   8  E/ne =   -0.79941 +- 0.00814   acc 0.780   |f| 2.225e+00   tau 7.69e-03
+    SR   9  E/ne =   -0.81387 +- 0.00744   acc 0.757   |f| 1.523e+00   tau 7.14e-03
+  phase            liquid
+  r_s              2.82843
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            2.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 42s   E_total -26.6677 -> -29.2993   min -29.2993  (per particle min -0.813870, NOT the answer)
+    production walk  n=250  acc=0.7286  sigma=0.7920  tau_E=2.2299
+  E/N          -0.789800744 +- 0.002582399  (per electron)
+  E_total      -28.432826770 +- 0.092966365  (= N * E/N, N=36)
+  elapsed      42s
+          done in 42.5s  E/N=-0.789800744 +- 0.002582399
+  RUN     liquid  r_s=  5.657 nmax=1 init=0 ...
+    SR   0  E/ne =   -2.01991 +- 0.02266   acc 0.826   |f| 2.248e+00   tau 2.00e-02
+    SR   1  E/ne =   -2.05624 +- 0.01785   acc 0.804   |f| 1.991e+00   tau 1.67e-02
+    SR   2  E/ne =   -2.08497 +- 0.01537   acc 0.822   |f| 3.065e+00   tau 1.43e-02
+    SR   3  E/ne =   -2.06233 +- 0.02512   acc 0.815   |f| 8.259e+00   tau 1.25e-02
+    SR   4  E/ne =   -2.14298 +- 0.01005   acc 0.789   |f| 1.616e+00   tau 1.11e-02
+    SR   5  E/ne =   -2.05343 +- 0.01040   acc 0.789   |f| 1.328e+00   tau 1.00e-02
+    SR   6  E/ne =   -2.13084 +- 0.01725   acc 0.783   |f| 6.700e+00   tau 9.09e-03
+    SR   7  E/ne =   -2.13543 +- 0.01057   acc 0.761   |f| 2.253e+00   tau 8.33e-03
+    SR   8  E/ne =   -2.10645 +- 0.01499   acc 0.752   |f| 2.670e+00   tau 7.69e-03
+    SR   9  E/ne =   -2.14068 +- 0.01037   acc 0.749   |f| 1.814e+00   tau 7.14e-03
+  phase            liquid
+  r_s              5.65685
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            4.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 47s   E_total -72.7166 -> -77.0643   min -77.1474  (per particle min -2.142983, NOT the answer)
+    production walk  n=250  acc=0.7006  sigma=0.7920  tau_E=2.2258
+  E/N          -2.105954284 +- 0.004917821  (per electron)
+  E_total      -75.814354229 +- 0.177041562  (= N * E/N, N=36)
+  elapsed      47s
+          done in 47.3s  E/N=-2.105954284 +- 0.004917821
+  RUN     liquid  r_s= 11.314 nmax=1 init=0 ...
+    SR   0  E/ne =   -4.58434 +- 0.04607   acc 0.815   |f| 8.123e+00   tau 2.00e-02
+    SR   1  E/ne =   -4.86495 +- 0.03742   acc 0.799   |f| 6.785e+00   tau 1.67e-02
+    SR   2  E/ne =   -4.83380 +- 0.03614   acc 0.806   |f| 1.048e+01   tau 1.43e-02
+    SR   3  E/ne =   -4.87903 +- 0.04023   acc 0.792   |f| 1.136e+01   tau 1.25e-02
+    SR   4  E/ne =   -4.80681 +- 0.03672   acc 0.772   |f| 1.070e+01   tau 1.11e-02
+    SR   5  E/ne =   -4.80044 +- 0.02354   acc 0.746   |f| 5.111e+00   tau 1.00e-02
+    SR   6  E/ne =   -4.88342 +- 0.01611   acc 0.773   |f| 1.937e+00   tau 9.09e-03
+    SR   7  E/ne =   -4.84481 +- 0.01980   acc 0.729   |f| 2.906e+00   tau 8.33e-03
+    SR   8  E/ne =   -4.80514 +- 0.01852   acc 0.724   |f| 3.161e+00   tau 7.69e-03
+    SR   9  E/ne =   -4.82798 +- 0.01509   acc 0.693   |f| 2.683e+00   tau 7.14e-03
+  phase            liquid
+  r_s              11.3137
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            8.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 44s   E_total -165.0363 -> -173.8073   min -175.8033  (per particle min -4.883424, NOT the answer)
+    production walk  n=250  acc=0.6631  sigma=0.7920  tau_E=3.5739
+  E/N          -4.843749128 +- 0.009704209  (per electron)
+  E_total      -174.374968616 +- 0.349351526  (= N * E/N, N=36)
+  elapsed      44s
+          done in 44.0s  E/N=-4.843749128 +- 0.009704209
+  RUN     liquid  r_s= 22.627 nmax=1 init=0 ...
+    SR   0  E/ne =  -10.11819 +- 0.05410   acc 0.787   |f| 9.356e+00   tau 2.00e-02
+    SR   1  E/ne =  -10.36418 +- 0.05444   acc 0.778   |f| 8.020e+00   tau 1.67e-02
+    SR   2  E/ne =  -10.32391 +- 0.03777   acc 0.752   |f| 7.435e+00   tau 1.43e-02
+    SR   3  E/ne =  -10.32383 +- 0.05815   acc 0.742   |f| 1.488e+01   tau 1.25e-02
+    SR   4  E/ne =  -10.51861 +- 0.03407   acc 0.724   |f| 7.023e+00   tau 1.11e-02
+    SR   5  E/ne =  -10.55601 +- 0.02801   acc 0.708   |f| 3.909e+00   tau 1.00e-02
+    SR   6  E/ne =  -10.58852 +- 0.04088   acc 0.716   |f| 9.265e+00   tau 9.09e-03
+    SR   7  E/ne =  -10.40879 +- 0.02781   acc 0.690   |f| 4.669e+00   tau 8.33e-03
+    SR   8  E/ne =  -10.39888 +- 0.04946   acc 0.671   |f| 1.683e+01   tau 7.69e-03
+    SR   9  E/ne =  -10.44239 +- 0.02824   acc 0.640   |f| 5.448e+00   tau 7.14e-03
+  phase            liquid
+  r_s              22.6274
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            16.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 46s   E_total -364.2547 -> -375.9261   min -381.1867  (per particle min -10.588519, NOT the answer)
+    production walk  n=250  acc=0.6070  sigma=0.7920  tau_E=2.1256
+  E/N          -10.447632298 +- 0.012801919  (per electron)
+  E_total      -376.114762711 +- 0.460869089  (= N * E/N, N=36)
+  elapsed      46s
+          done in 45.6s  E/N=-10.447632298 +- 0.012801919
+  RUN     liquid  r_s=     25 nmax=1 init=0 ...
+    SR   0  E/ne =  -11.21951 +- 0.07179   acc 0.784   |f| 6.788e+00   tau 2.00e-02
+    SR   1  E/ne =  -11.63011 +- 0.05853   acc 0.784   |f| 1.224e+01   tau 1.67e-02
+    SR   2  E/ne =  -11.68275 +- 0.03960   acc 0.760   |f| 7.777e+00   tau 1.43e-02
+    SR   3  E/ne =  -11.61484 +- 0.04811   acc 0.752   |f| 9.227e+00   tau 1.25e-02
+    SR   4  E/ne =  -11.64975 +- 0.04293   acc 0.740   |f| 6.888e+00   tau 1.11e-02
+    SR   5  E/ne =  -11.60845 +- 0.04837   acc 0.710   |f| 1.363e+01   tau 1.00e-02
+    SR   6  E/ne =  -11.69898 +- 0.02775   acc 0.702   |f| 5.261e+00   tau 9.09e-03
+    SR   7  E/ne =  -11.69136 +- 0.04791   acc 0.676   |f| 1.151e+01   tau 8.33e-03
+    SR   8  E/ne =  -11.64420 +- 0.04013   acc 0.659   |f| 1.154e+01   tau 7.69e-03
+    SR   9  E/ne =  -11.79063 +- 0.02206   acc 0.647   |f| 3.592e+00   tau 7.14e-03
+  phase            liquid
+  r_s              25
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            17.67766953   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 45s   E_total -403.9025 -> -424.4627   min -424.4627  (per particle min -11.790631, NOT the answer)
+    production walk  n=250  acc=0.5924  sigma=0.7920  tau_E=5.3991
+  E/N          -11.688261930 +- 0.019654850  (per electron)
+  E_total      -420.777429471 +- 0.707574586  (= N * E/N, N=36)
+  elapsed      45s
+          done in 44.8s  E/N=-11.688261930 +- 0.019654850
+  RUN     liquid  r_s= 27.500 nmax=1 init=0 ...
+    SR   0  E/ne =  -12.35635 +- 0.05763   acc 0.777   |f| 8.365e+00   tau 2.00e-02
+    SR   1  E/ne =  -12.72555 +- 0.04932   acc 0.765   |f| 7.056e+00   tau 1.67e-02
+    SR   2  E/ne =  -12.89006 +- 0.07297   acc 0.756   |f| 1.823e+01   tau 1.43e-02
+    SR   3  E/ne =  -12.93584 +- 0.05260   acc 0.747   |f| 1.153e+01   tau 1.25e-02
+    SR   4  E/ne =  -12.98766 +- 0.04094   acc 0.710   |f| 6.309e+00   tau 1.11e-02
+    SR   5  E/ne =  -12.88405 +- 0.02322   acc 0.717   |f| 1.338e+00   tau 1.00e-02
+    SR   6  E/ne =  -12.98191 +- 0.02478   acc 0.706   |f| 3.665e+00   tau 9.09e-03
+    SR   7  E/ne =  -12.85460 +- 0.04745   acc 0.662   |f| 1.006e+01   tau 8.33e-03
+    SR   8  E/ne =  -12.99911 +- 0.04507   acc 0.661   |f| 1.042e+01   tau 7.69e-03
+    SR   9  E/ne =  -13.04903 +- 0.02720   acc 0.633   |f| 6.001e+00   tau 7.14e-03
+  phase            liquid
+  r_s              27.5
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            19.44543648   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 41s   E_total -444.8285 -> -469.7650   min -469.7650  (per particle min -13.049027, NOT the answer)
+    production walk  n=250  acc=0.5808  sigma=0.7920  tau_E=7.0786
+  E/N          -12.962509482 +- 0.023782629  (per electron)
+  E_total      -466.650341335 +- 0.856174636  (= N * E/N, N=36)
+  elapsed      41s
+          done in 40.9s  E/N=-12.962509482 +- 0.023782629
+  RUN     liquid  r_s=     30 nmax=1 init=0 ...
+    SR   0  E/ne =  -13.64225 +- 0.09026   acc 0.772   |f| 1.283e+01   tau 2.00e-02
+    SR   1  E/ne =  -14.09564 +- 0.04972   acc 0.758   |f| 7.575e+00   tau 1.67e-02
+    SR   2  E/ne =  -14.10174 +- 0.05275   acc 0.765   |f| 1.744e+01   tau 1.43e-02
+    SR   3  E/ne =  -14.31722 +- 0.04427   acc 0.731   |f| 7.948e+00   tau 1.25e-02
+    SR   4  E/ne =  -14.19136 +- 0.05872   acc 0.704   |f| 1.117e+01   tau 1.11e-02
+    SR   5  E/ne =  -14.18949 +- 0.06476   acc 0.706   |f| 1.728e+01   tau 1.00e-02
+    SR   6  E/ne =  -14.18435 +- 0.03008   acc 0.694   |f| 5.652e+00   tau 9.09e-03
+    SR   7  E/ne =  -14.19194 +- 0.03489   acc 0.668   |f| 5.565e+00   tau 8.33e-03
+    SR   8  E/ne =  -14.17629 +- 0.04030   acc 0.651   |f| 5.594e+00   tau 7.69e-03
+    SR   9  E/ne =  -14.30742 +- 0.03073   acc 0.597   |f| 4.934e+00   tau 7.14e-03
+  phase            liquid
+  r_s              30
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            21.21320344   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 43s   E_total -491.1209 -> -515.0672   min -515.4199  (per particle min -14.317221, NOT the answer)
+    production walk  n=250  acc=0.5769  sigma=0.7920  tau_E=6.7884
+  E/N          -14.226044246 +- 0.024865984  (per electron)
+  E_total      -512.137592863 +- 0.895175408  (= N * E/N, N=36)
+  elapsed      43s
+          done in 42.7s  E/N=-14.226044246 +- 0.024865984
+  RUN     liquid  r_s= 32.500 nmax=1 init=0 ...
+    SR   0  E/ne =  -14.95222 +- 0.08705   acc 0.758   |f| 1.187e+01   tau 2.00e-02
+    SR   1  E/ne =  -15.39444 +- 0.07018   acc 0.755   |f| 8.907e+00   tau 1.67e-02
+    SR   2  E/ne =  -15.24926 +- 0.06611   acc 0.735   |f| 1.088e+01   tau 1.43e-02
+    SR   3  E/ne =  -15.41666 +- 0.06091   acc 0.727   |f| 1.098e+01   tau 1.25e-02
+    SR   4  E/ne =  -15.56676 +- 0.04656   acc 0.708   |f| 1.022e+01   tau 1.11e-02
+    SR   5  E/ne =  -15.62057 +- 0.04593   acc 0.683   |f| 8.350e+00   tau 1.00e-02
+    SR   6  E/ne =  -15.52664 +- 0.03524   acc 0.683   |f| 6.048e+00   tau 9.09e-03
+    SR   7  E/ne =  -15.45042 +- 0.03400   acc 0.656   |f| 4.546e+00   tau 8.33e-03
+    SR   8  E/ne =  -15.54308 +- 0.03610   acc 0.631   |f| 6.046e+00   tau 7.69e-03
+    SR   9  E/ne =  -15.56779 +- 0.02442   acc 0.588   |f| 4.453e+00   tau 7.14e-03
+  phase            liquid
+  r_s              32.5
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            22.98097039   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 43s   E_total -538.2801 -> -560.4405   min -562.3405  (per particle min -15.620570, NOT the answer)
+    production walk  n=250  acc=0.5665  sigma=0.7920  tau_E=1.8731
+  E/N          -15.522054210 +- 0.011831034  (per electron)
+  E_total      -558.793951551 +- 0.425917215  (= N * E/N, N=36)
+  elapsed      43s
+          done in 42.8s  E/N=-15.522054210 +- 0.011831034
+  RUN     liquid  r_s= 33.941 nmax=1 init=0 ...
+    SR   0  E/ne =  -15.73341 +- 0.09307   acc 0.761   |f| 1.136e+01   tau 2.00e-02
+    SR   1  E/ne =  -16.09649 +- 0.04161   acc 0.755   |f| 3.319e+00   tau 1.67e-02
+    SR   2  E/ne =  -15.72302 +- 0.07287   acc 0.736   |f| 9.755e+00   tau 1.43e-02
+    SR   3  E/ne =  -16.11662 +- 0.04617   acc 0.736   |f| 7.676e+00   tau 1.25e-02
+    SR   4  E/ne =  -16.22684 +- 0.05601   acc 0.708   |f| 1.183e+01   tau 1.11e-02
+    SR   5  E/ne =  -16.27039 +- 0.05019   acc 0.692   |f| 1.133e+01   tau 1.00e-02
+    SR   6  E/ne =  -16.35928 +- 0.04804   acc 0.676   |f| 9.500e+00   tau 9.09e-03
+    SR   7  E/ne =  -16.20067 +- 0.03892   acc 0.649   |f| 4.485e+00   tau 8.33e-03
+    SR   8  E/ne =  -16.11507 +- 0.05467   acc 0.642   |f| 1.160e+01   tau 7.69e-03
+    SR   9  E/ne =  -16.17365 +- 0.05210   acc 0.608   |f| 1.377e+01   tau 7.14e-03
+  phase            liquid
+  r_s              33.9411
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            24.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 41s   E_total -566.4026 -> -582.2512   min -588.9343  (per particle min -16.359285, NOT the answer)
+    production walk  n=250  acc=0.5608  sigma=0.7920  tau_E=4.1037
+  E/N          -16.270208392 +- 0.018845912  (per electron)
+  E_total      -585.727502104 +- 0.678452826  (= N * E/N, N=36)
+  elapsed      41s
+          done in 41.1s  E/N=-16.270208392 +- 0.018845912
+  RUN     liquid  r_s=     35 nmax=1 init=0 ...
+    SR   0  E/ne =  -16.18950 +- 0.07882   acc 0.750   |f| 1.073e+01   tau 2.00e-02
+    SR   1  E/ne =  -16.71557 +- 0.07928   acc 0.753   |f| 1.597e+01   tau 1.67e-02
+    SR   2  E/ne =  -16.59861 +- 0.08452   acc 0.740   |f| 2.493e+01   tau 1.43e-02
+    SR   3  E/ne =  -16.65994 +- 0.04982   acc 0.713   |f| 7.612e+00   tau 1.25e-02
+    SR   4  E/ne =  -16.76546 +- 0.04431   acc 0.708   |f| 6.402e+00   tau 1.11e-02
+    SR   5  E/ne =  -16.83053 +- 0.02823   acc 0.685   |f| 3.435e+00   tau 1.00e-02
+    SR   6  E/ne =  -16.93233 +- 0.03195   acc 0.680   |f| 4.264e+00   tau 9.09e-03
+    SR   7  E/ne =  -16.73542 +- 0.04234   acc 0.661   |f| 5.133e+00   tau 8.33e-03
+    SR   8  E/ne =  -16.76552 +- 0.06194   acc 0.641   |f| 1.471e+01   tau 7.69e-03
+    SR   9  E/ne =  -16.86475 +- 0.03553   acc 0.594   |f| 6.027e+00   tau 7.14e-03
+  phase            liquid
+  r_s              35
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            24.74873734   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 40s   E_total -582.8222 -> -607.1310   min -609.5639  (per particle min -16.932331, NOT the answer)
+    production walk  n=250  acc=0.5553  sigma=0.7920  tau_E=1.5935
+  E/N          -16.811822546 +- 0.012939106  (per electron)
+  E_total      -605.225611650 +- 0.465807806  (= N * E/N, N=36)
+  elapsed      40s
+          done in 39.9s  E/N=-16.811822546 +- 0.012939106
+  RUN     liquid  r_s= 37.500 nmax=1 init=0 ...
+    SR   0  E/ne =  -17.36697 +- 0.05761   acc 0.749   |f| 5.602e+00   tau 2.00e-02
+    SR   1  E/ne =  -17.41263 +- 0.10182   acc 0.738   |f| 2.945e+01   tau 1.67e-02
+    SR   2  E/ne =  -17.87788 +- 0.06023   acc 0.728   |f| 7.798e+00   tau 1.43e-02
+    SR   3  E/ne =  -17.95246 +- 0.08578   acc 0.726   |f| 2.064e+01   tau 1.25e-02
+    SR   4  E/ne =  -18.16538 +- 0.03635   acc 0.714   |f| 5.097e+00   tau 1.11e-02
+    SR   5  E/ne =  -18.11822 +- 0.04637   acc 0.685   |f| 8.293e+00   tau 1.00e-02
+    SR   6  E/ne =  -18.08798 +- 0.04417   acc 0.658   |f| 7.478e+00   tau 9.09e-03
+    SR   7  E/ne =  -18.00430 +- 0.03373   acc 0.647   |f| 4.132e+00   tau 8.33e-03
+    SR   8  E/ne =  -18.16404 +- 0.02391   acc 0.632   |f| 2.101e+00   tau 7.69e-03
+    SR   9  E/ne =  -18.10244 +- 0.04472   acc 0.594   |f| 5.138e+00   tau 7.14e-03
+  phase            liquid
+  r_s              37.5
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            26.51650429   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 40s   E_total -625.2108 -> -651.6877   min -653.9535  (per particle min -18.165375, NOT the answer)
+    production walk  n=250  acc=0.5513  sigma=0.7920  tau_E=4.9799
+  E/N          -18.118779048 +- 0.021707238  (per electron)
+  E_total      -652.276045744 +- 0.781460552  (= N * E/N, N=36)
+  elapsed      40s
+          done in 40.0s  E/N=-18.118779048 +- 0.021707238
+  RUN     liquid  r_s=     40 nmax=1 init=0 ...
+    SR   0  E/ne =  -18.59328 +- 0.06425   acc 0.750   |f| 1.358e+01   tau 2.00e-02
+    SR   1  E/ne =  -18.89835 +- 0.06835   acc 0.730   |f| 1.324e+01   tau 1.67e-02
+    SR   2  E/ne =  -19.14445 +- 0.05154   acc 0.739   |f| 6.759e+00   tau 1.43e-02
+    SR   3  E/ne =  -19.22032 +- 0.03973   acc 0.728   |f| 4.801e+00   tau 1.25e-02
+    SR   4  E/ne =  -19.08693 +- 0.03750   acc 0.697   |f| 2.378e+00   tau 1.11e-02
+    SR   5  E/ne =  -19.31525 +- 0.05859   acc 0.677   |f| 1.258e+01   tau 1.00e-02
+    SR   6  E/ne =  -19.24274 +- 0.02912   acc 0.648   |f| 4.150e+00   tau 9.09e-03
+    SR   7  E/ne =  -19.30068 +- 0.05326   acc 0.637   |f| 9.746e+00   tau 8.33e-03
+    SR   8  E/ne =  -19.37780 +- 0.04607   acc 0.628   |f| 7.169e+00   tau 7.69e-03
+    SR   9  E/ne =  -19.28075 +- 0.03701   acc 0.594   |f| 4.934e+00   tau 7.14e-03
+  phase            liquid
+  r_s              40
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            28.28427125   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 41s   E_total -669.3581 -> -694.1070   min -697.6008  (per particle min -19.377799, NOT the answer)
+    production walk  n=250  acc=0.5428  sigma=0.7920  tau_E=5.1284
+  E/N          -19.329253387 +- 0.027086581  (per electron)
+  E_total      -695.853121944 +- 0.975116926  (= N * E/N, N=36)
+  elapsed      41s
+          done in 40.6s  E/N=-19.329253387 +- 0.027086581
+  RUN     liquid  r_s= 42.500 nmax=1 init=0 ...
+    SR   0  E/ne =  -19.58880 +- 0.07511   acc 0.739   |f| 2.674e+01   tau 2.00e-02
+    SR   1  E/ne =  -20.23019 +- 0.09193   acc 0.740   |f| 1.313e+01   tau 1.67e-02
+    SR   2  E/ne =  -20.16135 +- 0.10179   acc 0.730   |f| 2.175e+01   tau 1.43e-02
+    SR   3  E/ne =  -20.41169 +- 0.08443   acc 0.703   |f| 2.034e+01   tau 1.25e-02
+    SR   4  E/ne =  -20.36146 +- 0.11918   acc 0.682   |f| 4.079e+01   tau 1.11e-02
+    SR   5  E/ne =  -20.57728 +- 0.05837   acc 0.669   |f| 1.512e+01   tau 1.00e-02
+    SR   6  E/ne =  -20.53800 +- 0.05554   acc 0.648   |f| 1.279e+01   tau 9.09e-03
+    SR   7  E/ne =  -20.58785 +- 0.06623   acc 0.609   |f| 1.664e+01   tau 8.33e-03
+    SR   8  E/ne =  -20.71837 +- 0.03513   acc 0.621   |f| 3.402e+00   tau 7.69e-03
+    SR   9  E/ne =  -20.63701 +- 0.04556   acc 0.578   |f| 9.277e+00   tau 7.14e-03
+  phase            liquid
+  r_s              42.5
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            30.05203820   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 41s   E_total -705.1967 -> -742.9324   min -745.8613  (per particle min -20.718370, NOT the answer)
+    production walk  n=250  acc=0.5411  sigma=0.7920  tau_E=4.4732
+  E/N          -20.649235506 +- 0.022757992  (per electron)
+  E_total      -743.372478233 +- 0.819287698  (= N * E/N, N=36)
+  elapsed      41s
+          done in 41.2s  E/N=-20.649235506 +- 0.022757992
+  RUN     liquid  r_s=     45 nmax=1 init=0 ...
+    SR   0  E/ne =  -20.85249 +- 0.04103   acc 0.738   |f| 3.527e+00   tau 2.00e-02
+    SR   1  E/ne =  -21.73976 +- 0.10001   acc 0.740   |f| 1.611e+01   tau 1.67e-02
+    SR   2  E/ne =  -21.45704 +- 0.07385   acc 0.708   |f| 1.176e+01   tau 1.43e-02
+    SR   3  E/ne =  -21.55472 +- 0.06414   acc 0.701   |f| 9.039e+00   tau 1.25e-02
+    SR   4  E/ne =  -21.84344 +- 0.04455   acc 0.672   |f| 4.714e+00   tau 1.11e-02
+    SR   5  E/ne =  -21.93703 +- 0.05899   acc 0.666   |f| 1.323e+01   tau 1.00e-02
+    SR   6  E/ne =  -22.03722 +- 0.05174   acc 0.630   |f| 1.015e+01   tau 9.09e-03
+    SR   7  E/ne =  -21.91284 +- 0.05970   acc 0.625   |f| 1.118e+01   tau 8.33e-03
+    SR   8  E/ne =  -21.90345 +- 0.05526   acc 0.607   |f| 1.807e+01   tau 7.69e-03
+    SR   9  E/ne =  -21.87087 +- 0.04905   acc 0.592   |f| 8.071e+00   tau 7.14e-03
+  phase            liquid
+  r_s              45
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            31.81980515   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 41s   E_total -750.6896 -> -787.3515   min -793.3401  (per particle min -22.037225, NOT the answer)
+    production walk  n=250  acc=0.5262  sigma=0.7920  tau_E=5.1879
+  E/N          -21.967811631 +- 0.027680446  (per electron)
+  E_total      -790.841218724 +- 0.996496040  (= N * E/N, N=36)
+  elapsed      41s
+          done in 41.0s  E/N=-21.967811631 +- 0.027680446
+  RUN     liquid  r_s= 45.255 nmax=1 init=0 ...
+    SR   0  E/ne =  -20.97376 +- 0.04034   acc 0.738   |f| 3.362e+00   tau 2.00e-02
+    SR   1  E/ne =  -21.68919 +- 0.08321   acc 0.740   |f| 1.385e+01   tau 1.67e-02
+    SR   2  E/ne =  -21.69680 +- 0.09610   acc 0.718   |f| 2.306e+01   tau 1.43e-02
+    SR   3  E/ne =  -21.86211 +- 0.09463   acc 0.710   |f| 2.195e+01   tau 1.25e-02
+    SR   4  E/ne =  -22.02051 +- 0.05230   acc 0.692   |f| 8.391e+00   tau 1.11e-02
+    SR   5  E/ne =  -21.90853 +- 0.04773   acc 0.684   |f| 8.756e+00   tau 1.00e-02
+    SR   6  E/ne =  -22.06863 +- 0.03193   acc 0.643   |f| 3.933e+00   tau 9.09e-03
+    SR   7  E/ne =  -21.88253 +- 0.04335   acc 0.614   |f| 6.132e+00   tau 8.33e-03
+    SR   8  E/ne =  -22.01647 +- 0.05444   acc 0.597   |f| 1.110e+01   tau 7.69e-03
+    SR   9  E/ne =  -22.19820 +- 0.04008   acc 0.574   |f| 7.260e+00   tau 7.14e-03
+  phase            liquid
+  r_s              45.2548
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            32.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 41s   E_total -755.0553 -> -799.1353   min -799.1353  (per particle min -22.198203, NOT the answer)
+    production walk  n=250  acc=0.5321  sigma=0.7920  tau_E=2.5540
+  E/N          -22.025453636 +- 0.019922773  (per electron)
+  E_total      -792.916330897 +- 0.717219820  (= N * E/N, N=36)
+  elapsed      41s
+          done in 40.9s  E/N=-22.025453636 +- 0.019922773
+  RUN     liquid  r_s= 47.500 nmax=1 init=0 ...
+    SR   0  E/ne =  -22.04492 +- 0.05650   acc 0.742   |f| 7.261e+00   tau 2.00e-02
+    SR   1  E/ne =  -22.96802 +- 0.07926   acc 0.732   |f| 1.037e+01   tau 1.67e-02
+    SR   2  E/ne =  -22.76061 +- 0.06753   acc 0.726   |f| 1.195e+01   tau 1.43e-02
+    SR   3  E/ne =  -23.02976 +- 0.06813   acc 0.685   |f| 1.167e+01   tau 1.25e-02
+    SR   4  E/ne =  -22.97146 +- 0.07500   acc 0.673   |f| 1.576e+01   tau 1.11e-02
+    SR   5  E/ne =  -23.15105 +- 0.04943   acc 0.661   |f| 8.396e+00   tau 1.00e-02
+    SR   6  E/ne =  -23.34517 +- 0.03624   acc 0.634   |f| 3.305e+00   tau 9.09e-03
+    SR   7  E/ne =  -23.18479 +- 0.03394   acc 0.609   |f| 3.530e+00   tau 8.33e-03
+    SR   8  E/ne =  -23.19240 +- 0.04512   acc 0.591   |f| 6.758e+00   tau 7.69e-03
+    SR   9  E/ne =  -23.37347 +- 0.03021   acc 0.578   |f| 4.591e+00   tau 7.14e-03
+  phase            liquid
+  r_s              47.5
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            33.58757211   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 42s   E_total -793.6173 -> -841.4450   min -841.4450  (per particle min -23.373472, NOT the answer)
+    production walk  n=250  acc=0.5249  sigma=0.7165  tau_E=4.5633
+  E/N          -23.242843798 +- 0.023052879  (per electron)
+  E_total      -836.742376738 +- 0.829903630  (= N * E/N, N=36)
+  elapsed      42s
+          done in 41.9s  E/N=-23.242843798 +- 0.023052879
+  RUN     liquid  r_s=     50 nmax=1 init=0 ...
+    SR   0  E/ne =  -23.30423 +- 0.05147   acc 0.740   |f| 4.723e+00   tau 2.00e-02
+    SR   1  E/ne =  -23.97473 +- 0.05149   acc 0.726   |f| 6.258e+00   tau 1.67e-02
+    SR   2  E/ne =  -24.40383 +- 0.05110   acc 0.717   |f| 6.072e+00   tau 1.43e-02
+    SR   3  E/ne =  -24.24504 +- 0.07829   acc 0.705   |f| 1.514e+01   tau 1.25e-02
+    SR   4  E/ne =  -24.41322 +- 0.06887   acc 0.681   |f| 1.320e+01   tau 1.11e-02
+    SR   5  E/ne =  -24.15469 +- 0.11381   acc 0.662   |f| 3.345e+01   tau 1.00e-02
+    SR   6  E/ne =  -24.50732 +- 0.04870   acc 0.632   |f| 6.575e+00   tau 9.09e-03
+    SR   7  E/ne =  -24.35130 +- 0.06013   acc 0.619   |f| 8.536e+00   tau 8.33e-03
+    SR   8  E/ne =  -24.51708 +- 0.05209   acc 0.606   |f| 8.858e+00   tau 7.69e-03
+    SR   9  E/ne =  -24.43260 +- 0.04424   acc 0.562   |f| 7.875e+00   tau 7.14e-03
+  phase            liquid
+  r_s              50
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            35.35533906   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 40s   E_total -838.9523 -> -879.5737   min -882.6149  (per particle min -24.517082, NOT the answer)
+    production walk  n=250  acc=0.5206  sigma=0.7920  tau_E=4.1670
+  E/N          -24.596642955 +- 0.022845691  (per electron)
+  E_total      -885.479146393 +- 0.822444887  (= N * E/N, N=36)
+  elapsed      40s
+          done in 40.1s  E/N=-24.596642955 +- 0.022845691
+  RUN     liquid  r_s= 52.500 nmax=1 init=0 ...
+    SR   0  E/ne =  -24.98037 +- 0.09064   acc 0.727   |f| 1.154e+01   tau 2.00e-02
+    SR   1  E/ne =  -25.37317 +- 0.11511   acc 0.720   |f| 2.683e+01   tau 1.67e-02
+    SR   2  E/ne =  -25.72611 +- 0.06401   acc 0.692   |f| 8.512e+00   tau 1.43e-02
+    SR   3  E/ne =  -25.52287 +- 0.10893   acc 0.676   |f| 2.297e+01   tau 1.25e-02
+    SR   4  E/ne =  -25.87186 +- 0.08514   acc 0.650   |f| 2.097e+01   tau 1.11e-02
+    SR   5  E/ne =  -25.83358 +- 0.06361   acc 0.649   |f| 1.019e+01   tau 1.00e-02
+    SR   6  E/ne =  -25.74074 +- 0.06279   acc 0.624   |f| 1.411e+01   tau 9.09e-03
+    SR   7  E/ne =  -25.80015 +- 0.04419   acc 0.605   |f| 8.014e+00   tau 8.33e-03
+    SR   8  E/ne =  -25.84200 +- 0.04534   acc 0.578   |f| 6.704e+00   tau 7.69e-03
+    SR   9  E/ne =  -25.95693 +- 0.03989   acc 0.534   |f| 3.571e+00   tau 7.14e-03
+  phase            liquid
+  r_s              52.5
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            37.12310601   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 40s   E_total -899.2932 -> -934.4494   min -934.4494  (per particle min -25.956929, NOT the answer)
+    production walk  n=250  acc=0.5141  sigma=0.7165  tau_E=5.5588
+  E/N          -25.909433916 +- 0.027182919  (per electron)
+  E_total      -932.739620974 +- 0.978585084  (= N * E/N, N=36)
+  elapsed      40s
+          done in 40.4s  E/N=-25.909433916 +- 0.027182919
+  RUN     liquid  r_s=     55 nmax=1 init=0 ...
+    SR   0  E/ne =  -26.35621 +- 0.09406   acc 0.719   |f| 1.435e+01   tau 2.00e-02
+    SR   1  E/ne =  -26.56452 +- 0.07805   acc 0.712   |f| 1.408e+01   tau 1.67e-02
+    SR   2  E/ne =  -26.77114 +- 0.07991   acc 0.678   |f| 9.345e+00   tau 1.43e-02
+    SR   3  E/ne =  -26.96002 +- 0.07526   acc 0.674   |f| 1.619e+01   tau 1.25e-02
+    SR   4  E/ne =  -27.04657 +- 0.08381   acc 0.663   |f| 1.856e+01   tau 1.11e-02
+    SR   5  E/ne =  -27.31248 +- 0.03555   acc 0.651   |f| 3.995e+00   tau 1.00e-02
+    SR   6  E/ne =  -27.05249 +- 0.06516   acc 0.627   |f| 1.244e+01   tau 9.09e-03
+    SR   7  E/ne =  -27.18201 +- 0.04265   acc 0.594   |f| 5.438e+00   tau 8.33e-03
+    SR   8  E/ne =  -27.26630 +- 0.04357   acc 0.585   |f| 5.311e+00   tau 7.69e-03
+    SR   9  E/ne =  -27.11885 +- 0.05520   acc 0.549   |f| 7.745e+00   tau 7.14e-03
+  phase            liquid
+  r_s              55
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            38.89087297   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 40s   E_total -948.8235 -> -976.2785   min -983.2495  (per particle min -27.312485, NOT the answer)
+    production walk  n=250  acc=0.5072  sigma=0.7165  tau_E=4.7913
+  E/N          -27.119891991 +- 0.027781228  (per electron)
+  E_total      -976.316111663 +- 1.000124193  (= N * E/N, N=36)
+  elapsed      40s
+          done in 40.3s  E/N=-27.119891991 +- 0.027781228
+  RUN     liquid  r_s= 56.569 nmax=1 init=0 ...
+    SR   0  E/ne =  -27.02192 +- 0.08504   acc 0.723   |f| 9.817e+00   tau 2.00e-02
+    SR   1  E/ne =  -27.63842 +- 0.10590   acc 0.703   |f| 2.274e+01   tau 1.67e-02
+    SR   2  E/ne =  -27.59356 +- 0.11320   acc 0.692   |f| 3.226e+01   tau 1.43e-02
+    SR   3  E/ne =  -27.74962 +- 0.08250   acc 0.674   |f| 1.935e+01   tau 1.25e-02
+    SR   4  E/ne =  -27.85992 +- 0.03829   acc 0.662   |f| 5.252e+00   tau 1.11e-02
+    SR   5  E/ne =  -28.10118 +- 0.04954   acc 0.640   |f| 7.886e+00   tau 1.00e-02
+    SR   6  E/ne =  -27.81488 +- 0.05751   acc 0.626   |f| 8.173e+00   tau 9.09e-03
+    SR   7  E/ne =  -27.80208 +- 0.05825   acc 0.600   |f| 6.230e+00   tau 8.33e-03
+    SR   8  E/ne =  -27.98164 +- 0.04046   acc 0.575   |f| 5.095e+00   tau 7.69e-03
+    SR   9  E/ne =  -27.90321 +- 0.05239   acc 0.560   |f| 1.056e+01   tau 7.14e-03
+  phase            liquid
+  r_s              56.5685
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            40.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 40s   E_total -972.7891 -> -1004.5155   min -1011.6423  (per particle min -28.101176, NOT the answer)
+    production walk  n=250  acc=0.5066  sigma=0.7165  tau_E=6.2597
+  E/N          -27.980448543 +- 0.028335195  (per electron)
+  E_total      -1007.296147560 +- 1.020067003  (= N * E/N, N=36)
+  elapsed      40s
+          done in 40.5s  E/N=-27.980448543 +- 0.028335195
+  RUN     liquid  r_s=     60 nmax=1 init=0 ...
+    SR   0  E/ne =  -28.47257 +- 0.10312   acc 0.719   |f| 1.204e+01   tau 2.00e-02
+    SR   1  E/ne =  -29.12300 +- 0.08928   acc 0.716   |f| 1.482e+01   tau 1.67e-02
+    SR   2  E/ne =  -28.86024 +- 0.07733   acc 0.682   |f| 1.351e+01   tau 1.43e-02
+    SR   3  E/ne =  -29.42519 +- 0.12181   acc 0.677   |f| 2.333e+01   tau 1.25e-02
+    SR   4  E/ne =  -29.60586 +- 0.07562   acc 0.655   |f| 1.467e+01   tau 1.11e-02
+    SR   5  E/ne =  -29.52550 +- 0.07259   acc 0.630   |f| 1.325e+01   tau 1.00e-02
+    SR   6  E/ne =  -29.72240 +- 0.06397   acc 0.613   |f| 1.450e+01   tau 9.09e-03
+    SR   7  E/ne =  -29.84790 +- 0.04921   acc 0.592   |f| 5.009e+00   tau 8.33e-03
+    SR   8  E/ne =  -29.79412 +- 0.04526   acc 0.574   |f| 5.517e+00   tau 7.69e-03
+    SR   9  E/ne =  -29.70505 +- 0.04390   acc 0.538   |f| 4.196e+00   tau 7.14e-03
+  phase            liquid
+  r_s              60
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            42.42640687   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 40s   E_total -1025.0124 -> -1069.3818   min -1074.5245  (per particle min -29.847901, NOT the answer)
+    production walk  n=250  acc=0.4943  sigma=0.6483  tau_E=3.2174
+  E/N          -29.795088173 +- 0.021847175  (per electron)
+  E_total      -1072.623174215 +- 0.786498313  (= N * E/N, N=36)
+  elapsed      40s
+          done in 40.5s  E/N=-29.795088173 +- 0.021847175
+  RUN     liquid  r_s=     65 nmax=1 init=0 ...
+    SR   0  E/ne =  -31.21164 +- 0.13414   acc 0.717   |f| 1.658e+01   tau 2.00e-02
+    SR   1  E/ne =  -31.76323 +- 0.05992   acc 0.680   |f| 5.798e+00   tau 1.67e-02
+    SR   2  E/ne =  -32.19544 +- 0.09916   acc 0.695   |f| 1.663e+01   tau 1.43e-02
+    SR   3  E/ne =  -32.07571 +- 0.09764   acc 0.674   |f| 2.608e+01   tau 1.25e-02
+    SR   4  E/ne =  -32.28101 +- 0.06615   acc 0.642   |f| 1.074e+01   tau 1.11e-02
+    SR   5  E/ne =  -32.11808 +- 0.07268   acc 0.615   |f| 1.271e+01   tau 1.00e-02
+    SR   6  E/ne =  -32.30272 +- 0.06092   acc 0.602   |f| 9.226e+00   tau 9.09e-03
+    SR   7  E/ne =  -32.19214 +- 0.09057   acc 0.591   |f| 2.019e+01   tau 8.33e-03
+    SR   8  E/ne =  -32.44108 +- 0.03672   acc 0.566   |f| 3.591e+00   tau 7.69e-03
+    SR   9  E/ne =  -32.50071 +- 0.05504   acc 0.528   |f| 8.072e+00   tau 7.14e-03
+  phase            liquid
+  r_s              65
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            45.96194078   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 40s   E_total -1123.6191 -> -1170.0256   min -1170.0256  (per particle min -32.500711, NOT the answer)
+    production walk  n=250  acc=0.4882  sigma=0.6483  tau_E=3.0331
+  E/N          -32.388643592 +- 0.023412301  (per electron)
+  E_total      -1165.991169305 +- 0.842842824  (= N * E/N, N=36)
+  elapsed      40s
+          done in 40.1s  E/N=-32.388643592 +- 0.023412301
+  RUN     liquid  r_s= 67.882 nmax=1 init=0 ...
+    SR   0  E/ne =  -32.63706 +- 0.17540   acc 0.707   |f| 3.284e+01   tau 2.00e-02
+    SR   1  E/ne =  -32.93963 +- 0.10043   acc 0.696   |f| 1.139e+01   tau 1.67e-02
+    SR   2  E/ne =  -33.58406 +- 0.07418   acc 0.686   |f| 7.697e+00   tau 1.43e-02
+    SR   3  E/ne =  -33.50807 +- 0.06870   acc 0.656   |f| 8.492e+00   tau 1.25e-02
+    SR   4  E/ne =  -33.62054 +- 0.07086   acc 0.637   |f| 1.164e+01   tau 1.11e-02
+    SR   5  E/ne =  -33.85277 +- 0.05595   acc 0.631   |f| 7.286e+00   tau 1.00e-02
+    SR   6  E/ne =  -33.94101 +- 0.04072   acc 0.592   |f| 4.700e+00   tau 9.09e-03
+    SR   7  E/ne =  -33.65727 +- 0.07388   acc 0.602   |f| 8.744e+00   tau 8.33e-03
+    SR   8  E/ne =  -33.78658 +- 0.05429   acc 0.553   |f| 9.082e+00   tau 7.69e-03
+    SR   9  E/ne =  -34.05755 +- 0.03380   acc 0.532   |f| 4.611e+00   tau 7.14e-03
+  phase            liquid
+  r_s              67.8823
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            48.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 41s   E_total -1174.9343 -> -1226.0718   min -1226.0718  (per particle min -34.057549, NOT the answer)
+    production walk  n=250  acc=0.4857  sigma=0.6483  tau_E=3.9283
+  E/N          -33.907745487 +- 0.023310276  (per electron)
+  E_total      -1220.678837542 +- 0.839169928  (= N * E/N, N=36)
+  elapsed      41s
+          done in 41.2s  E/N=-33.907745487 +- 0.023310276
+  RUN     liquid  r_s=     70 nmax=1 init=0 ...
+    SR   0  E/ne =  -33.64218 +- 0.14657   acc 0.706   |f| 2.940e+01   tau 2.00e-02
+    SR   1  E/ne =  -34.27694 +- 0.12472   acc 0.674   |f| 1.895e+01   tau 1.67e-02
+    SR   2  E/ne =  -34.38479 +- 0.10123   acc 0.672   |f| 2.287e+01   tau 1.43e-02
+    SR   3  E/ne =  -34.76552 +- 0.08237   acc 0.655   |f| 1.403e+01   tau 1.25e-02
+    SR   4  E/ne =  -34.90768 +- 0.05674   acc 0.628   |f| 8.745e+00   tau 1.11e-02
+    SR   5  E/ne =  -34.86955 +- 0.08613   acc 0.618   |f| 1.662e+01   tau 1.00e-02
+    SR   6  E/ne =  -35.06276 +- 0.03465   acc 0.594   |f| 2.867e+00   tau 9.09e-03
+    SR   7  E/ne =  -34.96046 +- 0.05628   acc 0.572   |f| 8.374e+00   tau 8.33e-03
+    SR   8  E/ne =  -34.98526 +- 0.07159   acc 0.549   |f| 1.344e+01   tau 7.69e-03
+    SR   9  E/ne =  -35.01984 +- 0.06262   acc 0.521   |f| 1.481e+01   tau 7.14e-03
+  phase            liquid
+  r_s              70
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            49.49747468   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 41s   E_total -1211.1185 -> -1260.7142   min -1262.2594  (per particle min -35.062760, NOT the answer)
+    production walk  n=250  acc=0.4840  sigma=0.7165  tau_E=1.2972
+  E/N          -35.051555889 +- 0.013549331  (per electron)
+  E_total      -1261.856012012 +- 0.487775916  (= N * E/N, N=36)
+  elapsed      41s
+          done in 41.2s  E/N=-35.051555889 +- 0.013549331
+  RUN     liquid  r_s=     75 nmax=1 init=0 ...
+    SR   0  E/ne =  -35.82711 +- 0.14341   acc 0.703   |f| 1.749e+01   tau 2.00e-02
+    SR   1  E/ne =  -37.05191 +- 0.07253   acc 0.674   |f| 9.714e+00   tau 1.67e-02
+    SR   2  E/ne =  -36.88101 +- 0.07613   acc 0.665   |f| 9.569e+00   tau 1.43e-02
+    SR   3  E/ne =  -37.56786 +- 0.10346   acc 0.655   |f| 1.899e+01   tau 1.25e-02
+    SR   4  E/ne =  -37.73331 +- 0.05349   acc 0.611   |f| 7.704e+00   tau 1.11e-02
+    SR   5  E/ne =  -37.52912 +- 0.05179   acc 0.621   |f| 6.291e+00   tau 1.00e-02
+    SR   6  E/ne =  -37.57571 +- 0.09617   acc 0.570   |f| 2.187e+01   tau 9.09e-03
+    SR   7  E/ne =  -37.65540 +- 0.05989   acc 0.567   |f| 7.336e+00   tau 8.33e-03
+    SR   8  E/ne =  -37.63933 +- 0.04772   acc 0.540   |f| 8.663e+00   tau 7.69e-03
+    SR   9  E/ne =  -37.75196 +- 0.05673   acc 0.501   |f| 8.838e+00   tau 7.14e-03
+  phase            liquid
+  r_s              75
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            53.03300859   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 40s   E_total -1289.7759 -> -1359.0704   min -1359.0704  (per particle min -37.751956, NOT the answer)
+    production walk  n=250  acc=0.4723  sigma=0.6483  tau_E=4.7796
+  E/N          -37.671185683 +- 0.028918778  (per electron)
+  E_total      -1356.162684585 +- 1.041075993  (= N * E/N, N=36)
+  elapsed      40s
+          done in 40.1s  E/N=-37.671185683 +- 0.028918778
+  RUN     liquid  r_s= 77.500 nmax=1 init=0 ...
+    SR   0  E/ne =  -37.11280 +- 0.14313   acc 0.701   |f| 2.298e+01   tau 2.00e-02
+    SR   1  E/ne =  -38.31501 +- 0.14723   acc 0.682   |f| 3.148e+01   tau 1.67e-02
+    SR   2  E/ne =  -38.91761 +- 0.05479   acc 0.674   |f| 7.378e+00   tau 1.43e-02
+    SR   3  E/ne =  -38.59647 +- 0.14707   acc 0.648   |f| 3.416e+01   tau 1.25e-02
+    SR   4  E/ne =  -38.74885 +- 0.07732   acc 0.626   |f| 1.370e+01   tau 1.11e-02
+    SR   5  E/ne =  -38.88614 +- 0.05050   acc 0.590   |f| 6.962e+00   tau 1.00e-02
+    SR   6  E/ne =  -39.07383 +- 0.05818   acc 0.601   |f| 8.509e+00   tau 9.09e-03
+    SR   7  E/ne =  -39.05350 +- 0.03367   acc 0.556   |f| 2.985e+00   tau 8.33e-03
+    SR   8  E/ne =  -38.69307 +- 0.05441   acc 0.533   |f| 6.783e+00   tau 7.69e-03
+    SR   9  E/ne =  -38.97510 +- 0.03567   acc 0.524   |f| 1.361e+00   tau 7.14e-03
+  phase            liquid
+  r_s              77.5
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            54.80077554   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 40s   E_total -1336.0608 -> -1403.1036   min -1406.6577  (per particle min -39.073826, NOT the answer)
+    production walk  n=250  acc=0.4806  sigma=0.6483  tau_E=4.4638
+  E/N          -38.965410330 +- 0.030657715  (per electron)
+  E_total      -1402.754771871 +- 1.103677736  (= N * E/N, N=36)
+  elapsed      40s
+          done in 40.3s  E/N=-38.965410330 +- 0.030657715
+  RUN     liquid  r_s=     80 nmax=1 init=0 ...
+    SR   0  E/ne =  -38.45108 +- 0.16993   acc 0.693   |f| 3.164e+01   tau 2.00e-02
+    SR   1  E/ne =  -39.76826 +- 0.09182   acc 0.683   |f| 1.284e+01   tau 1.67e-02
+    SR   2  E/ne =  -39.75200 +- 0.09748   acc 0.658   |f| 1.730e+01   tau 1.43e-02
+    SR   3  E/ne =  -40.28575 +- 0.06666   acc 0.646   |f| 1.083e+01   tau 1.25e-02
+    SR   4  E/ne =  -40.22668 +- 0.05288   acc 0.628   |f| 5.806e+00   tau 1.11e-02
+    SR   5  E/ne =  -40.32972 +- 0.06057   acc 0.608   |f| 7.721e+00   tau 1.00e-02
+    SR   6  E/ne =  -40.40289 +- 0.05188   acc 0.574   |f| 6.624e+00   tau 9.09e-03
+    SR   7  E/ne =  -40.31599 +- 0.04774   acc 0.555   |f| 4.891e+00   tau 8.33e-03
+    SR   8  E/ne =  -40.18641 +- 0.07925   acc 0.526   |f| 1.271e+01   tau 7.69e-03
+    SR   9  E/ne =  -40.23217 +- 0.07496   acc 0.492   |f| 9.035e+00   tau 7.14e-03
+  phase            liquid
+  r_s              80
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            56.56854249   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 41s   E_total -1384.2388 -> -1448.3580   min -1454.5039  (per particle min -40.402885, NOT the answer)
+    production walk  n=250  acc=0.4682  sigma=0.6483  tau_E=5.7175
+  E/N          -40.236310584 +- 0.034412720  (per electron)
+  E_total      -1448.507181009 +- 1.238857904  (= N * E/N, N=36)
+  elapsed      41s
+          done in 40.8s  E/N=-40.236310584 +- 0.034412720
+  RUN     liquid  r_s= 82.500 nmax=1 init=0 ...
+    SR   0  E/ne =  -39.88979 +- 0.18709   acc 0.689   |f| 3.990e+01   tau 2.00e-02
+    SR   1  E/ne =  -40.85311 +- 0.15295   acc 0.669   |f| 3.230e+01   tau 1.67e-02
+    SR   2  E/ne =  -41.11871 +- 0.12337   acc 0.660   |f| 2.500e+01   tau 1.43e-02
+    SR   3  E/ne =  -41.54570 +- 0.11238   acc 0.640   |f| 2.689e+01   tau 1.25e-02
+    SR   4  E/ne =  -41.31753 +- 0.07992   acc 0.608   |f| 1.142e+01   tau 1.11e-02
+    SR   5  E/ne =  -41.62336 +- 0.05480   acc 0.585   |f| 6.227e+00   tau 1.00e-02
+    SR   6  E/ne =  -41.47299 +- 0.06474   acc 0.577   |f| 1.053e+01   tau 9.09e-03
+    SR   7  E/ne =  -41.43230 +- 0.04550   acc 0.560   |f| 6.305e+00   tau 8.33e-03
+    SR   8  E/ne =  -41.53951 +- 0.05261   acc 0.526   |f| 4.360e+00   tau 7.69e-03
+    SR   9  E/ne =  -41.47069 +- 0.05037   acc 0.510   |f| 4.962e+00   tau 7.14e-03
+  phase            liquid
+  r_s              82.5
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            58.33630945   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 41s   E_total -1436.0325 -> -1492.9450   min -1498.4410  (per particle min -41.623361, NOT the answer)
+    production walk  n=250  acc=0.4612  sigma=0.6483  tau_E=4.3395
+  E/N          -41.623686109 +- 0.024147335  (per electron)
+  E_total      -1498.452699915 +- 0.869304057  (= N * E/N, N=36)
+  elapsed      41s
+          done in 40.7s  E/N=-41.623686109 +- 0.024147335
+  RUN     liquid  r_s=     85 nmax=1 init=0 ...
+    SR   0  E/ne =  -41.21089 +- 0.24766   acc 0.685   |f| 7.038e+01   tau 2.00e-02
+    SR   1  E/ne =  -42.26475 +- 0.09844   acc 0.664   |f| 1.695e+01   tau 1.67e-02
+    SR   2  E/ne =  -42.49962 +- 0.13128   acc 0.660   |f| 3.718e+01   tau 1.43e-02
+    SR   3  E/ne =  -42.73085 +- 0.11106   acc 0.643   |f| 2.024e+01   tau 1.25e-02
+    SR   4  E/ne =  -42.93567 +- 0.07610   acc 0.620   |f| 1.095e+01   tau 1.11e-02
+    SR   5  E/ne =  -42.67692 +- 0.06272   acc 0.593   |f| 9.898e+00   tau 1.00e-02
+    SR   6  E/ne =  -42.73169 +- 0.09597   acc 0.572   |f| 1.556e+01   tau 9.09e-03
+    SR   7  E/ne =  -42.55949 +- 0.07853   acc 0.544   |f| 1.523e+01   tau 8.33e-03
+    SR   8  E/ne =  -42.98758 +- 0.05624   acc 0.519   |f| 1.095e+01   tau 7.69e-03
+    SR   9  E/ne =  -43.04456 +- 0.05298   acc 0.491   |f| 6.076e+00   tau 7.14e-03
+  phase            liquid
+  r_s              85
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            60.10407640   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 41s   E_total -1483.5919 -> -1549.6041   min -1549.6041  (per particle min -43.044560, NOT the answer)
+    production walk  n=250  acc=0.4711  sigma=0.6483  tau_E=6.5556
+  E/N          -42.927468762 +- 0.037396527  (per electron)
+  E_total      -1545.388875434 +- 1.346274970  (= N * E/N, N=36)
+  elapsed      41s
+          done in 40.7s  E/N=-42.927468762 +- 0.037396527
+  RUN     liquid  r_s= 87.500 nmax=1 init=0 ...
+    SR   0  E/ne =  -42.31334 +- 0.13436   acc 0.689   |f| 2.411e+01   tau 2.00e-02
+    SR   1  E/ne =  -43.00034 +- 0.15336   acc 0.665   |f| 3.546e+01   tau 1.67e-02
+    SR   2  E/ne =  -43.44991 +- 0.07698   acc 0.647   |f| 6.896e+00   tau 1.43e-02
+    SR   3  E/ne =  -43.73118 +- 0.11211   acc 0.645   |f| 1.769e+01   tau 1.25e-02
+    SR   4  E/ne =  -44.41185 +- 0.06879   acc 0.590   |f| 8.553e+00   tau 1.11e-02
+    SR   5  E/ne =  -44.30370 +- 0.08016   acc 0.603   |f| 1.528e+01   tau 1.00e-02
+    SR   6  E/ne =  -44.19997 +- 0.08006   acc 0.572   |f| 1.360e+01   tau 9.09e-03
+    SR   7  E/ne =  -44.22788 +- 0.06872   acc 0.562   |f| 1.200e+01   tau 8.33e-03
+    SR   8  E/ne =  -44.12187 +- 0.11521   acc 0.525   |f| 2.479e+01   tau 7.69e-03
+    SR   9  E/ne =  -44.47175 +- 0.03848   acc 0.500   |f| 2.478e+00   tau 7.14e-03
+  phase            liquid
+  r_s              87.5
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            61.87184335   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 43s   E_total -1523.2804 -> -1600.9830   min -1600.9830  (per particle min -44.471751, NOT the answer)
+    production walk  n=250  acc=0.4613  sigma=0.6483  tau_E=3.9828
+  E/N          -44.244828864 +- 0.025062400  (per electron)
+  E_total      -1592.813839094 +- 0.902246387  (= N * E/N, N=36)
+  elapsed      43s
+          done in 42.8s  E/N=-44.244828864 +- 0.025062400
+  RUN     liquid  r_s=     90 nmax=1 init=0 ...
+    SR   0  E/ne =  -43.38092 +- 0.16368   acc 0.690   |f| 2.409e+01   tau 2.00e-02
+    SR   1  E/ne =  -44.53214 +- 0.08545   acc 0.652   |f| 9.726e+00   tau 1.67e-02
+    SR   2  E/ne =  -45.11015 +- 0.06320   acc 0.669   |f| 6.598e+00   tau 1.43e-02
+    SR   3  E/ne =  -45.34752 +- 0.11691   acc 0.624   |f| 2.681e+01   tau 1.25e-02
+    SR   4  E/ne =  -45.50993 +- 0.07948   acc 0.606   |f| 1.116e+01   tau 1.11e-02
+    SR   5  E/ne =  -45.45983 +- 0.05290   acc 0.589   |f| 6.410e+00   tau 1.00e-02
+    SR   6  E/ne =  -45.50604 +- 0.07889   acc 0.556   |f| 1.236e+01   tau 9.09e-03
+    SR   7  E/ne =  -45.51323 +- 0.07045   acc 0.551   |f| 8.829e+00   tau 8.33e-03
+    SR   8  E/ne =  -45.60837 +- 0.06080   acc 0.517   |f| 9.937e+00   tau 7.69e-03
+    SR   9  E/ne =  -45.54232 +- 0.06250   acc 0.497   |f| 7.635e+00   tau 7.14e-03
+  phase            liquid
+  r_s              90
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            63.63961031   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 41s   E_total -1561.7133 -> -1639.5234   min -1641.9014  (per particle min -45.608373, NOT the answer)
+    production walk  n=250  acc=0.4649  sigma=0.6174  tau_E=3.4981
+  E/N          -45.400620319 +- 0.025568026  (per electron)
+  E_total      -1634.422331483 +- 0.920448948  (= N * E/N, N=36)
+  elapsed      41s
+          done in 41.4s  E/N=-45.400620319 +- 0.025568026
+  RUN     liquid  r_s= 90.510 nmax=1 init=0 ...
+    SR   0  E/ne =  -43.63353 +- 0.16440   acc 0.690   |f| 2.420e+01   tau 2.00e-02
+    SR   1  E/ne =  -44.74234 +- 0.10599   acc 0.656   |f| 1.218e+01   tau 1.67e-02
+    SR   2  E/ne =  -45.29618 +- 0.08193   acc 0.651   |f| 1.031e+01   tau 1.43e-02
+    SR   3  E/ne =  -45.40580 +- 0.10268   acc 0.631   |f| 1.971e+01   tau 1.25e-02
+    SR   4  E/ne =  -45.74854 +- 0.06456   acc 0.610   |f| 6.893e+00   tau 1.11e-02
+    SR   5  E/ne =  -45.93142 +- 0.07869   acc 0.597   |f| 1.554e+01   tau 1.00e-02
+    SR   6  E/ne =  -45.79814 +- 0.08213   acc 0.572   |f| 1.114e+01   tau 9.09e-03
+    SR   7  E/ne =  -45.62602 +- 0.05917   acc 0.537   |f| 1.230e+01   tau 8.33e-03
+    SR   8  E/ne =  -45.90970 +- 0.07198   acc 0.516   |f| 9.383e+00   tau 7.69e-03
+    SR   9  E/ne =  -45.85324 +- 0.05189   acc 0.506   |f| 6.341e+00   tau 7.14e-03
+  phase            liquid
+  r_s              90.5097
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            64.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 41s   E_total -1570.8070 -> -1650.7168   min -1653.5309  (per particle min -45.931415, NOT the answer)
+    production walk  n=250  acc=0.4597  sigma=0.5866  tau_E=8.4293
+  E/N          -45.829229763 +- 0.045478819  (per electron)
+  E_total      -1649.852271457 +- 1.637237469  (= N * E/N, N=36)
+  elapsed      41s
+          done in 40.8s  E/N=-45.829229763 +- 0.045478819
+  RUN     liquid  r_s=113.137 nmax=1 init=0 ...
+    SR   0  E/ne =  -54.70232 +- 0.31987   acc 0.669   |f| 9.828e+01   tau 2.00e-02
+    SR   1  E/ne =  -57.09603 +- 0.10879   acc 0.614   |f| 1.484e+01   tau 1.67e-02
+    SR   2  E/ne =  -57.23966 +- 0.15805   acc 0.613   |f| 2.918e+01   tau 1.43e-02
+    SR   3  E/ne =  -57.53273 +- 0.12484   acc 0.620   |f| 2.928e+01   tau 1.25e-02
+    SR   4  E/ne =  -57.59649 +- 0.11800   acc 0.571   |f| 1.895e+01   tau 1.11e-02
+    SR   5  E/ne =  -57.63843 +- 0.06585   acc 0.567   |f| 9.736e+00   tau 1.00e-02
+    SR   6  E/ne =  -57.62656 +- 0.05861   acc 0.543   |f| 6.866e+00   tau 9.09e-03
+    SR   7  E/ne =  -57.89677 +- 0.06825   acc 0.517   |f| 6.300e+00   tau 8.33e-03
+    SR   8  E/ne =  -57.91722 +- 0.06771   acc 0.480   |f| 9.997e+00   tau 7.69e-03
+    SR   9  E/ne =  -57.92184 +- 0.04478   acc 0.461   |f| 1.623e+00   tau 7.14e-03
+  phase            liquid
+  r_s              113.137
+  orbital ansatz   filled LLL (fixed)
+  orbital SR       disabled
+  Jastrow SR       enabled
+  LL rotation      none
+  technical        nmax=1 n_bands=2 len(theta)=77 (padding block, held at v = 0 -- not a liquid parameter)
+  N                36
+  kappa            80.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  start        R0 built from (N, rs) alone; `init_id` selects nothing for the liquid
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (jastrow) 10 steps in 40s   E_total -1969.2835 -> -2085.1861   min -2085.1861  (per particle min -57.921835, NOT the answer)
+    production walk  n=250  acc=0.4456  sigma=0.5586  tau_E=3.9814
+  E/N          -57.893876931 +- 0.029463014  (per electron)
+  E_total      -2084.179569532 +- 1.060668510  (= N * E/N, N=36)
+  elapsed      40s
+          done in 40.3s  E/N=-57.893876931 +- 0.029463014
+  ROOT    crystal r_s=  2.828 nmax=1 init=0 ...
+  phase            crystal
+  r_s              2.82843
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            2.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 49s   E_total -16.5089 -> -18.1001   min -18.8465  (per particle min -0.523514, NOT the answer)
+    production walk  n=250  acc=0.7147  sigma=0.5940  tau_E=3.7876
+  E/N          -0.488928071 +- 0.007896311  (per electron)
+  E_total      -17.601410542 +- 0.284267178  (= N * E/N, N=36)
+  elapsed      49s
+          done in 49.1s  E/N=-0.488928071 +- 0.007896311
+  ROOT    crystal r_s=  5.657 nmax=1 init=0 ...
+  phase            crystal
+  r_s              5.65685
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            4.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 48s   E_total -61.5531 -> -63.5871   min -68.4307  (per particle min -1.900852, NOT the answer)
+    production walk  n=250  acc=0.7067  sigma=0.5940  tau_E=5.0281
+  E/N          -1.829297666 +- 0.011301006  (per electron)
+  E_total      -65.854715992 +- 0.406836213  (= N * E/N, N=36)
+  elapsed      48s
+          done in 48.1s  E/N=-1.829297666 +- 0.011301006
+  ROOT    crystal r_s= 11.314 nmax=1 init=0 ...
+  phase            crystal
+  r_s              11.3137
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            8.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 51s   E_total -153.0168 -> -165.5720   min -169.4815  (per particle min -4.707819, NOT the answer)
+    production walk  n=250  acc=0.6772  sigma=0.5940  tau_E=3.1112
+  E/N          -4.640869588 +- 0.010785932  (per electron)
+  E_total      -167.071305162 +- 0.388293564  (= N * E/N, N=36)
+  elapsed      51s
+          done in 50.8s  E/N=-4.640869588 +- 0.010785932
+  ROOT    crystal r_s= 22.627 nmax=1 init=0 ...
+  phase            crystal
+  r_s              22.6274
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            16.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 49s   E_total -349.3459 -> -375.5314   min -375.5314  (per particle min -10.431428, NOT the answer)
+    production walk  n=250  acc=0.6466  sigma=0.5940  tau_E=4.9790
+  E/N          -10.353346749 +- 0.023610016  (per electron)
+  E_total      -372.720482973 +- 0.849960579  (= N * E/N, N=36)
+  elapsed      49s
+          done in 48.5s  E/N=-10.353346749 +- 0.023610016
+  ROOT    crystal r_s= 33.941 nmax=1 init=0 ...
+  phase            crystal
+  r_s              33.9411
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            24.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 48s   E_total -545.5188 -> -581.7374   min -583.9241  (per particle min -16.220113, NOT the answer)
+    production walk  n=250  acc=0.6151  sigma=0.5940  tau_E=9.6335
+  E/N          -16.185930623 +- 0.032800945  (per electron)
+  E_total      -582.693502420 +- 1.180834028  (= N * E/N, N=36)
+  elapsed      48s
+          done in 48.5s  E/N=-16.185930623 +- 0.032800945
+  ROOT    crystal r_s= 45.255 nmax=1 init=0 ...
+  phase            crystal
+  r_s              45.2548
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            32.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 48s   E_total -745.8654 -> -793.7368   min -798.0851  (per particle min -22.169029, NOT the answer)
+    production walk  n=250  acc=0.5888  sigma=0.5940  tau_E=6.6415
+  E/N          -22.145939422 +- 0.025345172  (per electron)
+  E_total      -797.253819210 +- 0.912426202  (= N * E/N, N=36)
+  elapsed      48s
+          done in 48.0s  E/N=-22.145939422 +- 0.025345172
+  ROOT    crystal r_s= 56.569 nmax=1 init=0 ...
+  phase            crystal
+  r_s              56.5685
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            40.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 49s   E_total -971.0027 -> -1011.0890   min -1011.0890  (per particle min -28.085807, NOT the answer)
+    production walk  n=250  acc=0.5742  sigma=0.5940  tau_E=3.3551
+  E/N          -28.060342366 +- 0.017007399  (per electron)
+  E_total      -1010.172325164 +- 0.612266351  (= N * E/N, N=36)
+  elapsed      49s
+          done in 48.7s  E/N=-28.060342366 +- 0.017007399
+  ROOT    crystal r_s= 67.882 nmax=1 init=0 ...
+  phase            crystal
+  r_s              67.8823
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            48.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 48s   E_total -1166.1907 -> -1218.3051   min -1227.7204  (per particle min -34.103344, NOT the answer)
+    production walk  n=250  acc=0.5517  sigma=0.5940  tau_E=3.0119
+  E/N          -34.065127078 +- 0.016901493  (per electron)
+  E_total      -1226.344574799 +- 0.608453746  (= N * E/N, N=36)
+  elapsed      48s
+          done in 48.1s  E/N=-34.065127078 +- 0.016901493
+  ROOT    crystal r_s= 90.510 nmax=1 init=0 ...
+  phase            crystal
+  r_s              90.5097
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            64.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 48s   E_total -1604.8585 -> -1657.7287   min -1657.7287  (per particle min -46.048019, NOT the answer)
+    production walk  n=250  acc=0.5194  sigma=0.5374  tau_E=2.8359
+  E/N          -46.073182541 +- 0.016280468  (per electron)
+  E_total      -1658.634571487 +- 0.586096846  (= N * E/N, N=36)
+  elapsed      48s
+          done in 48.4s  E/N=-46.073182541 +- 0.016280468
+  ROOT    crystal r_s=113.137 nmax=1 init=0 ...
+  phase            crystal
+  r_s              113.137
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            80.00000000   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 46s   E_total -2025.4657 -> -2082.0189   min -2095.3527  (per particle min -58.204243, NOT the answer)
+    production walk  n=250  acc=0.5049  sigma=0.5374  tau_E=2.6000
+  E/N          -58.124544181 +- 0.016785686  (per electron)
+  E_total      -2092.483590533 +- 0.604284687  (= N * E/N, N=36)
+  elapsed      46s
+          done in 45.7s  E/N=-58.124544181 +- 0.016785686
+  ROOT    crystal r_s=     25 nmax=1 init=0 ...
+  phase            crystal
+  r_s              25
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            17.67766953   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 47s   E_total -392.6574 -> -417.9478   min -418.3203  (per particle min -11.620007, NOT the answer)
+    production walk  n=250  acc=0.6435  sigma=0.5940  tau_E=8.1799
+  E/N          -11.575667330 +- 0.030205192  (per electron)
+  E_total      -416.724023869 +- 1.087386920  (= N * E/N, N=36)
+  elapsed      47s
+          done in 47.0s  E/N=-11.575667330 +- 0.030205192
+  ROOT    crystal r_s= 27.500 nmax=1 init=0 ...
+  phase            crystal
+  r_s              27.5
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            19.44543648   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 49s   E_total -429.0473 -> -460.3514   min -465.6559  (per particle min -12.934885, NOT the answer)
+    production walk  n=250  acc=0.6364  sigma=0.5940  tau_E=23.2918
+  E/N          -12.823066893 +- 0.053369515  (per electron)
+  E_total      -461.630408161 +- 1.921302528  (= N * E/N, N=36)
+  elapsed      49s
+          done in 49.3s  E/N=-12.823066893 +- 0.053369515
+  ROOT    crystal r_s=     30 nmax=1 init=0 ...
+  phase            crystal
+  r_s              30
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            21.21320344   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 48s   E_total -474.6300 -> -510.5197   min -510.5197  (per particle min -14.181102, NOT the answer)
+    production walk  n=250  acc=0.6265  sigma=0.5940  tau_E=6.6025
+  E/N          -14.092584649 +- 0.032945484  (per electron)
+  E_total      -507.333047363 +- 1.186037408  (= N * E/N, N=36)
+  elapsed      48s
+          done in 48.2s  E/N=-14.092584649 +- 0.032945484
+  ROOT    crystal r_s= 32.500 nmax=1 init=0 ...
+  phase            crystal
+  r_s              32.5
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            22.98097039   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 49s   E_total -529.3939 -> -555.9549   min -557.2931  (per particle min -15.480364, NOT the answer)
+    production walk  n=250  acc=0.6201  sigma=0.5940  tau_E=11.8675
+  E/N          -15.492322280 +- 0.030280085  (per electron)
+  E_total      -557.723602081 +- 1.090083066  (= N * E/N, N=36)
+  elapsed      49s
+          done in 48.5s  E/N=-15.492322280 +- 0.030280085
+  ROOT    crystal r_s=     35 nmax=1 init=0 ...
+  phase            crystal
+  r_s              35
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            24.74873734   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 47s   E_total -560.9151 -> -606.8463   min -608.9233  (per particle min -16.914537, NOT the answer)
+    production walk  n=250  acc=0.6126  sigma=0.5940  tau_E=4.8540
+  E/N          -16.759530347 +- 0.020963174  (per electron)
+  E_total      -603.343092490 +- 0.754674255  (= N * E/N, N=36)
+  elapsed      47s
+          done in 47.3s  E/N=-16.759530347 +- 0.020963174
+  ROOT    crystal r_s= 37.500 nmax=1 init=0 ...
+  phase            crystal
+  r_s              37.5
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            26.51650429   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 48s   E_total -616.0013 -> -649.4065   min -653.1407  (per particle min -18.142798, NOT the answer)
+    production walk  n=250  acc=0.6149  sigma=0.5940  tau_E=9.5301
+  E/N          -18.045267469 +- 0.033105377  (per electron)
+  E_total      -649.629628895 +- 1.191793564  (= N * E/N, N=36)
+  elapsed      48s
+          done in 47.8s  E/N=-18.045267469 +- 0.033105377
+  ROOT    crystal r_s=     40 nmax=1 init=0 ...
+  phase            crystal
+  r_s              40
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            28.28427125   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 48s   E_total -664.8683 -> -693.4363   min -700.8106  (per particle min -19.466961, NOT the answer)
+    production walk  n=250  acc=0.6072  sigma=0.5940  tau_E=8.5666
+  E/N          -19.388418668 +- 0.027550902  (per electron)
+  E_total      -697.983072055 +- 0.991832480  (= N * E/N, N=36)
+  elapsed      48s
+          done in 48.1s  E/N=-19.388418668 +- 0.027550902
+  ROOT    crystal r_s= 42.500 nmax=1 init=0 ...
+  phase            crystal
+  r_s              42.5
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            30.05203820   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 47s   E_total -707.9451 -> -738.0398   min -746.4121  (per particle min -20.733670, NOT the answer)
+    production walk  n=250  acc=0.6013  sigma=0.5940  tau_E=7.2370
+  E/N          -20.661880802 +- 0.026953361  (per electron)
+  E_total      -743.827708884 +- 0.970320981  (= N * E/N, N=36)
+  elapsed      47s
+          done in 46.7s  E/N=-20.661880802 +- 0.026953361
+  ROOT    crystal r_s=     45 nmax=1 init=0 ...
+  phase            crystal
+  r_s              45
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            31.81980515   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 49s   E_total -741.4287 -> -791.8412   min -791.8412  (per particle min -21.995588, NOT the answer)
+    production walk  n=250  acc=0.5921  sigma=0.5940  tau_E=10.2196
+  E/N          -21.942624386 +- 0.040397624  (per electron)
+  E_total      -789.934477905 +- 1.454314464  (= N * E/N, N=36)
+  elapsed      49s
+          done in 48.7s  E/N=-21.942624386 +- 0.040397624
+  ROOT    crystal r_s= 47.500 nmax=1 init=0 ...
+  phase            crystal
+  r_s              47.5
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            33.58757211   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 49s   E_total -786.3218 -> -832.9905   min -843.4953  (per particle min -23.430425, NOT the answer)
+    production walk  n=250  acc=0.5968  sigma=0.5940  tau_E=4.2932
+  E/N          -23.296457519 +- 0.025082151  (per electron)
+  E_total      -838.672470696 +- 0.902957425  (= N * E/N, N=36)
+  elapsed      49s
+          done in 49.4s  E/N=-23.296457519 +- 0.025082151
+  ROOT    crystal r_s=     50 nmax=1 init=0 ...
+  phase            crystal
+  r_s              50
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            35.35533906   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 49s   E_total -841.1629 -> -876.9004   min -889.6170  (per particle min -24.711585, NOT the answer)
+    production walk  n=250  acc=0.5899  sigma=0.5940  tau_E=4.3685
+  E/N          -24.560695985 +- 0.022748404  (per electron)
+  E_total      -884.185055458 +- 0.818942550  (= N * E/N, N=36)
+  elapsed      49s
+          done in 49.4s  E/N=-24.560695985 +- 0.022748404
+  ROOT    crystal r_s= 52.500 nmax=1 init=0 ...
+  phase            crystal
+  r_s              52.5
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            37.12310601   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 50s   E_total -878.3922 -> -935.5031   min -935.5031  (per particle min -25.986198, NOT the answer)
+    production walk  n=250  acc=0.5793  sigma=0.5940  tau_E=8.3268
+  E/N          -25.915151988 +- 0.034493258  (per electron)
+  E_total      -932.945471584 +- 1.241757280  (= N * E/N, N=36)
+  elapsed      50s
+          done in 49.9s  E/N=-25.915151988 +- 0.034493258
+  ROOT    crystal r_s=     55 nmax=1 init=0 ...
+  phase            crystal
+  r_s              55
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            38.89087297   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 49s   E_total -930.0802 -> -982.6953   min -982.6953  (per particle min -27.297091, NOT the answer)
+    production walk  n=250  acc=0.5740  sigma=0.5940  tau_E=7.4878
+  E/N          -27.295214670 +- 0.024106862  (per electron)
+  E_total      -982.627728112 +- 0.867847039  (= N * E/N, N=36)
+  elapsed      49s
+          done in 48.7s  E/N=-27.295214670 +- 0.024106862
+  ROOT    crystal r_s=     60 nmax=1 init=0 ...
+  phase            crystal
+  r_s              60
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            42.42640687   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 48s   E_total -1029.6040 -> -1068.8374   min -1071.0607  (per particle min -29.751686, NOT the answer)
+    production walk  n=250  acc=0.5701  sigma=0.5940  tau_E=5.0200
+  E/N          -29.882582487 +- 0.028341140  (per electron)
+  E_total      -1075.772969546 +- 1.020281049  (= N * E/N, N=36)
+  elapsed      48s
+          done in 48.2s  E/N=-29.882582487 +- 0.028341140
+  ROOT    crystal r_s=     65 nmax=1 init=0 ...
+  phase            crystal
+  r_s              65
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            45.96194078   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 49s   E_total -1119.4598 -> -1168.8972   min -1173.8154  (per particle min -32.605984, NOT the answer)
+    production walk  n=250  acc=0.5608  sigma=0.5940  tau_E=5.8922
+  E/N          -32.472531400 +- 0.028134901  (per electron)
+  E_total      -1169.011130390 +- 1.012856444  (= N * E/N, N=36)
+  elapsed      49s
+          done in 49.0s  E/N=-32.472531400 +- 0.028134901
+  ROOT    crystal r_s=     70 nmax=1 init=0 ...
+  phase            crystal
+  r_s              70
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            49.49747468   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 49s   E_total -1227.8953 -> -1263.8199   min -1263.8621  (per particle min -35.107282, NOT the answer)
+    production walk  n=250  acc=0.5566  sigma=0.5940  tau_E=4.4559
+  E/N          -35.207706012 +- 0.018645770  (per electron)
+  E_total      -1267.477416421 +- 0.671247711  (= N * E/N, N=36)
+  elapsed      49s
+          done in 48.7s  E/N=-35.207706012 +- 0.018645770
+  ROOT    crystal r_s=     75 nmax=1 init=0 ...
+  phase            crystal
+  r_s              75
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            53.03300859   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 47s   E_total -1290.0702 -> -1357.7388   min -1363.2973  (per particle min -37.869369, NOT the answer)
+    production walk  n=250  acc=0.5478  sigma=0.5940  tau_E=9.7384
+  E/N          -37.793807191 +- 0.037252986  (per electron)
+  E_total      -1360.577058887 +- 1.341107493  (= N * E/N, N=36)
+  elapsed      47s
+          done in 47.1s  E/N=-37.793807191 +- 0.037252986
+  ROOT    crystal r_s= 77.500 nmax=1 init=0 ...
+  phase            crystal
+  r_s              77.5
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            54.80077554   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 49s   E_total -1346.0312 -> -1410.0681   min -1414.6252  (per particle min -39.295144, NOT the answer)
+    production walk  n=250  acc=0.5478  sigma=0.5374  tau_E=13.8590
+  E/N          -39.188754029 +- 0.038669620  (per electron)
+  E_total      -1410.795145036 +- 1.392106316  (= N * E/N, N=36)
+  elapsed      49s
+          done in 49.3s  E/N=-39.188754029 +- 0.038669620
+  ROOT    crystal r_s=     80 nmax=1 init=0 ...
+  phase            crystal
+  r_s              80
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            56.56854249   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 47s   E_total -1402.3802 -> -1448.5677   min -1460.0823  (per particle min -40.557842, NOT the answer)
+    production walk  n=250  acc=0.5460  sigma=0.5374  tau_E=9.1196
+  E/N          -40.444623354 +- 0.031964748  (per electron)
+  E_total      -1456.006440749 +- 1.150730940  (= N * E/N, N=36)
+  elapsed      47s
+          done in 47.4s  E/N=-40.444623354 +- 0.031964748
+  ROOT    crystal r_s= 82.500 nmax=1 init=0 ...
+  phase            crystal
+  r_s              82.5
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            58.33630945   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 50s   E_total -1447.4694 -> -1499.8149   min -1508.0169  (per particle min -41.889359, NOT the answer)
+    production walk  n=250  acc=0.5304  sigma=0.5374  tau_E=11.3339
+  E/N          -41.805130472 +- 0.040779308  (per electron)
+  E_total      -1504.984696999 +- 1.468055105  (= N * E/N, N=36)
+  elapsed      50s
+          done in 50.0s  E/N=-41.805130472 +- 0.040779308
+  ROOT    crystal r_s=     85 nmax=1 init=0 ...
+  phase            crystal
+  r_s              85
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            60.10407640   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 47s   E_total -1507.1430 -> -1555.4580   min -1556.1866  (per particle min -43.227405, NOT the answer)
+    production walk  n=250  acc=0.5358  sigma=0.5940  tau_E=8.2923
+  E/N          -43.089646605 +- 0.035950015  (per electron)
+  E_total      -1551.227277792 +- 1.294200527  (= N * E/N, N=36)
+  elapsed      47s
+          done in 47.2s  E/N=-43.089646605 +- 0.035950015
+  ROOT    crystal r_s= 87.500 nmax=1 init=0 ...
+  phase            crystal
+  r_s              87.5
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            61.87184335   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 48s   E_total -1538.1343 -> -1602.3437   min -1604.7731  (per particle min -44.577030, NOT the answer)
+    production walk  n=250  acc=0.5243  sigma=0.5374  tau_E=3.9553
+  E/N          -44.475956040 +- 0.020522503  (per electron)
+  E_total      -1601.134417449 +- 0.738810092  (= N * E/N, N=36)
+  elapsed      48s
+          done in 48.5s  E/N=-44.475956040 +- 0.020522503
+  ROOT    crystal r_s=     90 nmax=1 init=0 ...
+  phase            crystal
+  r_s              90
+  orbital ansatz   LL rotation
+  n_max            1
+  LL basis         n = 0, 1
+  n_bands          2   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       77
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            63.63961031   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 49s   E_total -1592.5566 -> -1647.5318   min -1651.3095  (per particle min -45.869707, NOT the answer)
+    production walk  n=250  acc=0.5222  sigma=0.5940  tau_E=2.6456
+  E/N          -45.743463430 +- 0.019327299  (per electron)
+  E_total      -1646.764683464 +- 0.695782754  (= N * E/N, N=36)
+  elapsed      49s
+          done in 49.3s  E/N=-45.743463430 +- 0.019327299
+  NEST    crystal r_s=     30 nmax=2 <- nmax=1 [parent caefadb335d94705] ...
+  phase            crystal
+  r_s              30
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            21.21320344   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 48s   E_total -505.9102 -> -509.8877   min -514.1145  (per particle min -14.280958, NOT the answer)
+    production walk  n=250  acc=0.6152  sigma=0.5940  tau_E=10.3686
+  E/N          -14.168463086 +- 0.026783746  (per electron)
+  E_total      -510.064671101 +- 0.964214842  (= N * E/N, N=36)
+  elapsed      48s
+  NEST    crystal r_s= 32.500 nmax=2 <- nmax=1 [parent 29599aebdc2a0582] ...
+  phase            crystal
+  r_s              32.5
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            22.98097039   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 49s   E_total -552.4401 -> -559.8715   min -561.1771  (per particle min -15.588254, NOT the answer)
+    production walk  n=250  acc=0.6095  sigma=0.5940  tau_E=7.7586
+  E/N          -15.458660834 +- 0.023104272  (per electron)
+  E_total      -556.511790026 +- 0.831753777  (= N * E/N, N=36)
+  elapsed      49s
+  NEST    crystal r_s=     35 nmax=2 <- nmax=1 [parent eacb07ad56776ed9] ...
+  phase            crystal
+  r_s              35
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            24.74873734   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 48s   E_total -600.7080 -> -606.3709   min -607.6677  (per particle min -16.879658, NOT the answer)
+    production walk  n=250  acc=0.6015  sigma=0.5940  tau_E=4.9832
+  E/N          -16.825786105 +- 0.014610121  (per electron)
+  E_total      -605.728299763 +- 0.525964361  (= N * E/N, N=36)
+  elapsed      48s
+  NEST    crystal r_s= 37.500 nmax=2 <- nmax=1 [parent a6ee235250067614] ...
+  phase            crystal
+  r_s              37.5
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            26.51650429   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 48s   E_total -646.5733 -> -652.6907   min -654.7285  (per particle min -18.186903, NOT the answer)
+    production walk  n=250  acc=0.5933  sigma=0.5940  tau_E=6.2056
+  E/N          -18.103271254 +- 0.017785743  (per electron)
+  E_total      -651.717765162 +- 0.640286742  (= N * E/N, N=36)
+  elapsed      48s
+  NEST    crystal r_s=     40 nmax=2 <- nmax=1 [parent 0bccbe5d7e41272d] ...
+  phase            crystal
+  r_s              40
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            28.28427125   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 47s   E_total -694.2113 -> -697.2606   min -701.5067  (per particle min -19.486296, NOT the answer)
+    production walk  n=250  acc=0.5914  sigma=0.5940  tau_E=6.7346
+  E/N          -19.431492106 +- 0.016933127  (per electron)
+  E_total      -699.533715826 +- 0.609592579  (= N * E/N, N=36)
+  elapsed      47s
+  NEST    crystal r_s= 42.500 nmax=2 <- nmax=1 [parent f966b9f445658301] ...
+  phase            crystal
+  r_s              42.5
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            30.05203820   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 47s   E_total -740.4662 -> -748.9885   min -748.9885  (per particle min -20.805235, NOT the answer)
+    production walk  n=250  acc=0.5898  sigma=0.5940  tau_E=19.1791
+  E/N          -20.642297875 +- 0.039583104  (per electron)
+  E_total      -743.122723511 +- 1.424991758  (= N * E/N, N=36)
+  elapsed      47s
+  NEST    crystal r_s=     45 nmax=2 <- nmax=1 [parent b0d493a07630f2e9] ...
+  phase            crystal
+  r_s              45
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            31.81980515   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 48s   E_total -787.8454 -> -795.3652   min -796.1934  (per particle min -22.116484, NOT the answer)
+    production walk  n=250  acc=0.5865  sigma=0.5940  tau_E=3.8753
+  E/N          -22.031291180 +- 0.015022067  (per electron)
+  E_total      -793.126482489 +- 0.540794405  (= N * E/N, N=36)
+  elapsed      48s
+  NEST    crystal r_s= 47.500 nmax=2 <- nmax=1 [parent 83839fc68edcf6f6] ...
+  phase            crystal
+  r_s              47.5
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            33.58757211   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 47s   E_total -832.0580 -> -841.8345   min -843.9397  (per particle min -23.442769, NOT the answer)
+    production walk  n=250  acc=0.5782  sigma=0.5940  tau_E=7.7724
+  E/N          -23.347301414 +- 0.020515991  (per electron)
+  E_total      -840.502850922 +- 0.738575687  (= N * E/N, N=36)
+  elapsed      47s
+  NEST    crystal r_s=     50 nmax=2 <- nmax=1 [parent f5885ef2b8035e37] ...
+  phase            crystal
+  r_s              50
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            35.35533906   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 48s   E_total -880.6478 -> -888.3561   min -890.7852  (per particle min -24.744032, NOT the answer)
+    production walk  n=250  acc=0.5703  sigma=0.5940  tau_E=6.3822
+  E/N          -24.648270067 +- 0.019495781  (per electron)
+  E_total      -887.337722418 +- 0.701848130  (= N * E/N, N=36)
+  elapsed      48s
+  NEST    crystal r_s= 52.500 nmax=2 <- nmax=1 [parent 1ae475af07c6d039] ...
+  phase            crystal
+  r_s              52.5
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            37.12310601   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 48s   E_total -928.1693 -> -936.3139   min -937.5652  (per particle min -26.043477, NOT the answer)
+    production walk  n=250  acc=0.5751  sigma=0.5940  tau_E=4.1060
+  E/N          -25.988195124 +- 0.013970811  (per electron)
+  E_total      -935.575024473 +- 0.502949205  (= N * E/N, N=36)
+  elapsed      48s
+  NEST    crystal r_s=     55 nmax=2 <- nmax=1 [parent 623c38379f56429c] ...
+  phase            crystal
+  r_s              55
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            38.89087297   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 47s   E_total -975.9800 -> -984.4530   min -984.4530  (per particle min -27.345918, NOT the answer)
+    production walk  n=250  acc=0.5664  sigma=0.5940  tau_E=9.0812
+  E/N          -27.300412477 +- 0.020481626  (per electron)
+  E_total      -982.814849177 +- 0.737338544  (= N * E/N, N=36)
+  elapsed      47s
+  NEST    crystal r_s=     60 nmax=2 <- nmax=1 [parent da957a4bba0bb839] ...
+  phase            crystal
+  r_s              60
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            42.42640687   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 47s   E_total -1069.7594 -> -1077.6944   min -1079.2099  (per particle min -29.978054, NOT the answer)
+    production walk  n=250  acc=0.5527  sigma=0.5940  tau_E=3.2896
+  E/N          -29.955119457 +- 0.012045462  (per electron)
+  E_total      -1078.384300451 +- 0.433636649  (= N * E/N, N=36)
+  elapsed      47s
+  NEST    crystal r_s=     65 nmax=2 <- nmax=1 [parent dc2b2a1bbbdbb6cd] ...
+  phase            crystal
+  r_s              65
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            45.96194078   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 47s   E_total -1167.8202 -> -1170.8569   min -1174.1660  (per particle min -32.615721, NOT the answer)
+    production walk  n=250  acc=0.5490  sigma=0.5940  tau_E=7.3123
+  E/N          -32.554692060 +- 0.020072715  (per electron)
+  E_total      -1171.968914150 +- 0.722617730  (= N * E/N, N=36)
+  elapsed      47s
+  NEST    crystal r_s=     70 nmax=2 <- nmax=1 [parent bf78232705315f52] ...
+  phase            crystal
+  r_s              70
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            49.49747468   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 46s   E_total -1263.4955 -> -1268.5189   min -1270.5079  (per particle min -35.291886, NOT the answer)
+    production walk  n=250  acc=0.5452  sigma=0.5940  tau_E=5.2263
+  E/N          -35.196287105 +- 0.016418141  (per electron)
+  E_total      -1267.066335796 +- 0.591053071  (= N * E/N, N=36)
+  elapsed      46s
+  NEST    crystal r_s=     75 nmax=2 <- nmax=1 [parent f9e73675661e722a] ...
+  phase            crystal
+  r_s              75
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            53.03300859   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 48s   E_total -1357.7941 -> -1365.4362   min -1365.4362  (per particle min -37.928782, NOT the answer)
+    production walk  n=250  acc=0.5360  sigma=0.5940  tau_E=2.8197
+  E/N          -37.861256125 +- 0.014363098  (per electron)
+  E_total      -1363.005220490 +- 0.517071528  (= N * E/N, N=36)
+  elapsed      48s
+  NEST    crystal r_s= 77.500 nmax=2 <- nmax=1 [parent 6bb67207112c4fdf] ...
+  phase            crystal
+  r_s              77.5
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            54.80077554   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 47s   E_total -1403.4786 -> -1410.7702   min -1413.8519  (per particle min -39.273664, NOT the answer)
+    production walk  n=250  acc=0.5320  sigma=0.5940  tau_E=3.9169
+  E/N          -39.200541343 +- 0.014503339  (per electron)
+  E_total      -1411.219488352 +- 0.522120219  (= N * E/N, N=36)
+  elapsed      47s
+  NEST    crystal r_s=     80 nmax=2 <- nmax=1 [parent 1712eb9938a4a101] ...
+  phase            crystal
+  r_s              80
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            56.56854249   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 46s   E_total -1455.5148 -> -1460.9151   min -1461.7108  (per particle min -40.603078, NOT the answer)
+    production walk  n=250  acc=0.5270  sigma=0.5374  tau_E=4.2753
+  E/N          -40.533270099 +- 0.013986436  (per electron)
+  E_total      -1459.197723582 +- 0.503511692  (= N * E/N, N=36)
+  elapsed      46s
+  NEST    crystal r_s= 82.500 nmax=2 <- nmax=1 [parent e57a529d881b0a76] ...
+  phase            crystal
+  r_s              82.5
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            58.33630945   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 46s   E_total -1498.3414 -> -1507.4316   min -1507.4316  (per particle min -41.873101, NOT the answer)
+    production walk  n=250  acc=0.5265  sigma=0.5374  tau_E=6.0867
+  E/N          -41.828215145 +- 0.020053260  (per electron)
+  E_total      -1505.815745208 +- 0.721917351  (= N * E/N, N=36)
+  elapsed      46s
+  NEST    crystal r_s=     85 nmax=2 <- nmax=1 [parent aeedda78824357c8] ...
+  phase            crystal
+  r_s              85
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            60.10407640   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 48s   E_total -1549.4935 -> -1550.0920   min -1555.6985  (per particle min -43.213847, NOT the answer)
+    production walk  n=250  acc=0.5256  sigma=0.5374  tau_E=4.1723
+  E/N          -43.164604531 +- 0.014671292  (per electron)
+  E_total      -1553.925763110 +- 0.528166510  (= N * E/N, N=36)
+  elapsed      48s
+  NEST    crystal r_s= 87.500 nmax=2 <- nmax=1 [parent 51d23f7d587c3c14] ...
+  phase            crystal
+  r_s              87.5
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            61.87184335   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 48s   E_total -1600.9304 -> -1603.3418   min -1605.6294  (per particle min -44.600815, NOT the answer)
+    production walk  n=250  acc=0.5194  sigma=0.5374  tau_E=7.6759
+  E/N          -44.500341669 +- 0.023707244  (per electron)
+  E_total      -1602.012300098 +- 0.853460786  (= N * E/N, N=36)
+  elapsed      48s
+  NEST    crystal r_s=     90 nmax=2 <- nmax=1 [parent fe10d55ff20fdb35] ...
+  phase            crystal
+  r_s              90
+  orbital ansatz   LL rotation
+  n_max            2
+  LL basis         n = 0, 1, 2
+  n_bands          3   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       149
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            63.63961031   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 47s   E_total -1647.8860 -> -1650.0584   min -1653.3569  (per particle min -45.926580, NOT the answer)
+    production walk  n=250  acc=0.5162  sigma=0.5657  tau_E=8.5339
+  E/N          -45.819726060 +- 0.025562623  (per electron)
+  E_total      -1649.510138152 +- 0.920254440  (= N * E/N, N=36)
+  elapsed      47s
+  NEST    crystal r_s=     70 nmax=3 <- nmax=2 [parent 922ff3d27f1292bf] ...
+  phase            crystal
+  r_s              70
+  orbital ansatz   LL rotation
+  n_max            3
+  LL basis         n = 0, 1, 2, 3
+  n_bands          4   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       221
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            49.49747468   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 57s   E_total -1267.1234 -> -1269.1727   min -1270.4354  (per particle min -35.289872, NOT the answer)
+    production walk  n=250  acc=0.5375  sigma=0.5940  tau_E=16.4662
+  E/N          -35.128621395 +- 0.035150044  (per electron)
+  E_total      -1264.630370208 +- 1.265401566  (= N * E/N, N=36)
+  elapsed      57s
+  NEST    crystal r_s=     75 nmax=3 <- nmax=2 [parent 57e001c445e9bc57] ...
+  phase            crystal
+  r_s              75
+  orbital ansatz   LL rotation
+  n_max            3
+  LL basis         n = 0, 1, 2, 3
+  n_bands          4   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       221
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            53.03300859   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 59s   E_total -1362.7545 -> -1364.4055   min -1364.4055  (per particle min -37.900152, NOT the answer)
+    production walk  n=250  acc=0.5323  sigma=0.5374  tau_E=4.1646
+  E/N          -37.874071609 +- 0.013633148  (per electron)
+  E_total      -1363.466577918 +- 0.490793333  (= N * E/N, N=36)
+  elapsed      59s
+  NEST    crystal r_s= 77.500 nmax=3 <- nmax=2 [parent e893ca81bb8ee5fb] ...
+  phase            crystal
+  r_s              77.5
+  orbital ansatz   LL rotation
+  n_max            3
+  LL basis         n = 0, 1, 2, 3
+  n_bands          4   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       221
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            54.80077554   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 58s   E_total -1410.9941 -> -1399.4513   min -1413.2815  (per particle min -39.257819, NOT the answer)
+    production walk  n=250  acc=0.5240  sigma=0.5374  tau_E=3.5937
+  E/N          -39.181571578 +- 0.011882081  (per electron)
+  E_total      -1410.536576814 +- 0.427754933  (= N * E/N, N=36)
+  elapsed      58s
+  NEST    crystal r_s=     80 nmax=3 <- nmax=2 [parent 5f555dda6cbf3abd] ...
+  phase            crystal
+  r_s              80
+  orbital ansatz   LL rotation
+  n_max            3
+  LL basis         n = 0, 1, 2, 3
+  n_bands          4   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       221
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            56.56854249   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 58s   E_total -1459.6459 -> -1457.7420   min -1461.3941  (per particle min -40.594279, NOT the answer)
+    production walk  n=250  acc=0.5225  sigma=0.5374  tau_E=4.9788
+  E/N          -40.533221829 +- 0.015110606  (per electron)
+  E_total      -1459.195985858 +- 0.543981806  (= N * E/N, N=36)
+  elapsed      58s
+  NEST    crystal r_s= 82.500 nmax=3 <- nmax=2 [parent 400b4d27c6d767d5] ...
+  phase            crystal
+  r_s              82.5
+  orbital ansatz   LL rotation
+  n_max            3
+  LL basis         n = 0, 1, 2, 3
+  n_bands          4   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       221
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            58.33630945   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 61s   E_total -1502.9234 -> -1508.4992   min -1508.4992  (per particle min -41.902755, NOT the answer)
+    production walk  n=250  acc=0.5219  sigma=0.5940  tau_E=4.1197
+  E/N          -41.847343023 +- 0.013384711  (per electron)
+  E_total      -1506.504348836 +- 0.481849584  (= N * E/N, N=36)
+  elapsed      61s
+  NEST    crystal r_s=     85 nmax=3 <- nmax=2 [parent 112553531d73a483] ...
+  phase            crystal
+  r_s              85
+  orbital ansatz   LL rotation
+  n_max            3
+  LL basis         n = 0, 1, 2, 3
+  n_bands          4   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       221
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            60.10407640   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 58s   E_total -1555.2974 -> -1556.8757   min -1557.6759  (per particle min -43.268776, NOT the answer)
+    production walk  n=250  acc=0.5195  sigma=0.5374  tau_E=26.3003
+  E/N          -43.138227652 +- 0.046875266  (per electron)
+  E_total      -1552.976195481 +- 1.687509558  (= N * E/N, N=36)
+  elapsed      58s
+  NEST    crystal r_s= 87.500 nmax=3 <- nmax=2 [parent 39c6054eb1f59298] ...
+  phase            crystal
+  r_s              87.5
+  orbital ansatz   LL rotation
+  n_max            3
+  LL basis         n = 0, 1, 2, 3
+  n_bands          4   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       221
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            61.87184335   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 60s   E_total -1601.6369 -> -1599.0952   min -1604.8542  (per particle min -44.579285, NOT the answer)
+    production walk  n=250  acc=0.5170  sigma=0.5388  tau_E=5.1140
+  E/N          -44.527800913 +- 0.014435422  (per electron)
+  E_total      -1603.000832885 +- 0.519675180  (= N * E/N, N=36)
+  elapsed      60s
+  NEST    crystal r_s=     90 nmax=3 <- nmax=2 [parent 4124e9a762e5bdca] ...
+  phase            crystal
+  r_s              90
+  orbital ansatz   LL rotation
+  n_max            3
+  LL basis         n = 0, 1, 2, 3
+  n_bands          4   (= n_max + 1)
+  orbital SR       enabled
+  Jastrow SR       enabled
+  optimisation     joint orbital + Jastrow SR
+  len(theta)       221
+  technical        ansatz=ll_rotation
+  N                36
+  kappa            63.63961031   [physical]
+  init_id          0
+  rng_seed         0
+  init L0      0.3   (from budget 'quick')
+  budget       quick   source: clean-package (NOT converged, NOT comparable to published numbers)
+  protocol     SR 10x40, walk 400/150
+  start        R0 built from (N, rs) alone; no checkpoint read
+    SR (joint) 10 steps in 58s   E_total -1650.9339 -> -1650.6059   min -1650.9339  (per particle min -45.859274, NOT the answer)
+    production walk  n=250  acc=0.5107  sigma=0.5374  tau_E=4.5148
+  E/N          -45.835578873 +- 0.012984382  (per electron)
+  E_total      -1650.080839424 +- 0.467437767  (= N * E/N, N=36)
+  elapsed      58s
+    conv   r_s=     25  dE=+0.112594600 +- 0.036037019  z=3.12
+    conv   r_s= 27.500  dE=+0.139442588 +- 0.058428747  z=2.39
+    conv   r_s=     30  dE=+0.133459597 +- 0.041276168  z=3.23
+    conv   r_s= 32.500  dE=+0.029731930 +- 0.032509336  z=0.91
+    conv   r_s=     35  dE=+0.052292199 +- 0.024634835  z=2.12
+    conv   r_s= 37.500  dE=+0.073511579 +- 0.039587500  z=1.86
+    conv   r_s=     40  dE=-0.059165281 +- 0.038635930  z=1.53
+    conv   r_s= 42.500  dE=-0.012645296 +- 0.035276194  z=0.36
+    conv   r_s=     45  dE=+0.025187245 +- 0.048971166  z=0.51
+    conv   r_s= 47.500  dE=-0.053613721 +- 0.034066839  z=1.57
+    conv   r_s=     50  dE=+0.035946970 +- 0.032239967  z=1.11
+    conv   r_s= 52.500  dE=-0.005718073 +- 0.043916921  z=0.13
+    conv   r_s=     55  dE=-0.175322679 +- 0.036782298  z=4.77
+    conv   r_s=     60  dE=-0.087494315 +- 0.035784344  z=2.45
+    conv   r_s=     65  dE=-0.083887808 +- 0.036602028  z=2.29
+    conv   r_s=     70  dE=-0.156150122 +- 0.023048842  z=6.77
+    conv   r_s=     75  dE=-0.122621508 +- 0.047160160  z=2.6
+    conv   r_s= 77.500  dE=-0.223343699 +- 0.049348100  z=4.53
+    conv   r_s=     80  dE=-0.208312771 +- 0.046967866  z=4.44
+    conv   r_s=     85  dE=-0.162177843 +- 0.051873922  z=3.13
+    conv   r_s=     90  dE=-0.342843111 +- 0.032051029  z=10.7
+    nest   r_s=     30  dE=+0.057581160 +- 0.036547040  z=1.58
+    nest   r_s= 32.500  dE=+0.063393376 +- 0.025957287  z=2.44
+    nest   r_s=     35  dE=-0.013963559 +- 0.019516047  z=0.72
+    nest   r_s= 37.500  dE=+0.015507794 +- 0.028063086  z=0.55
+    nest   r_s=     40  dE=-0.102238719 +- 0.031943915  z=3.2
+    nest   r_s= 42.500  dE=+0.006937631 +- 0.045659044  z=0.15
+    nest   r_s=     45  dE=-0.063479549 +- 0.031493961  z=2.02
+    nest   r_s= 47.500  dE=-0.104457616 +- 0.030860024  z=3.38
+    nest   r_s=     50  dE=-0.051627112 +- 0.030033500  z=1.72
+    nest   r_s= 52.500  dE=-0.078761208 +- 0.030562962  z=2.58
+    nest   r_s=     55  dE=-0.180520486 +- 0.034515122  z=5.23
+    nest   r_s=     60  dE=-0.160031284 +- 0.024947790  z=6.41
+    nest   r_s=     65  dE=-0.166048468 +- 0.030839094  z=5.38
+    nest   r_s=     70  dE=-0.144731216 +- 0.021287079  z=6.8
+    nest   r_s=     75  dE=-0.190070442 +- 0.032289229  z=5.89
+    nest   r_s= 77.500  dE=-0.235131013 +- 0.033915223  z=6.93
+    nest   r_s=     80  dE=-0.296959516 +- 0.037146408  z=7.99
+    nest   r_s= 82.500  dE=-0.204529036 +- 0.031388326  z=6.52
+    nest   r_s=     85  dE=-0.237135769 +- 0.040171470  z=5.9
+    nest   r_s= 87.500  dE=-0.255512806 +- 0.034498656  z=7.41
+    nest   r_s=     90  dE=-0.419105741 +- 0.036154829  z=11.59
+    nest4  r_s=     70  dE=-0.077065505 +- 0.037671076  z=2.05
+    nest4  r_s=     75  dE=-0.202885926 +- 0.031971212  z=6.35
+    nest4  r_s= 77.500  dE=-0.216161248 +- 0.032879771  z=6.57
+    nest4  r_s=     80  dE=-0.296911246 +- 0.037584115  z=7.9
+    nest4  r_s= 82.500  dE=-0.223656914 +- 0.027608771  z=8.1
+    nest4  r_s=     85  dE=-0.210758890 +- 0.059964913  z=3.51
+    nest4  r_s= 87.500  dE=-0.282972050 +- 0.028922401  z=9.78
+    nest4  r_s=     90  dE=-0.434958554 +- 0.028676090  z=15.17
+
+==============================================================================
+nested vs independent   delta_E_init = E_nested - E_independent
+==============================================================================
+  control  n_max=1 roots: 21 points, max |delta| = 1.046e-11   *** within tolerance but threading IS pinned: investigate ***
+           BLAS env: OMP_NUM_THREADS=1, OPENBLAS_NUM_THREADS=1, MKL_NUM_THREADS=1, NUMEXPR_NUM_THREADS=1, VECLIB_MAXIMUM_THREADS=1, numpy=2.3.5
+
+  nest  (n_max = 2, 1 seed(s))
+        r_s            nested       independent          delta        sigma        z
+         30     -14.168463086     -14.109498658   -0.058964428  0.053498903     -1.1
+     32.500     -15.458660834     -15.429009003   -0.029651831  0.038496952    -0.77
+         35     -16.825786105     -16.721945319   -0.103840785  0.030384947    -3.42
+     37.500     -18.103271254     -18.040371099   -0.062900156  0.034238706    -1.84
+         40     -19.431492106     -19.242524489   -0.188967617  0.040263802    -4.69
+     42.500     -20.642297875     -20.696415872   +0.054117997  0.041660865      1.3
+         45     -22.031291180     -21.984614316   -0.046676864  0.029429302    -1.59
+     47.500     -23.347301414     -23.308637667   -0.038663748  0.026540281    -1.46
+         50     -24.648270067     -24.615970338   -0.032299729  0.027587608    -1.17
+     52.500     -25.988195124     -25.955573688   -0.032621437  0.022549462    -1.45
+         55     -27.300412477     -27.244194981   -0.056217496  0.027812258    -2.02
+         60     -29.955119457     -29.921425327   -0.033694130  0.021741357    -1.55
+         65     -32.554692060     -32.558712902   +0.004020843  0.023284730     0.17
+         70     -35.196287105     -35.199073246   +0.002786141  0.027515286      0.1
+         75     -37.861256125     -37.858108125   -0.003147999  0.020394821    -0.15
+     77.500     -39.200541343     -39.167761698   -0.032779645  0.025474049    -1.29
+         80     -40.533270099     -40.486154657   -0.047115442  0.024466868    -1.93
+     82.500     -41.828215145     -41.837595466   +0.009380321  0.024535891     0.38
+         85     -43.164604531     -43.162170665   -0.002433866  0.022198074    -0.11
+     87.500     -44.500341669     -44.477835397   -0.022506272  0.028520034    -0.79
+         90     -45.819726060     -45.762156576   -0.057569484  0.048621585    -1.18
+
+  nest4  (n_max = 3, 1 seed(s))
+        r_s            nested       independent          delta        sigma        z
+         70     -35.128621395     -35.078008171   -0.050613223  0.052162536    -0.97
+         75     -37.874071609     -37.792294077   -0.081777531  0.025691237    -3.18
+     77.500     -39.181571578     -39.149514468   -0.032057111  0.021849363    -1.47
+         80     -40.533221829     -40.445131863   -0.088089966  0.045274668    -1.95
+     82.500     -41.847343023     -41.773870742   -0.073472282  0.030685391    -2.39
+         85     -43.138227652     -43.118849992   -0.019377660  0.048834560     -0.4
+     87.500     -44.527800913     -44.457185932   -0.070614981  0.021184425    -3.33
+         90     -45.835578873     -45.764281757   -0.071297116  0.020874777    -3.42
+
+  crossings of delta_E (crystal - liquid)
+    conv   nested       r_s* = 38.885 between 37.500 and 40   z = +1.86 / -1.53
+    conv   nested       r_s* = 43.336 between 42.500 and 45   z = -0.36 / +0.51
+    conv   nested       r_s* = 45.799 between 45 and 47.500   z = +0.51 / -1.57
+    conv   nested       r_s* = 48.997 between 47.500 and 50   z = -1.57 / +1.11
+    conv   nested       r_s* = 52.157 between 50 and 52.500   z = +1.11 / -0.13
+    conv   independent  r_s* = 38.885 between 37.500 and 40   z = +1.86 / -1.53
+    conv   independent  r_s* = 43.336 between 42.500 and 45   z = -0.36 / +0.51
+    conv   independent  r_s* = 45.799 between 45 and 47.500   z = +0.51 / -1.57
+    conv   independent  r_s* = 48.997 between 47.500 and 50   z = -1.57 / +1.11
+    conv   independent  r_s* = 52.157 between 50 and 52.500   z = +1.11 / -0.13
+    nest   nested       r_s* = 34.549 between 32.500 and 35   z = +2.44 / -0.72
+    nest   nested       r_s* = 36.185 between 35 and 37.500   z = -0.72 / +0.55
+    nest   nested       r_s* = 37.829 between 37.500 and 40   z = +0.55 / -3.20
+    nest   nested       r_s* = 42.341 between 40 and 42.500   z = -3.20 / +0.15
+    nest   nested       r_s* = 42.746 between 42.500 and 45   z = +0.15 / -2.02
+    nest   independent  r_s* = 41.619 between 40 and 42.500   z = +1.91 / -1.80
+    nest4  nested       none in the measured range
+    nest4  independent  none in the measured range
+==============================================================================
+
+==============================================================================
+  95 runs cached in results\figure_construction\phase_competition\N36__llrot__quick__l01__nested\runs.json
+  figure  figures\figure_construction\phase_competition\N36__llrot__quick__l01__nested\vmc_energy_phase_competition.png
+  metadata results\figure_construction\phase_competition\N36__llrot__quick__l01__nested\run_metadata.json
+  total 4448.8s
+==============================================================================

@@ -1,0 +1,37 @@
+{
+  "arms": null,
+  "cross_seed": {},
+  "layer1_seed_controls": {
+    "L0": 0.3,
+    "L0_source": "inits[0].L0 of quick",
+    "N": 9,
+    "base_rng_seed": 0,
+    "c6_correct": 0.45838573541196503,
+    "c6_correct_ctx2": 0.6393190217264298,
+    "c6_defect": 0.4513449499356903,
+    "c6_defect_ctx2": 0.7413119128029894,
+    "c6_gauge_shift": 5.551115123125783e-17,
+    "c6_gauge_value": 0.45838573541196503,
+    "c6_seed": 20261003,
+    "c6_seed2": 20261004,
+    "nbar_defect": 0.3463002733124987,
+    "nbar_seed": 0.3463002733124987,
+    "nmax": 1,
+    "nsp": 12,
+    "nsp2": 48,
+    "pinned_corner": "r_s = 75, n_max = 2 (tests/test_projection_convention.py)",
+    "rs": 90.0
+  },
+  "layer1_verdict": {
+    "controls_that_failed": 3,
+    "facts": {
+      "gauge_shift": 5.551115123125783e-17,
+      "min_separation": 1000000.0,
+      "separation": 0.9846400423653084
+    },
+    "ok": false,
+    "reason": "the corrected Gaussian seed reads c6 = 4.584e-01 > 0.1 at THIS operating point, so the seed is not C6-covariant here and SR cannot be blamed for leaving the sector; a second independent context (nsp=48, seed=20261004) reads 6.393e-01 where the first reads 4.584e-01; the conjugated-overlap control reads 4.513e-01 against 4.584e-01: a separation of 9.846e-01, which does not establish that this context resolves the gate (needs >1e+06 and the broken value above 0.01)"
+  },
+  "liquid": null,
+  "mode": "layers 1-2 -- the trajectory"
+}

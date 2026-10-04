@@ -1,0 +1,31 @@
+==============================================================================
+the periodic wrap: legacy send_to_first_supercell vs clean wrap_to_supercell
+==============================================================================
+  20000 random points spanning +-20 (supercell side ~16.161)
+  max |legacy - clean| = 0.000e+00
+  frames equal: sc_to_cart 0.000e+00   cart_to_sc 0.000e+00
+  wrap AGREES
+
+R0 == the frozen formula: 0.000e+00
+
+==============================================================================
+the REAL samplers, frozen protocol: 1500 sweeps, equil 400, sigma 0.4, seed 11, target_acc 0.4
+==============================================================================
+  (492s)
+
+                      legacy           clean         delta
+  --------------------------------------------------------
+  n           1100.000000000  1100.000000000    +0.000e+00
+  sigma          0.616647362     0.616647362    +0.000e+00
+  acc            0.412944444     0.412944444    +0.000e+00
+
+  snapshot arrays  legacy (1100, 36, 2)  clean (1100, 36, 2)
+  snapshots differing at all : 0 / 1100
+  max |dR| over all snapshots: 0.000e+00
+
+  against the frozen record liq_rs75.json:
+                           run          frozen         delta
+    --------------------------------------------------------
+    n           1100.000000000  1100.000000000    +0.000e+00
+    sigma          0.616647362     0.650729310    -3.408e-02
+    acc            0.412944444     0.414000000    -1.056e-03

@@ -1,0 +1,25 @@
+  legacy kappa 53.033   protocol 120x400 equil 150 snap 4
+  len(theta): nb=2 77   nb=3 149
+
+  --- raw Metropolis sweep cost (no solver, no log_deriv) ---
+    nb=2      33.82 ms/sweep
+    nb=3      38.84 ms/sweep
+    ratio nb3/nb2 = 1.149
+
+  --- full SR step cost, 2 steps each, same process ---
+    nb=2      14.82 s/step   (120 steps -> 29.6 min)
+    nb=3      17.03 s/step   (120 steps -> 34.1 min)
+    ratio nb3/nb2 = 1.149
+
+  --- recorded, same protocol, same box ---
+    B6  nb=2      50.33 s/step
+    B8  nb=3      16.99 s/step
+    ratio B8/B6 recorded = 0.338
+
+  VERDICT
+    nb=3 should cost 1.149x nb=2, so B6's 50.3 s/step predicts 57.8 s/step for B8.
+    B8 recorded 17.0 s/step against a measured 17.0 s/step now.
+    => B8's clock is reproducible on an idle box; B6's was inflated by machine load
+       (a wall-clock effect, NOT a physics one).
+    Physics gates are unaffected: B6/B7/B8 trajectories each reproduce their frozen
+      record to round-off, which is only possible if the sweep counts matched.

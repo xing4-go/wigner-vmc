@@ -1,0 +1,27 @@
+{
+ "budget": "quick",
+ "crystal": null,
+ "crystal_E": -33.74279575548448,
+ "crystal_err": 0.06905206146990343,
+ "delta_E_crystal": 1.7780070643605583,
+ "delta_E_nested": 2.1120817149402242,
+ "kappa": 53.03300858899106,
+ "liquid": null,
+ "liquid_E": -35.52080281984504,
+ "liquid_err": 0.1310076770192149,
+ "n_bands_B": 2,
+ "nested": null,
+ "nested_E": -33.408721104904814,
+ "nested_err": 0.08863832414087743,
+ "phase": "all",
+ "protocol": {
+  "meas_equil": 150,
+  "meas_sweeps": 400,
+  "sr_equil": 13,
+  "sr_snap": 2,
+  "sr_steps": 10,
+  "sr_sweeps": 40
+ },
+ "rs": 75.0,
+ "seed": 0
+}

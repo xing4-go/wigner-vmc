@@ -1,0 +1,1015 @@
+{
+  "N": 36,
+  "ansatz": "ll_rotation",
+  "budget": "quick",
+  "competition": {
+    "conv_rows": [
+      {
+        "delta_e": 0.11259460005415889,
+        "energy_crystal": -11.5756673296929,
+        "energy_liquid": -11.688261929747059,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 25.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.03603701918082996,
+        "sigma_total": 0.03603701918082996,
+        "tier": "conv",
+        "z": 3.124414910377883
+      },
+      {
+        "delta_e": 0.1394425881625665,
+        "energy_crystal": -12.823066893360526,
+        "energy_liquid": -12.962509481523092,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 27.5,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.05842874743160124,
+        "sigma_total": 0.05842874743160124,
+        "tier": "conv",
+        "z": 2.386540774741114
+      },
+      {
+        "delta_e": 0.13345959721621092,
+        "energy_crystal": -14.092584648968495,
+        "energy_liquid": -14.226044246184706,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 30.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.04127616774828893,
+        "sigma_total": 0.04127616774828893,
+        "tier": "conv",
+        "z": 3.2333330465676133
+      },
+      {
+        "delta_e": 0.029731929738801455,
+        "energy_crystal": -15.492322280018413,
+        "energy_liquid": -15.522054209757215,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 32.5,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.03250933585311015,
+        "sigma_total": 0.03250933585311015,
+        "tier": "conv",
+        "z": 0.9145658918761644
+      },
+      {
+        "delta_e": 0.052292198889446695,
+        "energy_crystal": -16.759530346936003,
+        "energy_liquid": -16.81182254582545,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 35.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.02463483530009672,
+        "sigma_total": 0.02463483530009672,
+        "tier": "conv",
+        "z": 2.1226932614906255
+      },
+      {
+        "delta_e": 0.07351157914374085,
+        "energy_crystal": -18.04526746930924,
+        "energy_liquid": -18.118779048452982,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 37.5,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.039587499706068084,
+        "sigma_total": 0.039587499706068084,
+        "tier": "conv",
+        "z": 1.8569391775069033
+      },
+      {
+        "delta_e": -0.059165280853790136,
+        "energy_crystal": -19.388418668180563,
+        "energy_liquid": -19.329253387326773,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 40.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.03863593014393707,
+        "sigma_total": 0.03863593014393707,
+        "tier": "conv",
+        "z": 1.53135386241179
+      },
+      {
+        "delta_e": -0.012645295863091377,
+        "energy_crystal": -20.66188080232413,
+        "energy_liquid": -20.64923550646104,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 42.5,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.03527619350353565,
+        "sigma_total": 0.03527619350353565,
+        "tier": "conv",
+        "z": 0.35846542971888307
+      },
+      {
+        "delta_e": 0.025187244971668576,
+        "energy_crystal": -21.94262438625099,
+        "energy_liquid": -21.96781163122266,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 45.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.04897116591794217,
+        "sigma_total": 0.04897116591794217,
+        "tier": "conv",
+        "z": 0.514328064270988
+      },
+      {
+        "delta_e": -0.05361372103757134,
+        "energy_crystal": -23.296457519320168,
+        "energy_liquid": -23.242843798282596,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 47.5,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.034066838653046265,
+        "sigma_total": 0.034066838653046265,
+        "tier": "conv",
+        "z": 1.5737803435064905
+      },
+      {
+        "delta_e": 0.035946970405444034,
+        "energy_crystal": -24.56069598495278,
+        "energy_liquid": -24.596642955358224,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 50.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.032239967481140316,
+        "sigma_total": 0.032239967481140316,
+        "tier": "conv",
+        "z": 1.1149815962585023
+      },
+      {
+        "delta_e": -0.005718072519417916,
+        "energy_crystal": -25.915151988454756,
+        "energy_liquid": -25.909433915935338,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 52.5,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.04391692064010362,
+        "sigma_total": 0.04391692064010362,
+        "tier": "conv",
+        "z": 0.13020203684764597
+      },
+      {
+        "delta_e": -0.17532267913071564,
+        "energy_crystal": -27.295214669775845,
+        "energy_liquid": -27.11989199064513,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 55.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.03678229752733653,
+        "sigma_total": 0.03678229752733653,
+        "tier": "conv",
+        "z": 4.766496138540997
+      },
+      {
+        "delta_e": -0.08749431473696134,
+        "energy_crystal": -29.882582487384486,
+        "energy_liquid": -29.795088172647525,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 60.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.03578434437149285,
+        "sigma_total": 0.03578434437149285,
+        "tier": "conv",
+        "z": 2.4450445096504994
+      },
+      {
+        "delta_e": -0.08388780791492678,
+        "energy_crystal": -32.47253139971986,
+        "energy_liquid": -32.388643591804936,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 65.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.036602028478243544,
+        "sigma_total": 0.036602028478243544,
+        "tier": "conv",
+        "z": 2.291889586523604
+      },
+      {
+        "delta_e": -0.1561501224637567,
+        "energy_crystal": -35.20770601169413,
+        "energy_liquid": -35.05155588923037,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 70.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.02304884161554841,
+        "sigma_total": 0.02304884161554841,
+        "tier": "conv",
+        "z": 6.774749250670372
+      },
+      {
+        "delta_e": -0.12262150839626429,
+        "energy_crystal": -37.79380719131635,
+        "energy_liquid": -37.67118568292008,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 75.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.047160159631597025,
+        "sigma_total": 0.047160159631597025,
+        "tier": "conv",
+        "z": 2.600108001205929
+      },
+      {
+        "delta_e": -0.22334369901381024,
+        "energy_crystal": -39.18875402876732,
+        "energy_liquid": -38.96541032975351,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 77.5,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.0493481001145823,
+        "sigma_total": 0.0493481001145823,
+        "tier": "conv",
+        "z": 4.525882424961128
+      },
+      {
+        "delta_e": -0.20831277055670938,
+        "energy_crystal": -40.44462335413869,
+        "energy_liquid": -40.23631058358198,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 80.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.04696786564864518,
+        "sigma_total": 0.04696786564864518,
+        "tier": "conv",
+        "z": 4.435219009419014
+      },
+      {
+        "delta_e": -0.16217784326998697,
+        "energy_crystal": -43.08964660532484,
+        "energy_liquid": -42.92746876205485,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 85.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.05187392197127043,
+        "sigma_total": 0.05187392197127043,
+        "tier": "conv",
+        "z": 3.1263848405332966
+      },
+      {
+        "delta_e": -0.3428431105703993,
+        "energy_crystal": -45.743463429545024,
+        "energy_liquid": -45.400620318974624,
+        "n_max": 1,
+        "n_states": 1,
+        "rs": 90.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.03205102878097604,
+        "sigma_total": 0.03205102878097604,
+        "tier": "conv",
+        "z": 10.69678957618654
+      }
+    ],
+    "nest4_rows": [
+      {
+        "delta_e": -0.026452282107534586,
+        "energy_crystal": -35.078008171337906,
+        "energy_liquid": -35.05155588923037,
+        "n_max": 3,
+        "n_states": 1,
+        "rs": 70.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.04085326200848069,
+        "sigma_total": 0.04085326200848069,
+        "tier": "nest4",
+        "z": 0.647494980989361
+      },
+      {
+        "delta_e": -0.12110839449100297,
+        "energy_crystal": -37.792294077411086,
+        "energy_liquid": -37.67118568292008,
+        "n_max": 3,
+        "n_states": 1,
+        "rs": 75.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.0362004508547654,
+        "sigma_total": 0.0362004508547654,
+        "tier": "nest4",
+        "z": 3.345494092791398
+      },
+      {
+        "delta_e": -0.18410413777732515,
+        "energy_crystal": -39.149514467530835,
+        "energy_liquid": -38.96541032975351,
+        "n_max": 3,
+        "n_states": 1,
+        "rs": 77.5,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.035722630092692324,
+        "sigma_total": 0.035722630092692324,
+        "tier": "nest4",
+        "z": 5.153711731180365
+      },
+      {
+        "delta_e": -0.20882127962248376,
+        "energy_crystal": -40.445131863204466,
+        "energy_liquid": -40.23631058358198,
+        "n_max": 3,
+        "n_states": 1,
+        "rs": 80.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.05482426880451506,
+        "sigma_total": 0.05482426880451506,
+        "tier": "nest4",
+        "z": 3.8089204685441467
+      },
+      {
+        "delta_e": -0.15018463280232197,
+        "energy_crystal": -41.77387074154192,
+        "energy_liquid": -41.6236861087396,
+        "n_max": 3,
+        "n_states": 1,
+        "rs": 82.5,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.036681555622776904,
+        "sigma_total": 0.036681555622776904,
+        "tier": "nest4",
+        "z": 4.094281996837313
+      },
+      {
+        "delta_e": -0.19138123039971333,
+        "energy_crystal": -43.118849992454564,
+        "energy_liquid": -42.92746876205485,
+        "n_max": 3,
+        "n_states": 1,
+        "rs": 85.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.03982491599207044,
+        "sigma_total": 0.03982491599207044,
+        "tier": "nest4",
+        "z": 4.805565200384085
+      },
+      {
+        "delta_e": -0.21235706872961657,
+        "energy_crystal": -44.457185932439515,
+        "energy_liquid": -44.2448288637099,
+        "n_max": 3,
+        "n_states": 1,
+        "rs": 87.5,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.029470703093327527,
+        "sigma_total": 0.029470703093327527,
+        "tier": "nest4",
+        "z": 7.2057007957063774
+      },
+      {
+        "delta_e": -0.36366143813531693,
+        "energy_crystal": -45.76428175710994,
+        "energy_liquid": -45.400620318974624,
+        "n_max": 3,
+        "n_states": 1,
+        "rs": 90.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.03034610521302522,
+        "sigma_total": 0.03034610521302522,
+        "tier": "nest4",
+        "z": 11.983792832143262
+      }
+    ],
+    "nest_rows": [
+      {
+        "delta_e": 0.11654558768528389,
+        "energy_crystal": -14.109498658499422,
+        "energy_liquid": -14.226044246184706,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 30.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.05256501383634711,
+        "sigma_total": 0.05256501383634711,
+        "tier": "nest",
+        "z": 2.2171703035812036
+      },
+      {
+        "delta_e": 0.0930452064190046,
+        "energy_crystal": -15.42900900333821,
+        "energy_liquid": -15.522054209757215,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 32.5,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.032987593059469314,
+        "sigma_total": 0.032987593059469314,
+        "tier": "nest",
+        "z": 2.8206121692863353
+      },
+      {
+        "delta_e": 0.08987722664855369,
+        "energy_crystal": -16.721945319176896,
+        "energy_liquid": -16.81182254582545,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 35.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.02961772828270458,
+        "sigma_total": 0.02961772828270458,
+        "tier": "nest",
+        "z": 3.0345752986409136
+      },
+      {
+        "delta_e": 0.07840794995157196,
+        "energy_crystal": -18.04037109850141,
+        "energy_liquid": -18.118779048452982,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 37.5,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.03643021414302217,
+        "sigma_total": 0.03643021414302217,
+        "tier": "nest",
+        "z": 2.1522780416208502
+      },
+      {
+        "delta_e": 0.08672889801321304,
+        "energy_crystal": -19.24252448931356,
+        "energy_liquid": -19.329253387326773,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 40.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.045476651591938706,
+        "sigma_total": 0.045476651591938706,
+        "tier": "nest",
+        "z": 1.9071082627505231
+      },
+      {
+        "delta_e": -0.047180365669923674,
+        "energy_crystal": -20.696415872130963,
+        "energy_liquid": -20.64923550646104,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 42.5,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.026205566241215398,
+        "sigma_total": 0.026205566241215398,
+        "tier": "nest",
+        "z": 1.800394818247418
+      },
+      {
+        "delta_e": -0.016802684854233974,
+        "energy_crystal": -21.984614316076893,
+        "energy_liquid": -21.96781163122266,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 45.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.03750504463576132,
+        "sigma_total": 0.03750504463576132,
+        "tier": "nest",
+        "z": 0.4480113280071262
+      },
+      {
+        "delta_e": -0.06579386859306169,
+        "energy_crystal": -23.308637666875658,
+        "energy_liquid": -23.242843798282596,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 47.5,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.028546730349247297,
+        "sigma_total": 0.028546730349247297,
+        "tier": "nest",
+        "z": 2.304777737699705
+      },
+      {
+        "delta_e": -0.019327382705512264,
+        "energy_crystal": -24.615970338063736,
+        "energy_liquid": -24.596642955358224,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 50.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.03004856503426265,
+        "sigma_total": 0.03004856503426265,
+        "tier": "nest",
+        "z": 0.6432048480010397
+      },
+      {
+        "delta_e": -0.04613977177266548,
+        "energy_crystal": -25.955573687708004,
+        "energy_liquid": -25.909433915935338,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 52.5,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.032437721168707884,
+        "sigma_total": 0.032437721168707884,
+        "tier": "nest",
+        "z": 1.4224110113251647
+      },
+      {
+        "delta_e": -0.12430299003685974,
+        "energy_crystal": -27.24419498068199,
+        "energy_liquid": -27.11989199064513,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 55.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.0335532602720302,
+        "sigma_total": 0.0335532602720302,
+        "tier": "nest",
+        "z": 3.70464714990686
+      },
+      {
+        "delta_e": -0.12633715391167044,
+        "energy_crystal": -29.921425326559195,
+        "energy_liquid": -29.795088172647525,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 60.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.028370627538201874,
+        "sigma_total": 0.028370627538201874,
+        "tier": "nest",
+        "z": 4.453096913050436
+      },
+      {
+        "delta_e": -0.17006931066012498,
+        "energy_crystal": -32.55871290246506,
+        "energy_liquid": -32.388643591804936,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 65.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.026218325977256745,
+        "sigma_total": 0.026218325977256745,
+        "tier": "nest",
+        "z": 6.486657874635196
+      },
+      {
+        "delta_e": -0.14751735683216793,
+        "energy_crystal": -35.19907324606254,
+        "energy_liquid": -35.05155588923037,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 70.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.025905983516336308,
+        "sigma_total": 0.025905983516336308,
+        "tier": "nest",
+        "z": 5.694335315976076
+      },
+      {
+        "delta_e": -0.1869224425338487,
+        "energy_crystal": -37.85810812545393,
+        "energy_liquid": -37.67118568292008,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 75.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.03234108595825075,
+        "sigma_total": 0.03234108595825075,
+        "tier": "nest",
+        "z": 5.77972065548905
+      },
+      {
+        "delta_e": -0.20235136828041078,
+        "energy_crystal": -39.16776169803392,
+        "energy_liquid": -38.96541032975351,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 77.5,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.03712783085964753,
+        "sigma_total": 0.03712783085964753,
+        "tier": "nest",
+        "z": 5.4501263229018
+      },
+      {
+        "delta_e": -0.24984407383190899,
+        "energy_crystal": -40.48615465741389,
+        "energy_liquid": -40.23631058358198,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 80.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.03984021248847034,
+        "sigma_total": 0.03984021248847034,
+        "tier": "nest",
+        "z": 6.271153144682982
+      },
+      {
+        "delta_e": -0.21390935701021618,
+        "energy_crystal": -41.837595465749814,
+        "energy_liquid": -41.6236861087396,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 82.5,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.027981609793019977,
+        "sigma_total": 0.027981609793019977,
+        "tier": "nest",
+        "z": 7.644640840627259
+      },
+      {
+        "delta_e": -0.23470190324164264,
+        "energy_crystal": -43.16217066529649,
+        "energy_liquid": -42.92746876205485,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 85.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.040939075479944,
+        "sigma_total": 0.040939075479944,
+        "tier": "nest",
+        "z": 5.732955629557947
+      },
+      {
+        "delta_e": -0.23300653368621482,
+        "energy_crystal": -44.47783539739611,
+        "energy_liquid": -44.2448288637099,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 87.5,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.029656075203088973,
+        "sigma_total": 0.029656075203088973,
+        "tier": "nest",
+        "z": 7.856957877620465
+      },
+      {
+        "delta_e": -0.361536256775004,
+        "energy_crystal": -45.76215657574963,
+        "energy_liquid": -45.400620318974624,
+        "n_max": 2,
+        "n_states": 1,
+        "rs": 90.0,
+        "seed_ids": [
+          "cry0"
+        ],
+        "sigma_init": 0.0,
+        "sigma_mc": 0.048624425910178314,
+        "sigma_total": 0.048624425910178314,
+        "tier": "nest",
+        "z": 7.435280725840413
+      }
+    ]
+  },
+  "crystal_widths": [
+    0
+  ],
+  "figure_stamp": "QUICK\nnot publication quality",
+  "figures": [
+    "figures\\figure_construction\\phase_competition\\N36__llrot__quick__l01\\vmc_energy_phase_competition.png"
+  ],
+  "l0_grid": false,
+  "ladder": {
+    "e_cry": [
+      -0.4889280706162572,
+      -1.8292976664410192,
+      -4.640869587830405,
+      -10.353346749239499,
+      -16.185930622789552,
+      -22.145939422489985,
+      -28.06034236567362,
+      -34.06512707774049,
+      -46.07318254131383,
+      -58.124544181461815
+    ],
+    "e_liq": [
+      -0.789800743621061,
+      -2.1059542841305134,
+      -4.8437491282230924,
+      -10.447632297539291,
+      -16.270208391773014,
+      -22.02545363603067,
+      -27.98044854334052,
+      -33.90774548727596,
+      -45.82922976270484,
+      -57.893876931450876
+    ],
+    "l0": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rs": [
+      2.828427124746,
+      5.656854249492,
+      11.313708498985,
+      22.62741699797,
+      33.941125496954,
+      45.254833995939,
+      56.568542494924,
+      67.882250993909,
+      90.509667991878,
+      113.137084989848
+    ],
+    "s_cry": [
+      0.007896310511561375,
+      0.01130100591993281,
+      0.010785932331782508,
+      0.023610016095189288,
+      0.03280094523294072,
+      0.025345172272335063,
+      0.017007398640772265,
+      0.016901492955746684,
+      0.016280467933282926,
+      0.016785685738462328
+    ],
+    "s_liq": [
+      0.002582399034744812,
+      0.0049178211753367305,
+      0.00970420905582122,
+      0.01280191912881058,
+      0.01884591183707975,
+      0.01992277277484047,
+      0.028335194532546848,
+      0.023310275775771033,
+      0.04547881857794339,
+      0.02946301417828555
+    ]
+  },
+  "legacy_json_reads": [],
+  "point_selection": {
+    "competition_tiers": {
+      "conv": [
+        25.0,
+        27.5,
+        30.0,
+        32.5,
+        35.0,
+        37.5,
+        40.0,
+        42.5,
+        45.0,
+        47.5,
+        50.0,
+        52.5,
+        55.0,
+        60.0,
+        65.0,
+        70.0,
+        75.0,
+        77.5,
+        80.0,
+        85.0,
+        90.0
+      ],
+      "nest": [
+        30.0,
+        32.5,
+        35.0,
+        37.5,
+        40.0,
+        42.5,
+        45.0,
+        47.5,
+        50.0,
+        52.5,
+        55.0,
+        60.0,
+        65.0,
+        70.0,
+        75.0,
+        77.5,
+        80.0,
+        82.5,
+        85.0,
+        87.5,
+        90.0
+      ],
+      "nest4": [
+        70.0,
+        75.0,
+        77.5,
+        80.0,
+        82.5,
+        85.0,
+        87.5,
+        90.0
+      ]
+    },
+    "delta_e_window": [
+      24.0,
+      91.0
+    ],
+    "historical_tiers": {
+      "conv": [
+        40.0,
+        42.5,
+        45.0,
+        47.5,
+        50.0,
+        52.5,
+        55.0,
+        65.0,
+        75.0,
+        77.5,
+        80.0,
+        85.0,
+        90.0
+      ],
+      "nest": [
+        55.0,
+        65.0,
+        75.0,
+        77.5,
+        80.0,
+        85.0,
+        90.0
+      ],
+      "nest4": [
+        75.0,
+        80.0
+      ]
+    },
+    "ladder_kappa": [
+      2.0,
+      4.0,
+      8.0,
+      16.0,
+      24.0,
+      32.0,
+      40.0,
+      48.0,
+      64.0,
+      80.0
+    ],
+    "source": "the historical figure's own scan grids, EXTENDED -- see historical_tiers for the original selection and the module comment on TIER_RS for what was added and why.  The ladder couplings are the original's, unchanged.",
+    "tier_nmax": {
+      "conv": 1,
+      "nest": 2,
+      "nest4": 3
+    }
+  },
+  "quality": "QUICK / not publication quality",
+  "recipe": "examples/figure_construction/phase_competition.py",
+  "run_metadata_schema": "figure_construction/phase_competition/1",
+  "state_of_the_historical_ladder": "the historical ladder is the GAUSSIAN crystal; this one is the implemented ll_rotation ansatz on the same couplings.  Different wavefunction families -- see DIVERGENCE_fig06_crystal.md.  The lower panel is liquid-versus-crystal WITHIN this recipe, which is the comparison phase competition needs.",
+  "timestamp": "2026-10-03T23:31:41",
+  "why_recomputed": "the historical delta_E points came from LL-rotation crystal records produced with the reversed complex conjugation at vmc/sr.py:219, which makes the first shell uniaxial.  Every energy here is a VMC run this recipe started; no legacy JSON is read.",
+  "wigner_vmc_version": "0.1.0"
+}

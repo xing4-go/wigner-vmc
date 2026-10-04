@@ -1,0 +1,624 @@
+{
+  "N": 36,
+  "available_sources": [
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs75__crystal_rs75__llrot_nmax1__quick",
+      "nmax": 1,
+      "phase": "crystal",
+      "post_projection_fix": false,
+      "rs": 75.0
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs75__crystal_rs75__llrot_nmax3__quick",
+      "nmax": 3,
+      "phase": "crystal",
+      "post_projection_fix": false,
+      "rs": 75.0
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs75__crystal_rs75__llrot_nmax2__quick",
+      "nmax": 2,
+      "phase": "crystal",
+      "post_projection_fix": false,
+      "rs": 75.0
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.65685__crystal_rs90.5097__llrot_nmax1__quick",
+      "nmax": 1,
+      "phase": "crystal",
+      "post_projection_fix": false,
+      "rs": 90.50966799187809
+    },
+    {
+      "budget": "reproduction",
+      "directory": "results\\figure_construction\\structure_slice",
+      "nmax": 1,
+      "phase": "crystal",
+      "post_projection_fix": false,
+      "rs": 90.50966799187809
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax1__quick",
+      "nmax": 1,
+      "phase": "crystal",
+      "post_projection_fix": true,
+      "rs": 90.51
+    },
+    {
+      "budget": "reproduction",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax1__reproduction",
+      "nmax": 1,
+      "phase": "crystal",
+      "post_projection_fix": true,
+      "rs": 90.51
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax3__quick",
+      "nmax": 3,
+      "phase": "crystal",
+      "post_projection_fix": true,
+      "rs": 90.51
+    },
+    {
+      "budget": "reproduction",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax3__reproduction",
+      "nmax": 3,
+      "phase": "crystal",
+      "post_projection_fix": true,
+      "rs": 90.51
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax2__quick",
+      "nmax": 2,
+      "phase": "crystal",
+      "post_projection_fix": true,
+      "rs": 90.51
+    },
+    {
+      "budget": "reproduction",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax2__reproduction",
+      "nmax": 2,
+      "phase": "crystal",
+      "post_projection_fix": true,
+      "rs": 90.51
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs50__crystal_rs100__llrot_nmax2__quick",
+      "nmax": 2,
+      "phase": "crystal",
+      "post_projection_fix": false,
+      "rs": 100.0
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs10__crystal_rs100__llrot_nmax2__quick",
+      "nmax": 2,
+      "phase": "crystal",
+      "post_projection_fix": true,
+      "rs": 100.0
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax1__quick",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": true,
+      "rs": 5.567
+    },
+    {
+      "budget": "reproduction",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax1__reproduction",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": true,
+      "rs": 5.567
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax3__quick",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": true,
+      "rs": 5.567
+    },
+    {
+      "budget": "reproduction",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax3__reproduction",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": true,
+      "rs": 5.567
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax2__quick",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": true,
+      "rs": 5.567
+    },
+    {
+      "budget": "reproduction",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax2__reproduction",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": true,
+      "rs": 5.567
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.65685__crystal_rs90.5097__llrot_nmax1__quick",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": false,
+      "rs": 5.656854249492381
+    },
+    {
+      "budget": "reproduction",
+      "directory": "results\\figure_construction\\structure_slice",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": false,
+      "rs": 5.656854249492381
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs10__crystal_rs100__llrot_nmax2__quick",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": true,
+      "rs": 10.0
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs50__crystal_rs100__llrot_nmax2__quick",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": false,
+      "rs": 50.0
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs75__crystal_rs75__llrot_nmax1__quick",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": false,
+      "rs": 75.0
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs75__crystal_rs75__llrot_nmax3__quick",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": false,
+      "rs": 75.0
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs75__crystal_rs75__llrot_nmax2__quick",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": false,
+      "rs": 75.0
+    }
+  ],
+  "classical_curves_drawn": false,
+  "crystal_cut_diagnostics": {
+    "rs100": {
+      "direction_deg": 30.00000000000001,
+      "max_perpendicular_residual": 4.440892098500626e-16,
+      "mirror_max_abs_gap": 0.0,
+      "mirror_pairs_checked": 8,
+      "n_points": 8,
+      "n_source_vectors": 294
+    }
+  },
+  "crystal_direction": {
+    "angle_deg_in_torus_frame": 30.00000000000001,
+    "choice": "bragg",
+    "collinear_tolerance": 1e-09,
+    "equivalents": "the six first-star Bragg directions +/-30, +/-90, +/-150 deg are one orbit of the crystal's point group, so they are the same cut up to measurement noise; G1+G2 is the representative the rotation selects.",
+    "not_interpolated": "every point on the cut is a stored momentum exactly on the axis; no momentum is projected onto the axis.",
+    "torus_A1": [
+      2.693547374177197,
+      0.0
+    ],
+    "torus_A2": [
+      1.3467736870885985,
+      2.3326804523343214
+    ],
+    "torus_G1": [
+      0.38878007538905357,
+      -0.2244622811814331
+    ],
+    "torus_G2": [
+      -0.0,
+      0.4489245623628662
+    ],
+    "unit_vector_in_torus_frame": [
+      0.8660254037844386,
+      0.5000000000000001
+    ],
+    "why": "the paper's lattice vectors sit at -30/+30 deg (A1 = [sqrt(3)/2, -1/2] a in QuantumHallVMC); this package's Torus puts A1 along (1,0).  The frames differ by a 30 deg rotation, so the paper's x = (1,0) is the direction of G1+G2 here -- a reciprocal-lattice (Bragg) direction, which is why a cut along it passes through Q_WC.  The torus's own first Cartesian axis is 30 deg away and its momenta never reach Q_WC."
+  },
+  "crystal_drawn_as": "markers only -- eight collinear points on a single branch, spaced by a whole supercell reciprocal vector; a line between them would assert a dispersion at q's that were not measured",
+  "crystal_nmax": 2,
+  "figure_stamp": "NOT PUBLICATION QUALITY\nsource budget: quick",
+  "figures": [
+    "figures\\figure_construction\\magnetoplasmon\\rs10__100\\magnetoplasmon.png"
+  ],
+  "formulas": {
+    "Omega_in_units": "Omega/(hbar omega_c) = q^2/(2 S(q)), q in 1/l_B",
+    "SMA": "Omega(q) = hbar^2 q^2 / (2 m S(q))",
+    "classical_in_units": "omega_mp/(hbar omega_c) = sqrt(1 + kappa q); kappa = e^2/(4 pi eps0 l_B hbar omega_c) per physics/hamiltonian.py",
+    "classical_magnetoplasmon": "omega_mp^2 = omega_c^2 + (2 pi n e^2/m) q",
+    "x_axis_conversion": "x = q l_B sqrt(2 pi / nu) from n = nu/(2 pi l_B^2)"
+  },
+  "liquid_shell_diagnostics": {
+    "rs10": {
+      "max_shell_spread_rel": 0.4559692714869041,
+      "max_within_shell_q_spread": 8.881784197001252e-16,
+      "n_shells": 30,
+      "n_vectors_averaged": 294,
+      "order_gap_max_rel": 0.026838182213623312,
+      "order_gap_rms_rel": 0.009329234093414492
+    }
+  },
+  "nu": 1.0,
+  "old_vs_new": {
+    "rs10": {
+      "max_omega_band_rel": 0.5341685469485983,
+      "max_rel_change_Omega": 0.026136720155620293,
+      "max_rel_order_gap": 0.026838182213623312,
+      "max_shell_directional_spread_rel": 0.4559692714869041,
+      "n_new_points": 30,
+      "n_old_points": 294,
+      "n_shells": 30,
+      "note": "the change is the shell mean of S followed by q^2/(2S); the old curve averaged q^2/(2S) over the same shells by plotting them all.  Order gap = <q^2/(2S)> - q^2/(2<S>).",
+      "phase": "liquid",
+      "rms_omega_band_rel": 0.23551339901549778,
+      "rms_rel_change_Omega": 0.009156872145371454,
+      "rms_rel_order_gap": 0.009329234093414492,
+      "rs": 10.0,
+      "shells_mixing_directions": 30
+    },
+    "rs100": {
+      "direction_deg": 30.00000000000001,
+      "directions_mixed_at_the_new_branch": [
+        {
+          "Omega_max": 6.485676545780202,
+          "Omega_min": 5.501301625823258,
+          "S_max": 0.018316870842591905,
+          "S_min": 0.015536795681231988,
+          "directions_deg": [
+            -150.0,
+            -90.0,
+            -30.0,
+            30.0,
+            90.0,
+            150.0
+          ],
+          "kept_on_axis": true,
+          "n_momenta_sharing_this_q": 6,
+          "n_off_axis_directions": 5,
+          "omega_spread_rel": 0.16092115260481218,
+          "q": 0.4489245623628662
+        },
+        {
+          "Omega_max": 6.863778385351381,
+          "Omega_min": 6.338486416898777,
+          "S_max": 0.06359034300535578,
+          "S_min": 0.058723709122894034,
+          "directions_deg": [
+            -150.0,
+            -90.0,
+            -30.0,
+            30.0,
+            90.0,
+            150.0
+          ],
+          "kept_on_axis": true,
+          "n_momenta_sharing_this_q": 6,
+          "n_off_axis_directions": 5,
+          "omega_spread_rel": 0.07949234926344434,
+          "q": 0.8978491247257324
+        },
+        {
+          "Omega_max": 7.417769435742348,
+          "Omega_min": 5.964834288359377,
+          "S_max": 0.15204105232008902,
+          "S_min": 0.12226043017018492,
+          "directions_deg": [
+            -150.0,
+            -90.0,
+            -30.0,
+            30.0,
+            90.0,
+            150.0
+          ],
+          "kept_on_axis": true,
+          "n_momenta_sharing_this_q": 6,
+          "n_off_axis_directions": 5,
+          "omega_spread_rel": 0.21656866852176596,
+          "q": 1.3467736870885987
+        },
+        {
+          "Omega_max": 7.300467192196473,
+          "Omega_min": 6.329602135540361,
+          "S_max": 0.2547183957248661,
+          "S_min": 0.22084423627913718,
+          "directions_deg": [
+            -150.0,
+            -90.0,
+            -30.0,
+            30.0,
+            90.0,
+            150.0
+          ],
+          "kept_on_axis": true,
+          "n_momenta_sharing_this_q": 6,
+          "n_off_axis_directions": 5,
+          "omega_spread_rel": 0.14123286542542396,
+          "q": 1.7956982494514648
+        },
+        {
+          "Omega_max": 6.2434337316598665,
+          "Omega_min": 5.5897211360444485,
+          "S_max": 0.4506782578855656,
+          "S_min": 0.4034904336189529,
+          "directions_deg": [
+            -150.0,
+            -90.0,
+            -30.0,
+            30.0,
+            90.0,
+            150.0
+          ],
+          "kept_on_axis": true,
+          "n_momenta_sharing_this_q": 6,
+          "n_off_axis_directions": 5,
+          "omega_spread_rel": 0.10985282230955895,
+          "q": 2.244622811814331
+        },
+        {
+          "Omega_max": 0.32386322638355697,
+          "Omega_min": 0.3039336753990861,
+          "S_max": 11.935494557176483,
+          "S_min": 11.201020779593565,
+          "directions_deg": [
+            -150.0,
+            -90.0,
+            -30.0,
+            30.0,
+            90.0,
+            150.0
+          ],
+          "kept_on_axis": true,
+          "n_momenta_sharing_this_q": 6,
+          "n_off_axis_directions": 5,
+          "omega_spread_rel": 0.06382251653909114,
+          "q": 2.6935473741771974
+        },
+        {
+          "Omega_max": 9.059077724048773,
+          "Omega_min": 5.104521400669616,
+          "S_max": 0.9672924351582133,
+          "S_min": 0.5450405754730826,
+          "directions_deg": [
+            -171.787,
+            -150.0,
+            -128.213,
+            -111.787,
+            -90.0,
+            -68.213,
+            -51.787,
+            -30.0,
+            -8.213,
+            8.213,
+            30.0,
+            51.787,
+            68.213,
+            90.0,
+            111.787,
+            128.213,
+            150.0,
+            171.787
+          ],
+          "kept_on_axis": true,
+          "n_momenta_sharing_this_q": 18,
+          "n_off_axis_directions": 17,
+          "omega_spread_rel": 0.61856542217255,
+          "q": 3.142471936540063
+        },
+        {
+          "Omega_max": 10.42343933759313,
+          "Omega_min": 9.051002314337435,
+          "S_max": 0.7125248875420493,
+          "S_min": 0.6187079137024325,
+          "directions_deg": [
+            -150.0,
+            -90.0,
+            -30.0,
+            30.0,
+            90.0,
+            150.0
+          ],
+          "kept_on_axis": true,
+          "n_momenta_sharing_this_q": 6,
+          "n_off_axis_directions": 5,
+          "omega_spread_rel": 0.1442719998675951,
+          "q": 3.5913964989029297
+        }
+      ],
+      "max_rel_spread_removed": 0.61856542217255,
+      "n_new_points": 8,
+      "n_old_points": 294,
+      "n_shells": 30,
+      "note": "the old curve plotted every direction sharing a |q|; the corrected curve keeps only the momenta collinear with the chosen axis and does not average them.",
+      "phase": "crystal",
+      "rs": 100.0,
+      "shells_mixing_directions": 30
+    }
+  },
+  "post_processing_only": true,
+  "q_wc": {
+    "from": "triangular Wigner crystal at nu = 1: a^2 = 4 pi l_B^2/sqrt(3), Q_WC = 4 pi/(sqrt(3) a)",
+    "value": 2.6935473741771965,
+    "x": 6.751722007170647
+  },
+  "recipe": "examples/figure_construction/magnetoplasmon.py",
+  "reduction": {
+    "crystal": "one direction, no averaging: S_C(q) = S_C(q dhat) on the momenta collinear with the chosen axis.  A Wigner crystal is not isotropic, so a shell mean would mix distinct modes and destroy the Bragg peak.",
+    "liquid": "rotation average: Sbar(q) = <S(q-vector)> over the allowed momenta with |q-vector| = q, THEN Omega = q^2/(2 Sbar).  Averaged on S, not on 1/S -- the other order is a different number wherever a shell has directional spread.",
+    "order_of_operations": "S(q-vector) -> S(q) -> q^2/(2 S(q)); never <q^2/(2 S(q-vector))>",
+    "paper_fig4_caption": "\"The data are rotation averaged in the liquid phase and taken along the x axis in the crystal phase.\""
+  },
+  "roton": {
+    "rs100": {
+      "Omega_roton": 0.3238632263835571,
+      "deeper_than_imbalance": true,
+      "depth_below_neighbours": 5.919570505276309,
+      "distance_from_q_wc": 8.881784197001252e-16,
+      "distance_in_x": 2.6645352591003757e-15,
+      "finite_size_caveat": "a finite-N Bragg peak grows with N, so a minimum driven by S's divergence at Q_WC is not a thermodynamic collective mode; it is reported as a roton-like minimum of the SMA dispersion",
+      "found": true,
+      "n_minima": 2,
+      "n_points_at_roton": 1,
+      "n_shells": 8,
+      "neighbour_imbalance": 2.8156439923889067,
+      "neighbour_shell_scatter": 0.0,
+      "neighbour_spacing": 0.4489245623628655,
+      "other_minima_q": [
+        1.3467736870885987
+      ],
+      "other_minima_x": [
+        3.375861003585325
+      ],
+      "q_roton": 2.6935473741771974,
+      "q_wc": 2.6935473741771965,
+      "reason": "roton-like minimum in the SMA dispersion",
+      "reduction": "directional",
+      "resolved": true,
+      "rs": 100.0,
+      "shell_points": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "shell_spread": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spread_at_roton": 0.0,
+      "x_roton": 6.75172200717065,
+      "x_wc": 6.751722007170647
+    }
+  },
+  "rs_c_recorded_not_used": 47.0,
+  "run_metadata_schema": "figure_construction/magnetoplasmon/2",
+  "s_q_definition": "read unchanged from structure_slice's structure_factor.npz; the reduction selects and means stored samples and nothing else -- no second estimator, no smoothing, no interpolation",
+  "s_q_regenerated": false,
+  "shell_tolerance": 1e-09,
+  "small_q_diagnostic": [
+    {
+      "Omega_SMA": 1.885125839390898,
+      "S_q_min": 0.053453530390790316,
+      "crystal_direction_deg": null,
+      "is_a_q_to_zero_limit": false,
+      "n_points_in_curve": 30,
+      "omega_magnetoplasmon": 2.043128978522858,
+      "phase": "liquid",
+      "q_min": 0.4489245623628662,
+      "q_min_over_sqrt_n": 1.1252870011951082,
+      "reduction": "shell-mean",
+      "relative_difference": -0.07733390343579445,
+      "rs": 10.0,
+      "shell_S_max": 0.0616226085948202,
+      "shell_S_min": 0.049120405769078536,
+      "shell_multiplicity": 6,
+      "shell_spread_rel": 0.23388918812920376,
+      "source": "results\\figure_construction\\structure_slice_liquid_rs10__crystal_rs100__llrot_nmax2__quick",
+      "statement": "This is a finite-q diagnostic, not a demonstrated q->0 limit.",
+      "x_min": 1.1252870011951082
+    },
+    {
+      "Omega_SMA": 6.485676545780204,
+      "S_q_min": 0.015536795681231988,
+      "crystal_direction_deg": 30.00000000000001,
+      "is_a_q_to_zero_limit": false,
+      "n_points_in_curve": 8,
+      "omega_magnetoplasmon": 5.722216373818679,
+      "phase": "crystal",
+      "q_min": 0.4489245623628662,
+      "q_min_over_sqrt_n": 1.1252870011951082,
+      "reduction": "directional",
+      "relative_difference": 0.1334203605887129,
+      "rs": 100.0,
+      "shell_S_max": 0.015536795681231988,
+      "shell_S_min": 0.015536795681231988,
+      "shell_multiplicity": 1,
+      "shell_spread_rel": 0.0,
+      "source": "results\\figure_construction\\structure_slice_liquid_rs10__crystal_rs100__llrot_nmax2__quick",
+      "statement": "This is a finite-q diagnostic, not a demonstrated q->0 limit.",
+      "x_min": 1.1252870011951082
+    }
+  ],
+  "small_q_statement": "Every q_min here is the finite torus's smallest allowed momentum, not q -> 0.  This is a finite-q diagnostic, not a demonstrated q->0 limit, and no Kohn-theorem convergence is claimed from it.",
+  "source_budget": "quick",
+  "source_budget_requested": "quick",
+  "sources": [
+    {
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs10__crystal_rs100__llrot_nmax2__quick",
+      "note": "structure_slice liquid r_s = 10, nmax = 1, budget quick",
+      "phase": "liquid",
+      "reduction": "shell-mean",
+      "rs": 10.0,
+      "structure_factor_npz": "results\\figure_construction\\structure_slice_liquid_rs10__crystal_rs100__llrot_nmax2__quick\\structure_factor.npz",
+      "structure_slice_budget": "quick",
+      "structure_slice_nmax": 1,
+      "structure_slice_rs": 10.0,
+      "written": "2026-10-03T19:21:09"
+    },
+    {
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs10__crystal_rs100__llrot_nmax2__quick",
+      "note": "structure_slice crystal r_s = 100, nmax = 2, budget quick",
+      "phase": "crystal",
+      "reduction": "directional",
+      "rs": 100.0,
+      "structure_factor_npz": "results\\figure_construction\\structure_slice_liquid_rs10__crystal_rs100__llrot_nmax2__quick\\structure_factor.npz",
+      "structure_slice_budget": "quick",
+      "structure_slice_nmax": 2,
+      "structure_slice_rs": 100.0,
+      "written": "2026-10-03T19:21:09"
+    }
+  ],
+  "sr_started": false,
+  "timestamp": "2026-10-04T14:36:10",
+  "units": {
+    "energy": "hbar*omega_c = 1",
+    "length": "l_B = 1",
+    "q": "1/l_B",
+    "x_axis": "q/sqrt(n)"
+  },
+  "vmc_started": false,
+  "wigner_vmc_version": "0.1.0"
+}

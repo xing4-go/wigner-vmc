@@ -1,0 +1,27 @@
+  using the cached E series (1100 points)
+
+  sequence sha1  e4ca8ade18ed1e7c   B7 recorded e4ca8ade18ed1e7c   SAME SERIES
+  n = 1100   (nans)
+
+  on ONE series, two estimators:
+    clean  statistics.tau_int(E, c=5.0)  tau =   27.1475  window 137
+    legacy _diag/mech.tau_int(E)         tau =   32.5464
+    ratio legacy/clean 1.1989   error-bar ratio 1.0949
+
+  the clean walk's own record:
+    E_tau                27.147547
+    E_err_naive (per/el) 0.006096720   recomputed 0.006096720
+    E_err       (per/el) 0.031765927
+    clean  predicts E_err/el 0.031765927
+    legacy predicts E_err/el 0.034781476
+
+  the frozen campaign reporter's row, the number B7 compared against:
+    legacy record E_tau            32.546443
+    legacy record E_err    (TOTAL) 1.252133121
+    legacy record E_err_naive(TOT) 0.219481914
+      ratio = 5.70495 = sqrt(32.546443) -> 5.70495
+      (legacy totals / ne = 0.006096720 per electron, the clean convention)
+
+  VERDICT: the legacy estimator reproduces the LEGACY record's E_tau (32.546443) on the clean series: True
+  => the two error bars differ by ESTIMATOR CONVENTION on an identical series,
+     not by any difference in the sampled configurations.

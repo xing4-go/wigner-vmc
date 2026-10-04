@@ -1,0 +1,36 @@
+lattice-vector sets
+  LL  (notebook _aiB)  n= 121  max|a|=14.997037   circular_lattice(LUMAX_LL, A1, A2)  PRIMITIVE
+  overlap (_lints8)    n=  13  max|a|=27.992165   circular_lattice(LUMAX, L1, L2)     SUPERCELL
+  Setup.ll_ac used by production: n=121  n=13 for the overlap set
+
+A2 -- first divergent layer vs legacy, 5 FIXED configurations (no sampling):
+config       production                 pre-fix wiring              rewired (max)
+--------------------------------------------------------------------------------
+R0           None                       Ops (padded orbitals)           9.817e-12
+R0+pert0     None                       Ops (padded orbitals)           3.730e-14
+R0+pert1     None                       Ops (padded orbitals)           9.871e-13
+R0+pert2     None                       Ops (padded orbitals)           6.063e-12
+R0+pert3     None                       Ops (padded orbitals)           6.899e-13
+
+layer (R0)                |legacy-production|       rel    |legacy-prefix|       rel
+------------------------------------------------------------------------------------
+Ops (padded orbitals)            9.930137e-16  4.42e-16       2.265059e+00  1.01e+00
+D  = psi_k(r_b)                  0.000000e+00  0.00e+00       1.516826e+00  1.08e+00
+D_inv                            0.000000e+00  0.00e+00       1.614115e+17  1.00e+00
+pi_x columns                     8.671119e-16  5.46e-16       1.601639e+00  1.01e+00
+pi^2 columns                     0.000000e+00  0.00e+00       1.516826e+00  1.08e+00
+T  (complex)                     9.816646e-12  3.58e-15       8.438459e+03  8.95e-01
+Re(T)                            9.549694e-12  3.48e-15       1.845684e+03  4.02e-01
+Im(T)                            2.273737e-12  3.47e-12       8.234138e+03  1.00e+00
+V                                0.000000e+00  0.00e+00       0.000000e+00  0.00e+00
+E_loc = T + kappa V              9.816646e-12  5.63e-15       8.438459e+03  9.39e-01
+
+scalars on R0 (TOTALS, not per particle)
+  legacy      T = -2745.476876-0.655752j   V =  18.890086   Im(T) = -6.557523e-01
+  production  T = -2745.476876-0.655752j   V =  18.890086   Im(T) = -6.557523e-01
+  pre-fix     T = -4591.160649-8234.794107j   V =  18.890086   Im(T) = -8.234794e+03
+  rewired     T = -2745.476876-0.655752j   V =  18.890086   Im(T) = -6.557523e-01
+
+worst |legacy - production| over all layers = 9.817e-12
+worst |legacy - rewired|    over all layers = 9.817e-12
+VERDICT: the production path MATCHES the frozen legacy engine at fixed configuration

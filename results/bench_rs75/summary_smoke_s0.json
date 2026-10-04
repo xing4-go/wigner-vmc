@@ -1,0 +1,27 @@
+{
+ "budget": "smoke",
+ "crystal": null,
+ "crystal_E": -30.406320978937003,
+ "crystal_err": 0.3037188270329195,
+ "delta_E_crystal": 4.646508101268772,
+ "delta_E_nested": 6.862093906940807,
+ "kappa": 53.03300858899106,
+ "liquid": null,
+ "liquid_E": -35.052829080205775,
+ "liquid_err": 0.14074108152470594,
+ "n_bands_B": 2,
+ "nested": null,
+ "nested_E": -28.19073517326497,
+ "nested_err": 0.35620081743775694,
+ "phase": "all",
+ "protocol": {
+  "meas_equil": 60,
+  "meas_sweeps": 200,
+  "sr_equil": 6,
+  "sr_snap": 1,
+  "sr_steps": 2,
+  "sr_sweeps": 20
+ },
+ "rs": 75.0,
+ "seed": 0
+}

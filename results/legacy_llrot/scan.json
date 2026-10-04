@@ -1,0 +1,631 @@
+{
+ "schema": "wigner_vmc_clean/results/scan",
+ "workflow": "llrot",
+ "written_utc": "2026-10-02T11:07:33+00:00",
+ "meta": {
+  "note": "delta_E points from the converged (120x400) and nested n_b=3 transition scan",
+  "source": "results/legacy_llrot/states.json (converted from _diag/part1/*.json)",
+  "sigma_convention": "sig_tot = hypot(hypot(sqrt(sum s_i^2)/n, s_liq), seed_std/sqrt(n)); legacy p1_report.py's convention",
+  "regression": {
+   "against": "_diag/energy_scan.json",
+   "common_points": 25,
+   "mismatches": 0,
+   "worst_abs_difference": 4.1885939161545593e-13,
+   "explained_differences": 3,
+   "unexplained_differences": 0,
+   "legacy_table_conflicts": [
+    {
+     "rs": 55.0,
+     "tier": "conv",
+     "p1_report_json": 0.018989336646304318,
+     "energy_scan_json": 0.01657441542640908,
+     "from_records": 0.01657441542640908
+    }
+   ],
+   "band_rows_not_in_legacy_pn_table": [
+    [
+     2,
+     "conv",
+     40.0
+    ],
+    [
+     2,
+     "conv",
+     42.5
+    ],
+    [
+     2,
+     "conv",
+     47.5
+    ],
+    [
+     2,
+     "conv",
+     52.5
+    ],
+    [
+     2,
+     "conv",
+     90.0
+    ],
+    [
+     3,
+     "nest",
+     55.0
+    ],
+    [
+     3,
+     "nest",
+     65.0
+    ],
+    [
+     3,
+     "nest",
+     85.0
+    ],
+    [
+     3,
+     "nest",
+     90.0
+    ],
+    [
+     4,
+     "nest4",
+     75.0
+    ],
+    [
+     4,
+     "nest4",
+     80.0
+    ]
+   ]
+  },
+  "caveats": {
+   "nest_sigma_init": "the nest tier's sigma_init understates the optimiser component: its five states are seeded from the five conv states of the SAME seed, so they are not five independent optimisations",
+   "nbar": "P_n / nbar_LL must not be compared across n_band: at n_b=2 nbar = P_1, at n_b=3 nbar = P_1 + 2*P_2, so the band counts are not the same quantity",
+   "window_rule": "a bracket is meaningful only WITHIN one truncation: n_b = n_max + 1, so the conv and nest tiers are different variational families that change sign at different r_s.  Brackets are keyed by tier and never merge; the nmax tier is excluded entirely because its states are fresh-L0 single-seed starts, not multi-start converged points"
+  }
+ },
+ "points": [
+  {
+   "rs": 40.0,
+   "tier": "conv",
+   "n_max": 1,
+   "n_states": 1,
+   "energy_crystal": -19.382447195310228,
+   "energy_liquid": -19.478266983030107,
+   "delta_e": 0.0958197877198792,
+   "sigma_mc": 0.013282799836363251,
+   "sigma_init": 0.0,
+   "sigma_total": 0.013282799836363251,
+   "z": 7.213824562616768,
+   "seed_ids": [
+    "cry_conv_rs40_nb2_s0"
+   ],
+   "caveats": []
+  },
+  {
+   "rs": 42.5,
+   "tier": "conv",
+   "n_max": 1,
+   "n_states": 1,
+   "energy_crystal": -20.70643531433596,
+   "energy_liquid": -20.768736373649617,
+   "delta_e": 0.0623010593136577,
+   "sigma_mc": 0.01168174231067808,
+   "sigma_init": 0.0,
+   "sigma_total": 0.01168174231067808,
+   "z": 5.333199248600902,
+   "seed_ids": [
+    "cry_conv_rs42.5_nb2_s0"
+   ],
+   "caveats": []
+  },
+  {
+   "rs": 45.0,
+   "tier": "conv",
+   "n_max": 1,
+   "n_states": 5,
+   "energy_crystal": -21.979236072996116,
+   "energy_liquid": -22.07446419566634,
+   "delta_e": 0.09522812267022474,
+   "sigma_mc": 0.009116577053761248,
+   "sigma_init": 0.008437922910480997,
+   "sigma_total": 0.012422178561765492,
+   "z": 7.665975995815223,
+   "seed_ids": [
+    "cry_conv_rs45_nb2_s0",
+    "cry_conv_rs45_nb2_s1",
+    "cry_conv_rs45_nb2_s2",
+    "cry_conv_rs45_nb2_s3",
+    "cry_conv_rs45_nb2_s4"
+   ],
+   "caveats": []
+  },
+  {
+   "rs": 45.0,
+   "tier": "nmax",
+   "n_max": 2,
+   "n_states": 1,
+   "energy_crystal": -21.99088382456227,
+   "energy_liquid": -22.07446419566634,
+   "delta_e": 0.08358037110406968,
+   "sigma_mc": 0.016310640992479572,
+   "sigma_init": 0.0,
+   "sigma_total": 0.016310640992479572,
+   "z": 5.1242848851008675,
+   "seed_ids": [
+    "cry_nmax_rs45_nb3_s0"
+   ],
+   "caveats": []
+  },
+  {
+   "rs": 47.5,
+   "tier": "conv",
+   "n_max": 1,
+   "n_states": 1,
+   "energy_crystal": -23.298503886444777,
+   "energy_liquid": -23.373743964836937,
+   "delta_e": 0.0752400783921594,
+   "sigma_mc": 0.018315451430183382,
+   "sigma_init": 0.0,
+   "sigma_total": 0.018315451430183382,
+   "z": 4.108011133603059,
+   "seed_ids": [
+    "cry_conv_rs47.5_nb2_s0"
+   ],
+   "caveats": []
+  },
+  {
+   "rs": 50.0,
+   "tier": "conv",
+   "n_max": 1,
+   "n_states": 5,
+   "energy_crystal": -24.58725386723794,
+   "energy_liquid": -24.673753751288746,
+   "delta_e": 0.08649988405080578,
+   "sigma_mc": 0.009842246851940049,
+   "sigma_init": 0.015589470616195701,
+   "sigma_total": 0.018436415518960105,
+   "z": 4.691795103112579,
+   "seed_ids": [
+    "cry_conv_rs50_nb2_s0",
+    "cry_conv_rs50_nb2_s1",
+    "cry_conv_rs50_nb2_s2",
+    "cry_conv_rs50_nb2_s3",
+    "cry_conv_rs50_nb2_s4"
+   ],
+   "caveats": []
+  },
+  {
+   "rs": 50.0,
+   "tier": "nmax",
+   "n_max": 2,
+   "n_states": 1,
+   "energy_crystal": -24.5516793708468,
+   "energy_liquid": -24.673753751288746,
+   "delta_e": 0.12207438044194774,
+   "sigma_mc": 0.012487435889840312,
+   "sigma_init": 0.0,
+   "sigma_total": 0.012487435889840312,
+   "z": 9.77577634983228,
+   "seed_ids": [
+    "cry_nmax_rs50_nb3_s0"
+   ],
+   "caveats": []
+  },
+  {
+   "rs": 52.5,
+   "tier": "conv",
+   "n_max": 1,
+   "n_states": 1,
+   "energy_crystal": -25.943040591907188,
+   "energy_liquid": -25.97555074204763,
+   "delta_e": 0.03251015014044256,
+   "sigma_mc": 0.016468247408112324,
+   "sigma_init": 0.0,
+   "sigma_total": 0.016468247408112324,
+   "z": 1.97411110816977,
+   "seed_ids": [
+    "cry_conv_rs52.5_nb2_s0"
+   ],
+   "caveats": []
+  },
+  {
+   "rs": 55.0,
+   "tier": "conv",
+   "n_max": 1,
+   "n_states": 5,
+   "energy_crystal": -27.224554967651954,
+   "energy_liquid": -27.28648895922431,
+   "delta_e": 0.06193399157235646,
+   "sigma_mc": 0.010861629789988303,
+   "sigma_init": 0.012519434693005349,
+   "sigma_total": 0.01657441542640908,
+   "z": 3.7367225316238337,
+   "seed_ids": [
+    "cry_conv_rs55_nb2_s0",
+    "cry_conv_rs55_nb2_s1",
+    "cry_conv_rs55_nb2_s2",
+    "cry_conv_rs55_nb2_s3",
+    "cry_conv_rs55_nb2_s4"
+   ],
+   "caveats": []
+  },
+  {
+   "rs": 55.0,
+   "tier": "nest",
+   "n_max": 2,
+   "n_states": 5,
+   "energy_crystal": -27.253861770195925,
+   "energy_liquid": -27.28648895922431,
+   "delta_e": 0.03262718902838557,
+   "sigma_mc": 0.012572856112932159,
+   "sigma_init": 0.007625063027986743,
+   "sigma_total": 0.014704363196591205,
+   "z": 2.218878069874476,
+   "seed_ids": [
+    "cry_nest_rs55_nb3_s0",
+    "cry_nest_rs55_nb3_s1",
+    "cry_nest_rs55_nb3_s2",
+    "cry_nest_rs55_nb3_s3",
+    "cry_nest_rs55_nb3_s4"
+   ],
+   "caveats": [
+    "the nest tier's sigma_init understates the optimiser component: its five states are seeded from the five conv states of the SAME seed, so they are not five independent optimisations"
+   ]
+  },
+  {
+   "rs": 65.0,
+   "tier": "conv",
+   "n_max": 1,
+   "n_states": 5,
+   "energy_crystal": -32.473626234875816,
+   "energy_liquid": -32.51032499513756,
+   "delta_e": 0.03669876026174279,
+   "sigma_mc": 0.013815486777665264,
+   "sigma_init": 0.006920480872360085,
+   "sigma_total": 0.015451884364327399,
+   "z": 2.3750346169083723,
+   "seed_ids": [
+    "cry_conv_rs65_nb2_s0",
+    "cry_conv_rs65_nb2_s1",
+    "cry_conv_rs65_nb2_s2",
+    "cry_conv_rs65_nb2_s3",
+    "cry_conv_rs65_nb2_s4"
+   ],
+   "caveats": []
+  },
+  {
+   "rs": 65.0,
+   "tier": "nest",
+   "n_max": 2,
+   "n_states": 5,
+   "energy_crystal": -32.513441129754355,
+   "energy_liquid": -32.51032499513756,
+   "delta_e": -0.0031161346167962733,
+   "sigma_mc": 0.015428544461483127,
+   "sigma_init": 0.007046093288174071,
+   "sigma_total": 0.016961350619146266,
+   "z": 0.1837197217819863,
+   "seed_ids": [
+    "cry_nest_rs65_nb3_s0",
+    "cry_nest_rs65_nb3_s1",
+    "cry_nest_rs65_nb3_s2",
+    "cry_nest_rs65_nb3_s3",
+    "cry_nest_rs65_nb3_s4"
+   ],
+   "caveats": [
+    "the nest tier's sigma_init understates the optimiser component: its five states are seeded from the five conv states of the SAME seed, so they are not five independent optimisations"
+   ]
+  },
+  {
+   "rs": 65.0,
+   "tier": "nmax",
+   "n_max": 2,
+   "n_states": 1,
+   "energy_crystal": -32.51735663629925,
+   "energy_liquid": -32.51032499513756,
+   "delta_e": -0.00703164116168864,
+   "sigma_mc": 0.015947529517823442,
+   "sigma_init": 0.0,
+   "sigma_total": 0.015947529517823442,
+   "z": 0.4409235395256591,
+   "seed_ids": [
+    "cry_nmax_rs65_nb3_s0"
+   ],
+   "caveats": []
+  },
+  {
+   "rs": 75.0,
+   "tier": "conv",
+   "n_max": 1,
+   "n_states": 5,
+   "energy_crystal": -37.770080244333364,
+   "energy_liquid": -37.75149595098596,
+   "delta_e": -0.01858429334740208,
+   "sigma_mc": 0.015506473950231456,
+   "sigma_init": 0.012377778204122784,
+   "sigma_total": 0.019840870133128328,
+   "z": 0.9366672541428444,
+   "seed_ids": [
+    "cry_conv_rs75_nb2_s0",
+    "cry_conv_rs75_nb2_s1",
+    "cry_conv_rs75_nb2_s2",
+    "cry_conv_rs75_nb2_s3",
+    "cry_conv_rs75_nb2_s4"
+   ],
+   "caveats": []
+  },
+  {
+   "rs": 75.0,
+   "tier": "nest",
+   "n_max": 2,
+   "n_states": 5,
+   "energy_crystal": -37.8098981195079,
+   "energy_liquid": -37.75149595098596,
+   "delta_e": -0.058402168521936915,
+   "sigma_mc": 0.01646325822385395,
+   "sigma_init": 0.008779680336059378,
+   "sigma_total": 0.018658018601895605,
+   "z": 3.130137758357868,
+   "seed_ids": [
+    "cry_nest_rs75_nb3_s0",
+    "cry_nest_rs75_nb3_s1",
+    "cry_nest_rs75_nb3_s2",
+    "cry_nest_rs75_nb3_s3",
+    "cry_nest_rs75_nb3_s4"
+   ],
+   "caveats": [
+    "the nest tier's sigma_init understates the optimiser component: its five states are seeded from the five conv states of the SAME seed, so they are not five independent optimisations"
+   ]
+  },
+  {
+   "rs": 75.0,
+   "tier": "nest4",
+   "n_max": 3,
+   "n_states": 5,
+   "energy_crystal": -37.79583779388787,
+   "energy_liquid": -37.75149595098596,
+   "delta_e": -0.04434184290190757,
+   "sigma_mc": 0.017171364852526953,
+   "sigma_init": 0.010190902768911648,
+   "sigma_total": 0.019967730720940952,
+   "z": 2.220675124359751,
+   "seed_ids": [
+    "cry_nest4_rs75_nb4_s0",
+    "cry_nest4_rs75_nb4_s1",
+    "cry_nest4_rs75_nb4_s2",
+    "cry_nest4_rs75_nb4_s3",
+    "cry_nest4_rs75_nb4_s4"
+   ],
+   "caveats": []
+  },
+  {
+   "rs": 77.5,
+   "tier": "conv",
+   "n_max": 1,
+   "n_states": 5,
+   "energy_crystal": -39.09964022371997,
+   "energy_liquid": -39.070762710429406,
+   "delta_e": -0.02887751329056698,
+   "sigma_mc": 0.015674894376949623,
+   "sigma_init": 0.02211558807246734,
+   "sigma_total": 0.027107223198247116,
+   "z": 1.0653069508216666,
+   "seed_ids": [
+    "cry_conv_rs77.5_nb2_s0",
+    "cry_conv_rs77.5_nb2_s1",
+    "cry_conv_rs77.5_nb2_s2",
+    "cry_conv_rs77.5_nb2_s3",
+    "cry_conv_rs77.5_nb2_s4"
+   ],
+   "caveats": []
+  },
+  {
+   "rs": 77.5,
+   "tier": "nest",
+   "n_max": 2,
+   "n_states": 5,
+   "energy_crystal": -39.115361970265596,
+   "energy_liquid": -39.070762710429406,
+   "delta_e": -0.04459925983618973,
+   "sigma_mc": 0.023321587593604903,
+   "sigma_init": 0.013258049015425395,
+   "sigma_total": 0.026826708921923473,
+   "z": 1.6624946416644524,
+   "seed_ids": [
+    "cry_nest_rs77.5_nb3_s0",
+    "cry_nest_rs77.5_nb3_s1",
+    "cry_nest_rs77.5_nb3_s2",
+    "cry_nest_rs77.5_nb3_s3",
+    "cry_nest_rs77.5_nb3_s4"
+   ],
+   "caveats": [
+    "the nest tier's sigma_init understates the optimiser component: its five states are seeded from the five conv states of the SAME seed, so they are not five independent optimisations"
+   ]
+  },
+  {
+   "rs": 80.0,
+   "tier": "conv",
+   "n_max": 1,
+   "n_states": 5,
+   "energy_crystal": -40.43027040663448,
+   "energy_liquid": -40.3908941597396,
+   "delta_e": -0.03937624689487507,
+   "sigma_mc": 0.018671985542875663,
+   "sigma_init": 0.013529005070258851,
+   "sigma_total": 0.023058122696881622,
+   "z": 1.707695262641668,
+   "seed_ids": [
+    "cry_conv_rs80_nb2_s0",
+    "cry_conv_rs80_nb2_s1",
+    "cry_conv_rs80_nb2_s2",
+    "cry_conv_rs80_nb2_s3",
+    "cry_conv_rs80_nb2_s4"
+   ],
+   "caveats": []
+  },
+  {
+   "rs": 80.0,
+   "tier": "nest",
+   "n_max": 2,
+   "n_states": 5,
+   "energy_crystal": -40.427529950313975,
+   "energy_liquid": -40.3908941597396,
+   "delta_e": -0.036635790574372606,
+   "sigma_mc": 0.02268385965356758,
+   "sigma_init": 0.012609333314525972,
+   "sigma_total": 0.02595289531862612,
+   "z": 1.4116263378167093,
+   "seed_ids": [
+    "cry_nest_rs80_nb3_s0",
+    "cry_nest_rs80_nb3_s1",
+    "cry_nest_rs80_nb3_s2",
+    "cry_nest_rs80_nb3_s3",
+    "cry_nest_rs80_nb3_s4"
+   ],
+   "caveats": [
+    "the nest tier's sigma_init understates the optimiser component: its five states are seeded from the five conv states of the SAME seed, so they are not five independent optimisations"
+   ]
+  },
+  {
+   "rs": 80.0,
+   "tier": "nest4",
+   "n_max": 3,
+   "n_states": 5,
+   "energy_crystal": -40.418716196146036,
+   "energy_liquid": -40.3908941597396,
+   "delta_e": -0.02782203640643388,
+   "sigma_mc": 0.028040083845329668,
+   "sigma_init": 0.02086436764914111,
+   "sigma_total": 0.034950939035334146,
+   "z": 0.7960311560815805,
+   "seed_ids": [
+    "cry_nest4_rs80_nb4_s0",
+    "cry_nest4_rs80_nb4_s1",
+    "cry_nest4_rs80_nb4_s2",
+    "cry_nest4_rs80_nb4_s3",
+    "cry_nest4_rs80_nb4_s4"
+   ],
+   "caveats": []
+  },
+  {
+   "rs": 85.0,
+   "tier": "conv",
+   "n_max": 1,
+   "n_states": 5,
+   "energy_crystal": -43.06596890579179,
+   "energy_liquid": -43.04617305720212,
+   "delta_e": -0.019795848589673426,
+   "sigma_mc": 0.02037419887162171,
+   "sigma_init": 0.00595201893547196,
+   "sigma_total": 0.02122579819626598,
+   "z": 0.9326315272871996,
+   "seed_ids": [
+    "cry_conv_rs85_nb2_s0",
+    "cry_conv_rs85_nb2_s1",
+    "cry_conv_rs85_nb2_s2",
+    "cry_conv_rs85_nb2_s3",
+    "cry_conv_rs85_nb2_s4"
+   ],
+   "caveats": []
+  },
+  {
+   "rs": 85.0,
+   "tier": "nest",
+   "n_max": 2,
+   "n_states": 5,
+   "energy_crystal": -43.11525813849984,
+   "energy_liquid": -43.04617305720212,
+   "delta_e": -0.06908508129772173,
+   "sigma_mc": 0.017845510019298735,
+   "sigma_init": 0.014851903463529178,
+   "sigma_total": 0.02321726220592948,
+   "z": 2.9755912081691536,
+   "seed_ids": [
+    "cry_nest_rs85_nb3_s0",
+    "cry_nest_rs85_nb3_s1",
+    "cry_nest_rs85_nb3_s2",
+    "cry_nest_rs85_nb3_s3",
+    "cry_nest_rs85_nb3_s4"
+   ],
+   "caveats": [
+    "the nest tier's sigma_init understates the optimiser component: its five states are seeded from the five conv states of the SAME seed, so they are not five independent optimisations"
+   ]
+  },
+  {
+   "rs": 90.0,
+   "tier": "conv",
+   "n_max": 1,
+   "n_states": 5,
+   "energy_crystal": -45.74032150437829,
+   "energy_liquid": -45.65809065722242,
+   "delta_e": -0.08223084715586992,
+   "sigma_mc": 0.018842207554122695,
+   "sigma_init": 0.01082031641931983,
+   "sigma_total": 0.021728047149406703,
+   "z": 3.784548449772454,
+   "seed_ids": [
+    "cry_conv_rs90_nb2_s0",
+    "cry_conv_rs90_nb2_s1",
+    "cry_conv_rs90_nb2_s2",
+    "cry_conv_rs90_nb2_s3",
+    "cry_conv_rs90_nb2_s4"
+   ],
+   "caveats": []
+  },
+  {
+   "rs": 90.0,
+   "tier": "nest",
+   "n_max": 2,
+   "n_states": 5,
+   "energy_crystal": -45.771644589132606,
+   "energy_liquid": -45.65809065722242,
+   "delta_e": -0.11355393191018948,
+   "sigma_mc": 0.022407787262146088,
+   "sigma_init": 0.011715486080146283,
+   "sigma_total": 0.025285599539652957,
+   "z": 4.490853844778877,
+   "seed_ids": [
+    "cry_nest_rs90_nb3_s0",
+    "cry_nest_rs90_nb3_s1",
+    "cry_nest_rs90_nb3_s2",
+    "cry_nest_rs90_nb3_s3",
+    "cry_nest_rs90_nb3_s4"
+   ],
+   "caveats": [
+    "the nest tier's sigma_init understates the optimiser component: its five states are seeded from the five conv states of the SAME seed, so they are not five independent optimisations"
+   ]
+  }
+ ],
+ "brackets": [
+  {
+   "tier": "conv",
+   "kind": "bracket",
+   "lo": 65.0,
+   "hi": 75.0,
+   "resolved": true,
+   "n_points": 13,
+   "note": "sign changes between r_s = 65 and 75"
+  },
+  {
+   "tier": "nest",
+   "kind": "bracket",
+   "lo": 55.0,
+   "hi": 65.0,
+   "resolved": true,
+   "n_points": 7,
+   "note": "sign changes between r_s = 55 and 65"
+  },
+  {
+   "tier": "nest4",
+   "kind": "below_scan",
+   "lo": null,
+   "hi": 75.0,
+   "resolved": false,
+   "n_points": 2,
+   "note": "every point is negative; the crossing lies below r_s = 75"
+  }
+ ]
+}

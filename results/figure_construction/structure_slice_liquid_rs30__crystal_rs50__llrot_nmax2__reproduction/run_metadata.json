@@ -1,0 +1,163 @@
+{
+  "N": 36,
+  "ansatz": "ll_rotation",
+  "ansatz_implemented": [
+    "ll_rotation",
+    "ll_rotation_pinned"
+  ],
+  "ansatz_of_the_historical_crystal": "NOT IMPLEMENTED -- the historical fig06 crystal is a determinant of site-centred magnetic Gaussians (notebook cell 18 crystal_wavefunction), a different wavefunction family from either implemented ansatz.  The families converge with the truncation; see DIVERGENCE_fig06_crystal.md.",
+  "ansatz_source": "recipe default",
+  "budget": "reproduction",
+  "budget_protocol": {
+    "meas_equil": 500,
+    "meas_sweeps": 1500,
+    "sr_equil": 50,
+    "sr_snap": 3,
+    "sr_steps": 8,
+    "sr_sweeps": 150
+  },
+  "budget_provenance": "legacy-notebook (fig06 cell 28 walk + cell 22 SR)",
+  "clean_only": "No checkpoint, cached observable array, _diag product or old figure was read to produce these numbers; every value comes from a VMC run this script started.",
+  "comparison_with_legacy_performed": false,
+  "crystal": {
+    "acceptance": 0.4963888888888889,
+    "ansatz": "ll_rotation",
+    "budget": "reproduction",
+    "energy_per_particle": -24.62190895767972,
+    "error": 0.008832258057985924,
+    "init_L0": 0.4,
+    "init_id": 0,
+    "jastrow_sr": true,
+    "kappa": 35.35533905932737,
+    "kappa_mode": "physical",
+    "ll_indices": [
+      0,
+      1,
+      2
+    ],
+    "n_bands": 3,
+    "n_snapshots": 1000,
+    "nmax": 2,
+    "nmax_is_a_physical_parameter": true,
+    "optimized": "orbitals+jastrow",
+    "orbital_ansatz": "ll_rotation",
+    "orbital_sr": true,
+    "phase": "crystal",
+    "rng_seed": 0,
+    "rs": 50.0,
+    "seconds": 148.97678303718567,
+    "sr_seconds": 148.97577047348022,
+    "sr_steps": 8
+  },
+  "crystal_ll_indices": [
+    0,
+    1,
+    2
+  ],
+  "crystal_n_bands": 3,
+  "crystal_nmax": 2,
+  "crystal_nmax_source": "--crystal-nmax",
+  "crystal_rs": 50.0,
+  "crystal_rs_source": "--crystal-rs",
+  "deviations_from_legacy": [
+    "Crystal ansatz: the historical fig06 crystal is a determinant of site-centred magnetic Gaussians (notebook cell 18); both of this package's crystal ansatze build LL-rotated orbitals instead.  The two families CONVERGE with the truncation -- measured at the historical couplings, the crystal's first-shell S(q) is 7.2817 at n_max=1, 11.5806 at n_max=2 and 12.1661 at n_max=3 (full budget), against the historical ensemble's 11.9154.  The n_max=1 shortfall was a TRUNCATION effect; an earlier version of this field called it a located divergence needing a third wavefunction family, and that claim is withdrawn.  See DIVERGENCE_fig06_crystal.md",
+    "SR seed: the notebook used SR_SEED = 91; the clean driver uses the run's rng_seed (0). Different RNG stream.",
+    "SR step size: the notebook used sigma 0.4 (liquid) / 0.3 (crystal); the clean budget carries one sr.sigma for both.",
+    "snapshot_every: fixed at 1 by measure_decomposed, where the legacy struct_walk used 4 -- the clean walk stores 1000 snapshots to the legacy 250, from the same 1500/500 walk.",
+    "crystal walk start R0: the clean API's crystal_R0() (lat.sites + 0.25*jitter, seed 100+int(kappa)) rather than the notebook's crystal_sites_seed(kappa, L0, 4).",
+    "kappa mode: physical r_s/sqrt(2), not the Stage-2E rounded regression value.  The two coincide exactly only at the historical couplings (kappa = 4 and 64), and not at the couplings of a general request.",
+    "These deviations from the historical protocol apply to the historical request.  A run at user-chosen couplings is not a reproduction of fig06 at all and should not be read as one: its `request_slug` and `request_is_the_historical_fig06` say which it is."
+  ],
+  "figures_dir": "figures\\figure_construction\\structure_slice_liquid_rs30__crystal_rs50__llrot_nmax2__reproduction",
+  "kappa_crystal": 35.35533905932737,
+  "kappa_liquid": 21.213203435596423,
+  "kappa_mode": "physical (rs/sqrt(2)); the Stage-2E rounded regression mode is not used by this recipe",
+  "liquid": {
+    "acceptance": 0.453537037037037,
+    "ansatz": "ll_rotation",
+    "budget": "reproduction",
+    "energy_per_particle": -14.214680252076114,
+    "error": 0.012790247921611505,
+    "init_L0": null,
+    "init_id": 0,
+    "jastrow_sr": true,
+    "kappa": 21.213203435596423,
+    "kappa_mode": "physical",
+    "ll_indices": [
+      0
+    ],
+    "n_bands": 2,
+    "n_snapshots": 1000,
+    "nmax": 1,
+    "nmax_is_a_physical_parameter": false,
+    "optimized": "jastrow only (orbitals pinned)",
+    "orbital_ansatz": "filled_lll_fixed",
+    "orbital_sr": false,
+    "phase": "liquid",
+    "rng_seed": 0,
+    "rs": 30.0,
+    "seconds": 206.70835375785828,
+    "sr_seconds": 206.70768523216248,
+    "sr_steps": 8
+  },
+  "liquid_ll_indices": [
+    0
+  ],
+  "liquid_nmax_is_a_physical_parameter": false,
+  "liquid_nmax_technical": 1,
+  "liquid_rs": 30.0,
+  "liquid_rs_source": "--liquid-rs",
+  "observables": {
+    "S_LLL_reference": "1 - exp(-q^2/2), exact at any N",
+    "S_q_definition": "<|rho_q|^2>/ne, averaged over snapshots (rho_q = sum_j e^{i q.r_j})",
+    "g_LLL_reference": "(N/(N-1)) (1 - exp(-r^2/2))",
+    "g_r_definition": "minimum-image radial pair histogram, normalised so a uniform liquid gives g = 1; ne*(ne-1)/2 counts per snapshot",
+    "n_bins": 40,
+    "q_grid": "allowed_momenta of the supercell: q = m*G1 + n*G2, 0 < |q| < q_max, rounded-lexsort order",
+    "q_max": 4.0,
+    "r_max": 6.0,
+    "sites": "analysis.structure.lattice_sites, fractional in [0,1), shifted by half a cell into the frame the snapshots are drawn in",
+    "snapshot_rule": "snaps[-1] of the liquid walk (the legacy cell 28 rule)"
+  },
+  "optimization_protocol": {
+    "crystal": "joint orbital + Jastrow SR",
+    "liquid": "Jastrow-only SR (orbital sector fixed at v = 0)",
+    "rng_seed": 0,
+    "sigma": 0.3,
+    "sr_equil": 50,
+    "sr_snapshot_every": 3,
+    "sr_steps": 8,
+    "sr_sweeps": 150,
+    "target_acc": 0.4
+  },
+  "phase_parameters": {
+    "crystal": "LL rotation + Jastrow; the LL basis is truncated at n_max",
+    "liquid": "filled_lll_fixed + Jastrow; no orbital sector, no LL rotation, no truncation to choose"
+  },
+  "production_protocol": {
+    "crystal_walk_seed": 13,
+    "crystal_walk_sigma": 0.2,
+    "equil": 500,
+    "liquid_walk_seed": 11,
+    "liquid_walk_sigma": 0.4,
+    "snapshot_every": 1,
+    "sweeps": 1500
+  },
+  "quality": "reproduction",
+  "request_is_the_historical_fig06": false,
+  "request_slug": "liquid_rs30__crystal_rs50__llrot_nmax2__reproduction",
+  "results_dir": "results\\figure_construction\\structure_slice_liquid_rs30__crystal_rs50__llrot_nmax2__reproduction",
+  "run_metadata_schema": "figure_construction/structure_slice/1",
+  "source_id": "not a git repository (no .git at the checkout root); wigner_vmc 0.1.0",
+  "timestamp": "2026-10-04T15:07:27",
+  "torus_L1": [
+    16.161284245063182,
+    0.0
+  ],
+  "torus_L2": [
+    8.080642122531591,
+    13.99608271400593
+  ],
+  "torus_area": 226.1946710584651,
+  "wigner_vmc_version": "0.1.0"
+}

@@ -1,0 +1,477 @@
+{
+  "N": 36,
+  "available_sources": [
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs75__crystal_rs75__llrot_nmax1__quick",
+      "nmax": 1,
+      "phase": "crystal",
+      "post_projection_fix": false,
+      "rs": 75.0
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs75__crystal_rs75__llrot_nmax3__quick",
+      "nmax": 3,
+      "phase": "crystal",
+      "post_projection_fix": false,
+      "rs": 75.0
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs75__crystal_rs75__llrot_nmax2__quick",
+      "nmax": 2,
+      "phase": "crystal",
+      "post_projection_fix": false,
+      "rs": 75.0
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.65685__crystal_rs90.5097__llrot_nmax1__quick",
+      "nmax": 1,
+      "phase": "crystal",
+      "post_projection_fix": false,
+      "rs": 90.50966799187809
+    },
+    {
+      "budget": "reproduction",
+      "directory": "results\\figure_construction\\structure_slice",
+      "nmax": 1,
+      "phase": "crystal",
+      "post_projection_fix": false,
+      "rs": 90.50966799187809
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax1__quick",
+      "nmax": 1,
+      "phase": "crystal",
+      "post_projection_fix": true,
+      "rs": 90.51
+    },
+    {
+      "budget": "reproduction",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax1__reproduction",
+      "nmax": 1,
+      "phase": "crystal",
+      "post_projection_fix": true,
+      "rs": 90.51
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax3__quick",
+      "nmax": 3,
+      "phase": "crystal",
+      "post_projection_fix": true,
+      "rs": 90.51
+    },
+    {
+      "budget": "reproduction",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax3__reproduction",
+      "nmax": 3,
+      "phase": "crystal",
+      "post_projection_fix": true,
+      "rs": 90.51
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax2__quick",
+      "nmax": 2,
+      "phase": "crystal",
+      "post_projection_fix": true,
+      "rs": 90.51
+    },
+    {
+      "budget": "reproduction",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax2__reproduction",
+      "nmax": 2,
+      "phase": "crystal",
+      "post_projection_fix": true,
+      "rs": 90.51
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs50__crystal_rs100__llrot_nmax2__quick",
+      "nmax": 2,
+      "phase": "crystal",
+      "post_projection_fix": false,
+      "rs": 100.0
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs10__crystal_rs100__llrot_nmax2__quick",
+      "nmax": 2,
+      "phase": "crystal",
+      "post_projection_fix": true,
+      "rs": 100.0
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax1__quick",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": true,
+      "rs": 5.567
+    },
+    {
+      "budget": "reproduction",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax1__reproduction",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": true,
+      "rs": 5.567
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax3__quick",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": true,
+      "rs": 5.567
+    },
+    {
+      "budget": "reproduction",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax3__reproduction",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": true,
+      "rs": 5.567
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax2__quick",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": true,
+      "rs": 5.567
+    },
+    {
+      "budget": "reproduction",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax2__reproduction",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": true,
+      "rs": 5.567
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.65685__crystal_rs90.5097__llrot_nmax1__quick",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": false,
+      "rs": 5.656854249492381
+    },
+    {
+      "budget": "reproduction",
+      "directory": "results\\figure_construction\\structure_slice",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": false,
+      "rs": 5.656854249492381
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs10__crystal_rs100__llrot_nmax2__quick",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": true,
+      "rs": 10.0
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs50__crystal_rs100__llrot_nmax2__quick",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": false,
+      "rs": 50.0
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs75__crystal_rs75__llrot_nmax1__quick",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": false,
+      "rs": 75.0
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs75__crystal_rs75__llrot_nmax3__quick",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": false,
+      "rs": 75.0
+    },
+    {
+      "budget": "quick",
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs75__crystal_rs75__llrot_nmax2__quick",
+      "nmax": 1,
+      "phase": "liquid",
+      "post_projection_fix": false,
+      "rs": 75.0
+    }
+  ],
+  "crystal_nmax": 3,
+  "figure_stamp": "NOT PUBLICATION QUALITY\nsource budget: quick",
+  "figures": [
+    "figures\\figure_construction\\magnetoplasmon\\rs0__5p567__10__90p51\\magnetoplasmon.png"
+  ],
+  "formulas": {
+    "Omega_in_units": "Omega/(hbar omega_c) = q^2/(2 S(q)), q in 1/l_B",
+    "SMA": "Omega(q) = hbar^2 q^2 / (2 m S(q))",
+    "classical_in_units": "omega_mp/(hbar omega_c) = sqrt(1 + kappa q); kappa = e^2/(4 pi eps0 l_B hbar omega_c) per physics/hamiltonian.py",
+    "classical_magnetoplasmon": "omega_mp^2 = omega_c^2 + (2 pi n e^2/m) q",
+    "x_axis_conversion": "x = q l_B sqrt(2 pi / nu) from n = nu/(2 pi l_B^2)"
+  },
+  "nu": 1.0,
+  "post_processing_only": true,
+  "q_wc": {
+    "from": "triangular Wigner crystal at nu = 1: a^2 = 4 pi l_B^2/sqrt(3), Q_WC = 4 pi/(sqrt(3) a)",
+    "value": 2.6935473741771965,
+    "x": 6.751722007170647
+  },
+  "recipe": "examples/figure_construction/magnetoplasmon.py",
+  "roton": {
+    "rs90p51": {
+      "Omega_roton": 0.27324568665496507,
+      "deeper_than_imbalance": true,
+      "depth_below_neighbours": 3.4454635014770845,
+      "distance_from_q_wc": 4.440892098500626e-16,
+      "distance_in_x": 8.881784197001252e-16,
+      "found": true,
+      "n_minima": 9,
+      "n_points_at_roton": 6,
+      "n_shells": 30,
+      "neighbour_imbalance": 1.5579482035257048,
+      "neighbour_shell_scatter": 1.1902768713462688,
+      "neighbour_spacing": 0.03715413269417134,
+      "other_minima_q": [
+        1.1877427494406507,
+        1.6186205284145454,
+        2.057230788352758,
+        2.8035329933879756,
+        3.237241056829091,
+        3.563228248321952,
+        3.6746059108985127,
+        3.8878007538905357
+      ],
+      "other_minima_x": [
+        2.977229558735899,
+        4.05727998242207,
+        5.1567128615264455,
+        7.0274150700871845,
+        8.11455996484414,
+        8.931688676207695,
+        9.210871074384414,
+        9.745271295833735
+      ],
+      "q_roton": 2.693547374177197,
+      "q_wc": 2.6935473741771965,
+      "reason": "roton-like minimum found",
+      "resolved": true,
+      "rs": 90.51,
+      "shell_points": [
+        6,
+        6,
+        6,
+        12,
+        6,
+        6,
+        12,
+        6,
+        12,
+        12,
+        6,
+        6,
+        12,
+        12,
+        6,
+        12,
+        12,
+        12,
+        6,
+        18,
+        12,
+        12,
+        12,
+        12,
+        6,
+        12,
+        12,
+        6,
+        12,
+        12
+      ],
+      "shell_spread": [
+        1.9496853805039027,
+        1.355082076507073,
+        1.1496072219254732,
+        1.6833250077608808,
+        2.468693457850243,
+        0.9359880201546575,
+        0.8148427111265013,
+        2.801013544878515,
+        0.7698138652018276,
+        1.7348284263530331,
+        1.975771394726177,
+        0.8817069766594079,
+        1.9315701864217498,
+        0.78447650462165,
+        0.0157868641763918,
+        1.1902768713462688,
+        1.3777558009054212,
+        2.2327844009401114,
+        0.6453147902820264,
+        3.026906526973094,
+        1.9486674461578364,
+        1.8484892339915424,
+        3.1492584005846522,
+        1.449776553875779,
+        3.3281536287348956,
+        2.758594401356933,
+        1.676004584112265,
+        1.8251434715102368,
+        1.8294982622937699,
+        2.9697923092931084
+      ],
+      "spread_at_roton": 0.0157868641763918,
+      "x_roton": 6.751722007170648,
+      "x_wc": 6.751722007170647
+    }
+  },
+  "rs_c_recorded_not_used": 47.0,
+  "run_metadata_schema": "figure_construction/magnetoplasmon/1",
+  "s_q_definition": "read unchanged from structure_slice's structure_factor.npz; no second estimator, no rotational average, no smoothing",
+  "s_q_regenerated": false,
+  "small_q_diagnostic": [
+    {
+      "Omega_SMA": 1.0000002501045544,
+      "S_q_min": 4.999998749477541e-07,
+      "omega_magnetoplasmon": 1.0,
+      "phase": "analytic",
+      "q_min": 0.001,
+      "relative_difference": 2.5010455440011015e-07,
+      "rs": 0.0,
+      "shell_Omega_max": 1.0000002501045544,
+      "shell_Omega_min": 1.0000002501045544,
+      "shell_S_max": 4.999998749477541e-07,
+      "shell_S_min": 4.999998749477541e-07,
+      "shell_relative_difference_max": 2.5010455440011015e-07,
+      "shell_relative_difference_min": 2.5010455440011015e-07,
+      "shell_size": 1,
+      "source": null,
+      "x_min": 0.002506628274631
+    },
+    {
+      "Omega_SMA": 1.6848924131016871,
+      "S_q_min": 0.05980597370062699,
+      "omega_magnetoplasmon": 1.663482831873301,
+      "phase": "liquid",
+      "q_min": 0.44892456236286615,
+      "relative_difference": 0.012870334949159701,
+      "rs": 5.567,
+      "shell_Omega_max": 1.6848924131016871,
+      "shell_Omega_min": 1.232540559700144,
+      "shell_S_max": 0.08175522545956641,
+      "shell_S_min": 0.05980597370062699,
+      "shell_relative_difference_max": 0.012870334949159701,
+      "shell_relative_difference_min": -0.25906024631937996,
+      "shell_size": 6,
+      "source": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax2__quick",
+      "x_min": 1.1252870011951082
+    },
+    {
+      "Omega_SMA": 2.051420988256135,
+      "S_q_min": 0.049120405769078536,
+      "omega_magnetoplasmon": 2.043128978522858,
+      "phase": "liquid",
+      "q_min": 0.44892456236286615,
+      "relative_difference": 0.0040584856954413995,
+      "rs": 10.0,
+      "shell_Omega_max": 2.051420988256135,
+      "shell_Omega_min": 1.6352217740229775,
+      "shell_S_max": 0.0616226085948202,
+      "shell_S_min": 0.049120405769078536,
+      "shell_relative_difference_max": 0.0040584856954413995,
+      "shell_relative_difference_min": -0.1996482888685713,
+      "shell_size": 6,
+      "source": "results\\figure_construction\\structure_slice_liquid_rs10__crystal_rs100__llrot_nmax2__quick",
+      "x_min": 1.1252870011951082
+    },
+    {
+      "Omega_SMA": 6.392874261229746,
+      "S_q_min": 0.01576233588034966,
+      "omega_magnetoplasmon": 5.452639487723867,
+      "phase": "crystal",
+      "q_min": 0.44892456236286615,
+      "relative_difference": 0.1724366291999928,
+      "rs": 90.51,
+      "shell_Omega_max": 7.00934518914568,
+      "shell_Omega_min": 5.0596598086417774,
+      "shell_S_max": 0.019915692982804593,
+      "shell_S_min": 0.01437604064676221,
+      "shell_relative_difference_max": 0.28549580527496776,
+      "shell_relative_difference_min": -0.07207145822988086,
+      "shell_size": 6,
+      "source": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax3__quick",
+      "x_min": 1.1252870011951082
+    }
+  ],
+  "source_budget": "quick",
+  "source_budget_requested": "quick",
+  "sources": [
+    {
+      "directory": null,
+      "note": "filled lowest Landau level, S_0(q) = 1 - exp(-q^2/2), exact at any N; no VMC",
+      "phase": "analytic",
+      "rs": 0.0,
+      "structure_factor_npz": null,
+      "structure_slice_budget": null,
+      "structure_slice_nmax": null,
+      "structure_slice_rs": null,
+      "written": null
+    },
+    {
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax2__quick",
+      "note": "structure_slice liquid r_s = 5.567, nmax = 1, budget quick",
+      "phase": "liquid",
+      "rs": 5.567,
+      "structure_factor_npz": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax2__quick\\structure_factor.npz",
+      "structure_slice_budget": "quick",
+      "structure_slice_nmax": 1,
+      "structure_slice_rs": 5.567,
+      "written": "2026-10-03T19:26:54"
+    },
+    {
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs10__crystal_rs100__llrot_nmax2__quick",
+      "note": "structure_slice liquid r_s = 10, nmax = 1, budget quick",
+      "phase": "liquid",
+      "rs": 10.0,
+      "structure_factor_npz": "results\\figure_construction\\structure_slice_liquid_rs10__crystal_rs100__llrot_nmax2__quick\\structure_factor.npz",
+      "structure_slice_budget": "quick",
+      "structure_slice_nmax": 1,
+      "structure_slice_rs": 10.0,
+      "written": "2026-10-03T19:21:09"
+    },
+    {
+      "directory": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax3__quick",
+      "note": "structure_slice crystal r_s = 90.51, nmax = 3, budget quick",
+      "phase": "crystal",
+      "rs": 90.51,
+      "structure_factor_npz": "results\\figure_construction\\structure_slice_liquid_rs5.567__crystal_rs90.51__llrot_nmax3__quick\\structure_factor.npz",
+      "structure_slice_budget": "quick",
+      "structure_slice_nmax": 3,
+      "structure_slice_rs": 90.51,
+      "written": "2026-10-03T19:13:06"
+    }
+  ],
+  "sr_started": false,
+  "timestamp": "2026-10-04T02:11:43",
+  "units": {
+    "energy": "hbar*omega_c = 1",
+    "length": "l_B = 1",
+    "q": "1/l_B",
+    "x_axis": "q/sqrt(n)"
+  },
+  "vmc_started": false,
+  "wigner_vmc_version": "0.1.0"
+}

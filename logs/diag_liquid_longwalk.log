@@ -1,0 +1,59 @@
+# Diagnostic: long clean liquid walk, watching T drift (2026-10-02, PAUSED mid-investigation)
+#
+# Command:
+#   python -c "...Setup(initial_conditions.json); wf = maker(NMAX_STAGE_B)(theta(c_liquid, 0));
+#              sample(nsweep=6000, sigma=0.4, rng=default_rng(11), snapshot_every=1,
+#                     equil=1000, target_acc=0.4); per-snapshot T,V = local_energy(...)"
+#
+# Status: COMPLETED NATURALLY (not killed).  It is the only diagnostic that ran to
+# completion; the regression benchmark was killed mid-crystal and produced no
+# liquid/crystal summary (see below).
+
+sigma 0.3374   acc 0.4188   n 5000   (6000 sweeps, equil 1000, snapshot_every 1)
+
+block           T/ne        V/ne        E/ne
+    0-500      0.81553    -0.68892   -35.71997
+  500-1000     0.97793    -0.68385   -35.28866
+ 1000-1500     0.21599    -0.67056   -35.34590
+ 1500-2000     0.43474    -0.66672   -34.92351
+ 2000-2500    -0.03022    -0.65772   -34.91133
+ 2500-3000     0.13039    -0.66224   -34.99012
+ 3000-3500     1.03024    -0.67786   -34.91862
+ 3500-4000     0.87529    -0.67210   -34.76802
+ 4000-4500     0.97954    -0.68205   -35.19138
+ 4500-5000     1.32863    -0.67602   -34.52250
+
+LEGACY (liq_rs75.json, per particle)     1.74597    -0.74477   -37.75150
+
+imag part of T over the first 200 snapshots: mean 7.2782, rms 26.2945
+
+# ---------------------------------------------------------------------------
+# READING OF THIS OUTPUT -- the three facts that matter on resume
+#
+# 1. IT IS NOT AN EQUILIBRATION PROBLEM.  With 5000 snapshots and 6x the walk
+#    length of the legacy run, T/ne wanders 0.2-1.3 with no approach to the
+#    legacy +1.746.  E/ne sits at -34.5..-35.7 against legacy -37.75, a ~2.1
+#    gap that does not close.  So "walk longer" is NOT the fix, and no amount
+#    of extra sweeps should be spent before the estimator is understood.
+#
+# 2. V IS CLOSE AND T IS NOT.  V/ne = -0.676 (this walk) / -0.6439 (the
+#    regression-budget walk) against legacy -0.7448: a 9-14% difference.  T is
+#    the wrong SIGN: clean ~+0.6, legacy +1.746, and the regression-budget walk
+#    even read T/ne = -1.5281.  T carries the whole of the ~2.07 discrepancy.
+#    A wrong sign in a kinetic energy is an estimator or wavefunction defect,
+#    not sampling noise.
+#
+# 3. Im(T) IS LARGE.  mean 7.28, rms 26.29 per snapshot, against a T/ne of order
+#    1.  For a wavefunction that is real up to a global phase -- which the
+#    v = 0 liquid should be -- the local energy's imaginary part must average to
+#    zero.  An rms this large is the single most suspicious number here and is
+#    the first thing to chase.
+#
+# What was already ESTABLISHED before the pause (do not redo these):
+#   * the construction is IDENTICAL to legacy `part1_scan.py:599-604` --
+#     same c_liquid (cache HIT, byte-faithful), same make_ll_crystal(kappa,2)
+#     with v = zeros, same R0 = (default_rng(3).random((ne,2))-.5) @ C.T,
+#     same sigma=0.4, seed=11, 1500 sweeps, equil 400.
+#   * `c` matches the legacy record EXACTLY.
+#   * the clean liquid Jastrow reproduces the preserved frozen record exactly
+#     (0.000e+00), so the start is not in question.

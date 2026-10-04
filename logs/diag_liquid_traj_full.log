@@ -1,0 +1,10 @@
+full sweep trajectory: 2 x 1500 sweeps in 274s
+  legacy  sigma=0.616647 acc=0.4129
+  clean   sigma=0.616647 acc=0.4129
+
+  first sweep whose configuration differs: 0  (of 1500)
+  max |dR| over sweeps before it          : 0.000e+00
+  REBUILD_AT (reset_period) = 3600 attempts = sweep 100
+
+  attempt-level trace to attempt 36:
+    no decision differs in the first 36 attempts (the configurations differ anyway -- investigate)

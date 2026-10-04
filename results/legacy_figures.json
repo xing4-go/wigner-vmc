@@ -1,0 +1,363 @@
+{
+ "schema": "wigner_vmc_clean/legacy_figures",
+ "note": "Read-only fingerprint of every figure present when Stage 1 began. Nothing was moved, renamed, re-rendered or overwritten.",
+ "written_utc": "2026-10-01T12:29:47Z",
+ "directories": [
+  {
+   "path": "figs",
+   "workflow": "gaussian",
+   "tier": "official",
+   "exists": true,
+   "files": [
+    {
+     "filename": "fig01_phase_boundary.png",
+     "sha256": "cc9aba220c268831373b43e69414cf91678cc8b3e92bc58ef319710f7483b0e3",
+     "size_bytes": 79000,
+     "width": 1506,
+     "height": 516,
+     "mtime": "2026-09-18 00:08"
+    },
+    {
+     "filename": "fig02_validation_lll.png",
+     "sha256": "7f1a7bb7840e6ae79162d359a10a7dd2f1907d122fdc34c3caf5413387f10628",
+     "size_bytes": 70057,
+     "width": 1418,
+     "height": 385,
+     "mtime": "2026-09-18 00:08"
+    },
+    {
+     "filename": "fig06_fingerprints_1d.png",
+     "sha256": "8a061be183b5f2b6c9894985ddfe81e4cc313bafca9208b5384de47fc8df7ed5",
+     "size_bytes": 64970,
+     "width": 1418,
+     "height": 395,
+     "mtime": "2026-09-18 00:08"
+    },
+    {
+     "filename": "fig07_structure_maps.png",
+     "sha256": "c4e42394005a0397ff756b7af4cf7e306d6e1b1c7466448e8483d858cae2e478",
+     "size_bytes": 244912,
+     "width": 1265,
+     "height": 1130,
+     "mtime": "2026-09-18 00:08"
+    },
+    {
+     "filename": "fig08_sma.png",
+     "sha256": "ada471fa0184afc3455013fed80be221a48e9acd9c581e94542c6ed45134bf86",
+     "size_bytes": 35414,
+     "width": 607,
+     "height": 429,
+     "mtime": "2026-09-18 00:08"
+    },
+    {
+     "filename": "fig09_ladder_Sq.png",
+     "sha256": "6b7eb6688a775015856b3e4c83413fda575f1c4214286c2a4424347300b4842f",
+     "size_bytes": 377023,
+     "width": 1611,
+     "height": 675,
+     "mtime": "2026-09-18 00:08"
+    },
+    {
+     "filename": "fig10_ladder_g.png",
+     "sha256": "6bbe944f92e7f440f2c39ea49b2fec2a9fe5ad266f58583f54d9197ae8313f70",
+     "size_bytes": 232302,
+     "width": 1611,
+     "height": 674,
+     "mtime": "2026-09-18 00:08"
+    }
+   ]
+  },
+  {
+   "path": "figs_LLRotation",
+   "workflow": "llrot",
+   "tier": "official",
+   "exists": true,
+   "files": [
+    {
+     "filename": "correlation_function_phase_map.png",
+     "sha256": "639f45fe1460b7a4314f581afbfaa1915f43f5236cec2336ee688aaca9e05124",
+     "size_bytes": 361606,
+     "width": 4084,
+     "height": 2013,
+     "mtime": "2026-09-18 15:14"
+    },
+    {
+     "filename": "shell_averaged_companions.png",
+     "sha256": "7ae02ef283166ad13d42cdab1224d7c73ab5eb0660ba5b4ced817edd6e747603",
+     "size_bytes": 518320,
+     "width": 2574,
+     "height": 1770,
+     "mtime": "2026-09-18 15:14"
+    },
+    {
+     "filename": "structure_factor_phase_map.png",
+     "sha256": "3ea417346178312ecc05231e1259d403f954515aa58d6fbc927a6bb1149dd782",
+     "size_bytes": 635303,
+     "width": 4078,
+     "height": 2032,
+     "mtime": "2026-09-18 15:14"
+    },
+    {
+     "filename": "vmc_energy_crossing_linear.png",
+     "sha256": "db0ce56e4082bc75cdc6197c23f20b5605ba93048687103cbdb97d5061881d06",
+     "size_bytes": 78410,
+     "width": 1598,
+     "height": 884,
+     "mtime": "2026-09-30 08:38"
+    },
+    {
+     "filename": "vmc_energy_phase_competition.png",
+     "sha256": "3d0b1505e99ed4f7498bce750ceb254d90a540cd5a31c4645c50c28fca04c8f2",
+     "size_bytes": 85275,
+     "width": 1292,
+     "height": 1241,
+     "mtime": "2026-09-30 08:38"
+    },
+    {
+     "filename": "vmc_real_space_density.png",
+     "sha256": "b849c88875b273e315ec531b9e6cef1612cd99019a9c505eea69a2220c135fb1",
+     "size_bytes": 608914,
+     "width": 3570,
+     "height": 1020,
+     "mtime": "2026-09-28 12:39"
+    },
+    {
+     "filename": "vmc_structure_factor_sma.png",
+     "sha256": "5b91973fe86c86f0815cb50441a4d5b095ea2850804a81a7bbb53b9f05d18555",
+     "size_bytes": 469496,
+     "width": 1938,
+     "height": 1598,
+     "mtime": "2026-09-27 00:27"
+    }
+   ]
+  },
+  {
+   "path": "reproduction/figs_LLRotation",
+   "workflow": "llrot",
+   "tier": "official",
+   "exists": true,
+   "files": [
+    {
+     "filename": "correlation_function_phase_map.png",
+     "sha256": "639f45fe1460b7a4314f581afbfaa1915f43f5236cec2336ee688aaca9e05124",
+     "size_bytes": 361606,
+     "width": 4084,
+     "height": 2013,
+     "mtime": "2026-09-18 15:14"
+    },
+    {
+     "filename": "energy_order_summary.png",
+     "sha256": "e45ffa0b525991f296ca6c755525486ec338d5a3bc04c0ec196d2fd3aa572de3",
+     "size_bytes": 352495,
+     "width": 4377,
+     "height": 1028,
+     "mtime": "2026-09-18 15:14"
+    },
+    {
+     "filename": "shell_averaged_companions.png",
+     "sha256": "7ae02ef283166ad13d42cdab1224d7c73ab5eb0660ba5b4ced817edd6e747603",
+     "size_bytes": 518320,
+     "width": 2574,
+     "height": 1770,
+     "mtime": "2026-09-18 15:14"
+    },
+    {
+     "filename": "structure_factor_phase_map.png",
+     "sha256": "3ea417346178312ecc05231e1259d403f954515aa58d6fbc927a6bb1149dd782",
+     "size_bytes": 635303,
+     "width": 4078,
+     "height": 2032,
+     "mtime": "2026-09-18 15:14"
+    }
+   ]
+  },
+  {
+   "path": "_diag/v_figs",
+   "workflow": "llrot",
+   "tier": "scratch",
+   "exists": true,
+   "files": [
+    {
+     "filename": "llrot_causal_chain.png",
+     "sha256": "502b86fada8be1f38374e6f623a897ca70ad9d3263933eef1ed191bf6b570fb8",
+     "size_bytes": 74156,
+     "width": 1085,
+     "height": 1612,
+     "mtime": "2026-09-29 00:54"
+    },
+    {
+     "filename": "llrot_deltaE_scan.png",
+     "sha256": "7d41ff891c053f930f245c8785a15b89a367c51d4116f9dc317e3a411022f03d",
+     "size_bytes": 101994,
+     "width": 1953,
+     "height": 713,
+     "mtime": "2026-09-29 00:54"
+    },
+    {
+     "filename": "llrot_kinetic_decomposition.png",
+     "sha256": "633f5a2bd0cfbafcb06cf58531a843f405e7fd094e108bcfc8065d76ee36b36f",
+     "size_bytes": 55142,
+     "width": 2170,
+     "height": 759,
+     "mtime": "2026-09-29 00:54"
+    },
+    {
+     "filename": "llrot_kinetic_validation.png",
+     "sha256": "c4447d93d7cda75d06bd41f5b316d3d53009e4ddc21d0c2ae4de4b30df77a2ec",
+     "size_bytes": 68520,
+     "width": 1147,
+     "height": 775,
+     "mtime": "2026-09-29 00:54"
+    },
+    {
+     "filename": "llrot_ll_occupations.png",
+     "sha256": "bf367572785e8f5089151620b07bcccb6c2a103d36f3617450e84c7916acb82c",
+     "size_bytes": 132656,
+     "width": 1891,
+     "height": 682,
+     "mtime": "2026-09-29 00:54"
+    },
+    {
+     "filename": "llrot_order_vs_mixing.png",
+     "sha256": "450c6fd2084b1a79b2d07d377d30ce7fdce33d5e660216a5f5fd0d7493abe378",
+     "size_bytes": 69773,
+     "width": 1860,
+     "height": 713,
+     "mtime": "2026-09-29 00:54"
+    }
+   ]
+  },
+  {
+   "path": "_diag/iv_figs",
+   "workflow": "gaussian",
+   "tier": "scratch",
+   "exists": true,
+   "files": [
+    {
+     "filename": "corner_tiling_k4.png",
+     "sha256": "59a8c18b463826429f41e563d96c1c505f6c5b60c9dd807865dd21a5d49d52a3",
+     "size_bytes": 192720,
+     "width": 1158,
+     "height": 737,
+     "mtime": "2026-09-27 16:25"
+    },
+    {
+     "filename": "corner_tiling_k64.png",
+     "sha256": "05feb854b34cd7aa499ebcff1be928a17b0f27b8e5ba5a26449e9d96fb5a6489",
+     "size_bytes": 197697,
+     "width": 1158,
+     "height": 737,
+     "mtime": "2026-09-27 16:25"
+    },
+    {
+     "filename": "vmc_energy_crossing_linear.png",
+     "sha256": "ad0d0c840af1a107466d9524a3c291eae65c2b555d223faa4d48b7c66841ac60",
+     "size_bytes": 78393,
+     "width": 1598,
+     "height": 884,
+     "mtime": "2026-09-30 08:17"
+    },
+    {
+     "filename": "vmc_energy_crossing_linear.stale-preview.png",
+     "sha256": "c7bb3ea3efab9b7de5ab80f65c7c4b60430340302f78edc45398b9ed056a410f",
+     "size_bytes": 67539,
+     "width": 1360,
+     "height": 833,
+     "mtime": "2026-09-29 22:41"
+    },
+    {
+     "filename": "vmc_energy_phase_competition.png",
+     "sha256": "3d0b1505e99ed4f7498bce750ceb254d90a540cd5a31c4645c50c28fca04c8f2",
+     "size_bytes": 85275,
+     "width": 1292,
+     "height": 1241,
+     "mtime": "2026-09-30 08:38"
+    },
+    {
+     "filename": "vmc_real_space_contrast.png",
+     "sha256": "58d5b1d48a24cd2cdc79dca899e6b233529f8bbbaa8886206dc8f817675ee02d",
+     "size_bytes": 210296,
+     "width": 2652,
+     "height": 1292,
+     "mtime": "2026-09-27 17:08"
+    },
+    {
+     "filename": "vmc_real_space_density.png",
+     "sha256": "2ed38dfcc500efdd49e8119867f46fbf5f555688da9871efe913755f53d02691",
+     "size_bytes": 600696,
+     "width": 3570,
+     "height": 1020,
+     "mtime": "2026-09-27 17:08"
+    }
+   ]
+  },
+  {
+   "path": "_diag/figs_proto",
+   "workflow": "llrot",
+   "tier": "scratch",
+   "exists": true,
+   "files": [
+    {
+     "filename": "vmc_energy_phase_competition.png",
+     "sha256": "095dfadc988d85fee1b31d7599aa7066ee1b3893deea4041818efe31e348d032",
+     "size_bytes": 184336,
+     "width": 2312,
+     "height": 918,
+     "mtime": "2026-09-26 22:45"
+    },
+    {
+     "filename": "vmc_structure_factor_sma.png",
+     "sha256": "7686e1b1e4db99944e51f7df3fe28f9ba0c5762e52a2a31db2e55f4db6076ed1",
+     "size_bytes": 417544,
+     "width": 1938,
+     "height": 1563,
+     "mtime": "2026-09-26 22:45"
+    }
+   ]
+  }
+ ],
+ "official_cross_directory": {
+  "byte_identical_in_both": [
+   {
+    "filename": "correlation_function_phase_map.png",
+    "copies": [
+     {
+      "where": "figs_LLRotation",
+      "sha256": "639f45fe1460b7a4314f581afbfaa1915f43f5236cec2336ee688aaca9e05124"
+     },
+     {
+      "where": "reproduction/figs_LLRotation",
+      "sha256": "639f45fe1460b7a4314f581afbfaa1915f43f5236cec2336ee688aaca9e05124"
+     }
+    ]
+   },
+   {
+    "filename": "shell_averaged_companions.png",
+    "copies": [
+     {
+      "where": "figs_LLRotation",
+      "sha256": "7ae02ef283166ad13d42cdab1224d7c73ab5eb0660ba5b4ced817edd6e747603"
+     },
+     {
+      "where": "reproduction/figs_LLRotation",
+      "sha256": "7ae02ef283166ad13d42cdab1224d7c73ab5eb0660ba5b4ced817edd6e747603"
+     }
+    ]
+   },
+   {
+    "filename": "structure_factor_phase_map.png",
+    "copies": [
+     {
+      "where": "figs_LLRotation",
+      "sha256": "3ea417346178312ecc05231e1259d403f954515aa58d6fbc927a6bb1149dd782"
+     },
+     {
+      "where": "reproduction/figs_LLRotation",
+      "sha256": "3ea417346178312ecc05231e1259d403f954515aa58d6fbc927a6bb1149dd782"
+     }
+    ]
+   }
+  ],
+  "same_name_different_bytes": []
+ }
+}

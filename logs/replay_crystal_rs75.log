@@ -1,0 +1,57 @@
+==============================================================================
+  Blocker B / B6 -- crystal SR replay at r_s = 75
+==============================================================================
+  seed 0  L0 = 0.3  frozen digest cadd5d6a  frozen state in: frozen
+  init  E:\physics notes\condensed matter physics\quantum neural network\wigner_vmc_clean\results\bench_rs75\initial_conditions.json
+  kappa artifact 53.03300858899106  kappa_init 53.033
+  kappa legacy   53.033   kappa physical 53.033008588991
+  budget regression: SR 120x400 equil 150 snap 4 sigma 0.3 target_acc 0.4
+  comparable steps: 120  (the full legacy protocol (120 x 400))
+
+  frozen pkl: E:\physics notes\condensed matter physics\quantum neural network\_diag\ckpt_rebuild\llcryst_nb2_k53.033_p1conv0.pkl
+    hist 120 steps   theta (77,)   stored kappa np.float64(53.033)   n_band 2
+    campaign reporter: present  E_perpart -37.775219
+
+  --- arm 'legacy'  kappa = 53.033 ---
+    [legacy] SR 120x400 in 6040s   E_start -35.734773 -> E_final -37.813692
+      vs the campaign reporter (independent oracle):
+        E_start      dev 0.000000e+00   clean -35.734772920   legacy -35.734772920
+        E_final      dev 2.280842e-12   clean -37.813691725   legacy -37.813691725
+        E_min        dev 1.818989e-12   clean -37.863730952   legacy -37.863730952
+        force_first  dev 4.099832e-12   clean +33.663286801   legacy +33.663286801
+        force_final  dev 2.675637e-12   clean +1.318890408   legacy +1.318890408
+        cond_final   dev 2.005027e-08   clean +2447.942355271   legacy +2447.942355251
+        theta_final  max|dev| 6.219008e-10   (len 77 vs 77)
+      vs the frozen pkl trajectory (120 step(s) compared, keys identical: True):
+        field        dev@step0      max dev  @step
+        E            0.000e+00    4.970e-10     43
+        E_err        8.882e-16    1.146e-10     15
+        acc          0.000e+00    0.000e+00      0
+        sigma        0.000e+00    0.000e+00      0
+        force        4.100e-12    1.140e-08     15
+        tau          0.000e+00    0.000e+00      0
+        cond         2.534e-09    1.011e-05     15
+        eig_min      3.017e-17    3.386e-13     22
+        eig_max      1.759e-13    1.336e-08     15
+        theta        2.095e-12    7.136e-10    104   (shape [77] vs [77])
+
+      --- B7: the production walk from this theta ---
+    [legacy] walk 1100 snapshots in 146s   E/ne -37.775219 +- 0.031766   acc 0.4311   sequence reproduces production_walk exactly: True
+        moment                      dev              clean           legacy  unit
+        E_perpart             2.387e-12      -37.775218988    -37.775218988  per electron
+        E_perpart_err         3.016e-03        0.031765927      0.034781476  per electron
+        T                     8.606e-11       67.022091267     67.022091267  total
+        V                     0.000e+00      -26.906453997    -26.906453997  total
+        acc                   0.000e+00        0.431111111      0.431111111  walker
+        sigma                 0.000e+00        0.564975388      0.564975388  walker
+        E_tau                 5.399e+00       27.147546855     32.546442867  autocorrelation
+        V_tau              legacy MISSING
+        cov_TV                3.920e-12       -2.914448338     -2.914448338  per snapshot
+        n                     0.000e+00     1100.000000000   1100.000000000  count
+        E_err_total           1.086e-01        1.143573372      1.252133121  total
+        E_err_naive_total     3.101e-11        0.219481914      0.219481914  total
+        the legacy record stores MOMENTS of the walk, not the sequence; the clean sequence was
+        recovered by re-driving sample() and is accepted only because it reproduces these
+        moments exactly.
+
+  wrote E:\physics notes\condensed matter physics\quantum neural network\wigner_vmc_clean\logs\replay_crystal_rs75.json

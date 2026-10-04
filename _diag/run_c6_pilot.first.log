@@ -1,0 +1,98 @@
+==============================================================================
+crystal_c6_trajectory -- why a C6-correct seed leaves the C6 sector (wigner_vmc 0.1.0)
+==============================================================================
+  mode             layers 1-2 -- the trajectory
+  budget           quick   (clean-package (NOT converged, NOT comparable to published numbers))
+  N                36   nk = 36
+  r_s              90   kappa = 63.63961031
+  n_max            1   n_bands = 2
+  len(theta)       77
+  SR               2 x 40 sweeps   (equil 13, snap 2)
+  E resolution     n = 14 snapshots/step -> E_err is a LOWER bound (autocorrelation ignored; consecutive rows share the walker)
+  S walk           every 1 step(s), 400 sweeps (equil 150), its OWN rng
+  raw rng seeds    [0]   (index 0 = the budget's own rng_seed)
+  gate             c6_residual <= 0.1;  bragg >= 3x liquid;  contrast >= 2
+  BLAS threads     pinned: OMP_NUM_THREADS=1, OPENBLAS_NUM_THREADS=1, MKL_NUM_THREADS=1
+  results          results\phase_competition_2\c6_trajectory
+==============================================================================
+  C6 is NOT an order parameter: v = 0 (the filled LLL) is invariant under
+  every rotation, so the liquid reads ~3e-14.  Stage A first asks whether
+  the state is still a CRYSTAL; only then does C6 mean symmetry.
+==============================================================================
+  bragg set        6 first-shell vectors
+  background set   120 momenta
+
+  LAYER 1 -- is the seed C6-correct at THIS operating point?
+    corrected Gaussian seed     c6 = 3.032e-14   nbar = 0.3500
+    second context (nsp=2000, seed=20261004)   c6 = 3.039e-14
+    conjugating the overlap     c6 = 5.944e-01   nbar = 0.3500   <- the negative control (separation 1.96e+13)
+    columns x(1+.5i), per-rotation max |d c6| = 3.259e-18   <- the gauge-invariance control
+    -> OK: the seed IS C6-covariant here: 3.032e-14 at r_s = 90, n_max = 1 (the pinned corner is r_s = 75, n_max = 2, so this is measured rather than inherited); the conjugated-overlap control reads 5.944e-01 -- a separation of 2.0e+13; a second context agrees to the same order; the residual is invariant under a column rescaling to 3.3e-18
+
+    SR   0  E/ne =  -43.38092 +- 0.16368   acc 0.690   |f| 2.409e+01   tau 2.00e-02
+    SR   1  E/ne =  -44.53214 +- 0.08545   acc 0.652   |f| 9.726e+00   tau 1.67e-02
+    SR   2  E/ne =  -45.11015 +- 0.06320   acc 0.669   |f| 6.598e+00   tau 1.43e-02
+    SR   3  E/ne =  -45.34752 +- 0.11691   acc 0.624   |f| 2.681e+01   tau 1.25e-02
+    SR   4  E/ne =  -45.50993 +- 0.07948   acc 0.606   |f| 1.116e+01   tau 1.11e-02
+    SR   5  E/ne =  -45.45983 +- 0.05290   acc 0.589   |f| 6.410e+00   tau 1.00e-02
+    SR   6  E/ne =  -45.50604 +- 0.07889   acc 0.556   |f| 1.236e+01   tau 9.09e-03
+    SR   7  E/ne =  -45.51323 +- 0.07045   acc 0.551   |f| 8.829e+00   tau 8.33e-03
+    SR   8  E/ne =  -45.60837 +- 0.06080   acc 0.517   |f| 9.937e+00   tau 7.69e-03
+    SR   9  E/ne =  -45.54232 +- 0.06250   acc 0.497   |f| 7.635e+00   tau 7.14e-03
+  liquid null      bragg = 1.1091   contrast = 0.9495   c6 = 2.56e-14   [35s]
+
+      S walk [traj:0]   18.8s   bragg  6.789   ctr  3.91   c6 -44.728818+-0.104727
+      S walk [traj:0]   18.6s   bragg  6.119   ctr  3.58   c6 -45.222220+-0.077348
+      S walk [traj:0]   18.8s   bragg  6.799   ctr  4.08   c6 -45.381070+-0.050465
+
+  arm joint  tag traj  idx 0  rng_seed 0  [60s]
+    c6: 3.032e-14 -> 1.475e-01 (first update) -> 1.551e-01 (closing)
+
+    rows (joint, traj, idx 0)
+       t   C6        nbar   E/ne       +-        |f|      |dv|    S(G1)  S(G2)  S(G3)  bragg    ctr   reg(g1)     id     E_walk+-   tau   n
+       0  3.03e-14  0.350 -44.237685  0.161851 37.44162         6.135  5.975  6.412  6.7886  3.911 -0.025378 -0.047   -44.7288  6.193  250  
+       1  1.47e-01  0.375 -45.252231  0.084923 12.41501  0.632  6.434  5.730  5.684  6.1192  3.585 +0.109791 -0.013   -45.2222  6.359  250  
+       2  1.55e-01  0.369        --        --           0.176  6.877  6.349  6.616  6.7987  4.075 -0.028003 -0.007   -45.3811  3.879  250  closing
+
+  measured 29.8 s/SR-step (first job, 2 steps); 0 arm(s) to go
+
+
+  |f| floor: fewer than two joint arms: no |f| floor is available and no |f| claim is made
+
+  VERDICT arm=joint tag=traj idx=0: Stage A = CRYSTAL   Stage B = STILL_RISING
+    Stage A: bragg 6.799 >= 3x 1.109 and contrast 4.08 >= 2: the crystal survived, so C6 is measuring symmetry
+    Stage B: c6_0 = 3.032e-14, peak = 1.551e-01 at t = 2, closing = 1.551e-01, turned over = False
+    'STILL_RISING' names the NEXT experiment, NOT an answer about (a)-(d).
+
+  wrote results\phase_competition_2\c6_trajectory\N36__ll_rotation__quick__rs90__nmax1__steps2__nsweep40\trajectory.json
+  wrote results\phase_competition_2\c6_trajectory\N36__ll_rotation__quick__rs90__nmax1__steps2__nsweep40\run_metadata.json
+Traceback (most recent call last):
+  File "E:\physics notes\condensed matter physics\quantum neural network\wigner_vmc_clean\examples\phase_competition_2\crystal_c6_trajectory.py", line 1516, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "E:\physics notes\condensed matter physics\quantum neural network\wigner_vmc_clean\examples\phase_competition_2\crystal_c6_trajectory.py", line 1395, in main
+    p = write_figure(fig_dir, arms, liquid, floor, bud.name,
+                     {"N": int(vmc.N), "rs": float(vmc.rs),
+                      "nmax": int(vmc.nmax)})
+  File "E:\physics notes\condensed matter physics\quantum neural network\wigner_vmc_clean\examples\phase_competition_2\crystal_c6_trajectory.py", line 914, in write_figure
+    ax.errorbar([r["t"] for r in a["rows"]],
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                [r["E_per_particle"] for r in a["rows"]],
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                yerr=[r["E_err_per_particle"] or 0.0 for r in a["rows"]],
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                marker="o", ms=3.0, lw=0.9, capsize=2, alpha=0.6,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                label=f"seed {a['idx']}")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda\Lib\site-packages\matplotlib\_api\deprecation.py", line 453, in wrapper
+    return func(*args, **kwargs)
+  File "D:\anaconda\Lib\site-packages\matplotlib\__init__.py", line 1524, in inner
+    return func(
+        ax,
+        *map(cbook.sanitize_sequence, args),
+        **{k: cbook.sanitize_sequence(v) for k, v in kwargs.items()})
+  File "D:\anaconda\Lib\site-packages\matplotlib\axes\_axes.py", line 3831, in errorbar
+    low, high = dep + np.vstack([-(1 - lolims), 1 - uplims]) * err
+                ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'float'

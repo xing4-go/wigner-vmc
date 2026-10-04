@@ -1,0 +1,60 @@
+frozen store : E:\physics notes\condensed matter physics\quantum neural network\_diag\ckpt_rebuild
+building the notebook namespace against a WORKING COPY
+
+working copy : C:\Users\Administrator\AppData\Local\Temp\ckpt_working_osixc4sf
+
+  cell   2 done in     0.5s (total     0.5s)
+  cell   4 done in     0.0s (total     0.5s)
+  cell   6 done in     0.0s (total     0.5s)
+  cell   8 done in     0.0s (total     0.5s)
+  cell  10 done in    20.8s (total    21.4s)
+  cell  12 done in     0.0s (total    21.4s)
+  cell  14 done in     0.3s (total    21.6s)
+  cell  16 done in     0.0s (total    21.6s)
+  cell  18 done in     0.0s (total    21.7s)
+  cell  20 done in     0.2s (total    21.8s)
+  cell  22 done in     0.0s (total    21.9s)
+  cell  24 done in     0.1s (total    22.0s)
+  cell  26 done in     0.2s (total    22.1s)
+  cell  28 done in     0.7s (total    22.8s)
+  cell  30 done in     2.6s (total    25.4s)
+  cell  31 done in    30.0s (total    55.4s)
+  cell  33 done in     0.4s (total    55.8s)
+  cell  35 done in     0.0s (total    55.8s)
+  cell  38 done in     0.2s (total    56.0s)
+  cell  39 done in     0.4s (total    56.3s)
+  cell  41 done in     0.0s (total    56.3s)
+  cell  43 done in     0.0s (total    56.3s)
+  cell  44 done in     0.0s (total    56.3s)
+  cell  46 done in     0.0s (total    56.3s)
+  cell  47 done in     0.2s (total    56.5s)
+  cell  49 done in     0.2s (total    56.8s)
+  cell  52 done in    83.5s (total   140.3s)
+  cell  61 done in     0.0s (total   140.3s)
+  cell  62 done in     3.0s (total   143.3s)
+  cell  76 done in    95.6s (total   238.9s)
+  cell  78 done in     0.9s (total   239.8s)
+  cell  80 done in    58.8s (total   298.6s)
+  cell  82 done in     4.2s (total   302.8s)
+namespace built in 302.8s
+ne=36 nk=36 NMAX_STAGE_B=2  KAPPAS=[ 2.  4.  8. 16. 24. 32. 40. 48. 64. 80.]
+_L0S=[0.3, 0.45, 0.5, 0.6, 0.8]   kappa(75)=53.03300858899106   kappa_init=53.033   nearest grid 48.0
+[cache HIT  ] jastrow_liquid_k53.033   saved 5267.2 min ago -- skipping the computation
+[cache MISS ] jastrow_crystal_k53.033   -- computing
+[cache SAVE ] jastrow_crystal_k53.033   computed in 20.2s
+  s0  L0=0.3    jastrow cache MISS (recomputed)  |v0| mean 0.5859  c0=[-6.5605 -1.1111 -0.7844  0.3711 -0.2455]
+[cache STALE] jastrow_crystal_k53.033   parameters changed -> recomputing
+[cache SAVE ] jastrow_crystal_k53.033   computed in 20.3s
+  s1  L0=0.45   jastrow cache MISS (recomputed)  |v0| mean 0.5141  c0=[-8.0568 -2.9207 -1.285  -0.3017 -0.2839]
+[cache STALE] jastrow_crystal_k53.033   parameters changed -> recomputing
+[cache SAVE ] jastrow_crystal_k53.033   computed in 20.2s
+  s2  L0=0.5    jastrow cache MISS (recomputed)  |v0| mean 0.4841  c0=[-8.36   -3.0587 -1.2794 -0.3221 -0.2207]
+[cache STALE] jastrow_crystal_k53.033   parameters changed -> recomputing
+[cache SAVE ] jastrow_crystal_k53.033   computed in 20.0s
+  s3  L0=0.6    jastrow cache MISS (recomputed)  |v0| mean 0.4151  c0=[-9.2745 -3.7385 -1.6229 -0.5368 -0.3285]
+[cache STALE] jastrow_crystal_k53.033   parameters changed -> recomputing
+[cache SAVE ] jastrow_crystal_k53.033   computed in 20.1s
+  s4  L0=0.8    jastrow cache MISS (recomputed)  |v0| mean 0.2427  c0=[-9.8373 -4.1213 -1.703  -0.587  -0.3145]
+
+wrote E:\physics notes\condensed matter physics\quantum neural network\wigner_vmc_clean\results\bench_rs75\initial_conditions.json
+frozen tree: UNCHANGED -- the guard verified it on exit

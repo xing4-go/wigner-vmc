@@ -1,0 +1,58 @@
+{
+  "N": 36,
+  "ansatz": "ll_rotation",
+  "background_set_size": 120,
+  "blas_env": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "numpy": "2.3.5"
+  },
+  "blas_threading_pinned": true,
+  "bragg_set_size": 6,
+  "budget": "smoke",
+  "criterion": {
+    "anisotropy_is_reported_not_gated": "A = (max-min)/mean over the three first-shell families is a ratio of noisy S values with a small denominator in the liquid, so it is reported and never thresholded",
+    "bragg_definition": "bragg_ratio(trial) >= bragg_gate * bragg_ratio(liquid measured in the SAME run)",
+    "bragg_gate": 3.0,
+    "c6_definition": "max over 60/120/180/240/300 deg of the normalized least-squares residual of the rotated occupied space (test_projection_convention.py); bounded in [0,1]; 3.0e-14 for a C6-covariant seed, 7.9e-01 for a C6-broken one",
+    "c6_gate": 0.1,
+    "contrast_definition": "site density over nearest-neighbour-midpoint density on the density smoothed at 0.4 l_B over 72 bins; 1 for anything uniform, and inf on the raw histogram",
+    "contrast_gate": 2.0,
+    "escape_hatch": "if the Gaussian-seed reference fails the C6 gate, the run reports NO VERDICT rather than 0/N"
+  },
+  "figure_stamp": "QUICK\nnot publication quality",
+  "kappa": 63.63961030678927,
+  "len_theta": 77,
+  "n_bands": 2,
+  "nmax": 1,
+  "not_in_scope": [
+    "r_s continuation",
+    "n_max nesting",
+    "phase competition",
+    "reproduction/full"
+  ],
+  "quality": "QUICK / not publication quality",
+  "random_measure": {
+    "construction": "c_row(v), the same map the optimiser uses",
+    "name": "haar_cp1",
+    "no_scale_knob": true,
+    "statement": "sin^2(t) ~ U[0,1] (the CP1 Fubini-Study CDF), phi ~ U[0, 2pi), i.i.d. over the nk momenta; E[sin^2 t] = 1/2"
+  },
+  "recipe": "examples/phase_competition_2/crystal_seed_search.py",
+  "result_dir": "results\\phase_competition_2\\crystal_seed_search\\N36__ll_rotation__smoke__rs90__nmax1",
+  "root_rs_note": "the paper gives no numeric seeding coupling, only 'at large r_s'; r_s = 90 is this recipe's choice",
+  "root_selection": "lowest E_final among trials with wc_formed true; None (and NOT the best-energy trial) when none pass",
+  "root_trial": null,
+  "rs": 90.0,
+  "run_metadata_schema": "phase_competition_2/crystal_seed_search/1",
+  "seed_base": 20261004,
+  "stage": "1A -- pipeline validation only; no scientific claim if no WC forms, because quick is SR 10x40 and a random determinant may simply not have had time",
+  "timestamp": "2026-10-04T12:50:22",
+  "trials": 2,
+  "verdict": "FAILED",
+  "verdict_reason": "0/2 random starts formed a triangular WC at this budget.  This is NOT evidence the basin is unreachable -- it is equally consistent with the optimiser not having had time at quick; see the module docstring.",
+  "wigner_vmc_version": "0.1.0"
+}

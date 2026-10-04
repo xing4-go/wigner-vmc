@@ -1,0 +1,29 @@
+==============================================================================
+the two matrices handed to LandauLevelBasis
+==============================================================================
+  notebook CToCart = column_stack([A1, A2])   |A1|=2.693547  |A2|=2.693547   PRIMITIVE
+  Setup.C          = column_stack([L1, L2])   |L1|=16.161284  |L2|=16.161284   SUPERCELL
+  ratio L/A = 6.0000
+
+-- 1. orbitals psi_{k,n}(r), notebook matrix vs Setup's matrix --
+    r=[-0.8648 -0.106 ]  |dn|=2.8549e-15  rel=1.2824e-15
+    r=[16.0731 -0.3462]  |dn|=1.4288e-14  rel=6.4568e-15
+    r=[31.9318  0.4823]  |dn|=2.6516e-14  rel=1.2129e-14
+    r=[49.5751 -0.207 ]  |dn|=3.9237e-14  rel=1.7915e-14
+    r=[65.0567 -0.2647]  |dn|=5.0904e-14  rel=2.3534e-14
+  worst relative orbital difference = 2.3534e-14
+
+-- 2. local energy at the frozen R0 (TOTALS) --
+    notebook matrix  T =     -2753.879487   V =    18.890086
+    Setup.C          T =     -2745.476876   V =    18.890086
+
+==============================================================================
+-- 3. walk with the NOTEBOOK wiring, frozen protocol (1500 sweeps, equil 400, sigma 0.4, seed 11) --
+==============================================================================
+                      this run          frozen         delta
+  ------------------------------------------------------------
+  n             1100.000000000  1100.000000000    +0.000e+00
+  sigma            0.650729310     0.650729310    +0.000e+00
+  acc              0.414000000     0.414000000    +0.000e+00
+
+  VERDICT: the notebook's matrix pair reproduces the frozen sigma

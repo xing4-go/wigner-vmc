@@ -1,0 +1,75 @@
+==============================================================================
+  Blocker B / B8 -- nested nmax = 2 at r_s = 75
+==============================================================================
+  parent      logs/replay_crystal_rs75.json
+  parent arm  legacy  kappa 53.033  n_band 2  len(theta) 77
+  parent init digest cadd5d6a  (the nmax=1 start)
+
+  oracle self-check, from cry_conv_rs75_nb2_s0.json:
+    nb2 endpoint -> nb3 start digest  d603e632   table says d603e632   MATCH
+
+  --- the nesting identity: v1 -> (v1, 0), i.e. (36, 1) -> (36, 2) ---
+    C_src (36, 2) -> C_nest (36, 3)
+    head  max|C_nest[:, :2] - C_src| 0.000e+00   (the source's own 2 columns)
+    tail  max|C_nest[:, 2:]|        0.000e+00   (the new, zero level)
+    nested start digest 72ea9093   frozen nb3 tag says d603e632  (MISMATCH)
+    theta length 149 = 5 + 2*36*2
+
+  The nesting identity is exact but the nested start is NOT the campaign's nested start.
+  The parent state is not the campaign's nmax=1 state (see B6: the digest of the nmax=1 START matched, so a
+  mismatch here means the SR endpoint differs).  The nested SR below will be measured and
+  reported as a DIFFERENT calculation, not as a reproduction.
+
+  frozen nested pkl: E:\physics notes\condensed matter physics\quantum neural network\_diag\ckpt_rebuild\llcryst_nb3_k53.033_p1nest0.pkl
+    hist 120 steps   theta (149,)   stored kappa np.float64(53.033)   n_band 3
+    campaign reporter: present  E_perpart -37.823241
+
+  --- nested SR, arm 'legacy', kappa = 53.033 ---
+    SR 120x400 in 2039s   E_start -37.823271 -> E_final -37.825119
+
+    vs the frozen nested pkl trajectory (120 steps, keys identical: True):
+      field        dev@step0      max dev  @step
+      E            4.934e-11    8.520e-09     77
+      E_err        4.328e-12    4.981e-09     77
+      acc          0.000e+00    0.000e+00      0
+      sigma        0.000e+00    0.000e+00      0
+      force        3.602e-10    9.212e-08     77
+      tau          0.000e+00    0.000e+00      0
+      cond         2.327e-08    8.051e-05     39
+      eig_min      3.210e-16    8.482e-15     39
+      eig_max      2.395e-11    8.066e-08     39
+      theta        6.198e-10    5.345e-09    102   (shape [149] vs [149])
+
+    --- nest_identity_dev (the campaign's energy cross-check) ---
+      legacy  -0.048052  tol None   (source E -37.775219)
+      clean   -0.048052  tol 0.180   (source E -37.775219 from the clean parent walk)
+      within tol: True
+
+    --- B8 production walk ---
+    [legacy] walk 1100 snapshots in 178s   E/ne -37.823241 +- 0.019869   acc 0.4350   sequence reproduces production_walk exactly: True
+      moment                      dev              clean           legacy
+      E_perpart             8.242e-13      -37.823241349    -37.823241349  per electron
+      E_perpart_err         1.972e-03        0.019868526      0.021840969  per electron
+      T                     2.966e-11       69.492190115     69.492190115  total
+      V                     0.000e+00      -26.985629300    -26.985629300  total
+      acc                   0.000e+00        0.435037037      0.435037037  walker
+      sigma                 0.000e+00        0.564975388      0.564975388  walker
+      E_tau                 4.097e+00       19.657865372     23.754663511  autocorrelation
+      V_tau              legacy MISSING
+      cov_TV                1.362e-10       -2.735251163     -2.735251163  per snapshot
+      n                     0.000e+00     1100.000000000   1100.000000000  count
+      E_err_total           7.101e-02        0.715266921      0.786274886  total
+
+  --- delta_E(75) = E_C - E_L, per electron ---
+    clean_nested_E                 -37.823241349
+    legacy_nested_E                -37.823241349
+    legacy_liquid_E                -37.751495951
+    clean_delta_E_nmax2            -0.071745398
+    legacy_delta_E_nmax2           -0.071745398
+    delta_E_difference             +0.000000000
+    legacy_pooled_delta_E_nmax2    -0.058402169
+    (5 legacy nest records pooled -- the published -0.0584 is THIS number, not the seed-matched one)
+
+    -0.0584 is the published comparison reference.  Nothing in this script reads it.
+
+  wrote E:\physics notes\condensed matter physics\quantum neural network\wigner_vmc_clean\logs\replay_nested_rs75.json

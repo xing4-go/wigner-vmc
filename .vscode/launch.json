@@ -1,0 +1,77 @@
+{
+  // F5 entry points.  Every one of these runs THE SAME API (`wigner_vmc.api`);
+  // none of them implements any part of the VMC workflow.  If you find yourself
+  // editing physics in here, it belongs in src/wigner_vmc instead.
+  //
+  // First run only: pick the interpreter that has `pip install -e .` done
+  // (Ctrl+Shift+P -> "Python: Select Interpreter").  See USER_GUIDE.md.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "VMC: crystal (quick, examples/)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/examples/run_crystal.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": false
+    },
+    {
+      "name": "VMC: liquid (quick, examples/)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/examples/run_liquid.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": false
+    },
+    {
+      "name": "VMC: playground (current # %% cell via Python Interactive)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/examples/playground.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": false
+    },
+    {
+      "name": "VMC: CLI quick crystal",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/run_vmc.py",
+      "args": ["--phase", "crystal", "--rs", "75", "--nmax", "1", "--budget", "quick", "--init-id", "0"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": false
+    },
+    {
+      "name": "VMC: CLI nested quick",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/run_nested.py",
+      "args": ["--rs", "75", "--new-nmax", "2", "--budget", "quick", "--init-id", "0"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": false
+    },
+    {
+      "name": "pytest: behavior firewall (-m behavior)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["-m", "behavior", "-v"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": false
+    },
+    {
+      "name": "Python: current file",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": false
+    }
+  ]
+}

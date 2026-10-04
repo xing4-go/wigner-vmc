@@ -1,0 +1,51 @@
+{
+  // Tasks (Ctrl+Shift+B / Terminal -> Run Task).  Same rule as launch.json:
+  // these are shells over the package, never a second implementation.
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "install (editable)",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath} -m pip install -e .",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "tests: behavior firewall",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath} -m pytest -m behavior -v",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "group": { "kind": "test", "isDefault": true }
+    },
+    {
+      "label": "tests: full suite",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath} -m pytest -q",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "VMC: quick crystal",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath} scripts/run_vmc.py --phase crystal --rs 75 --nmax 1 --budget quick --init-id 0",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "VMC: quick liquid",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath} scripts/run_vmc.py --phase liquid --rs 75 --nmax 1 --budget quick --init-id 0",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "VMC: nested quick (crystal nmax=1 -> nmax=2)",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath} scripts/run_nested.py --rs 75 --new-nmax 2 --budget quick --init-id 0",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    }
+  ]
+}

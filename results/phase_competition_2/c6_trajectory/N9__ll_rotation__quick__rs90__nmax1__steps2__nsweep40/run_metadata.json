@@ -1,0 +1,135 @@
+{
+  "N": 9,
+  "ansatz": "ll_rotation",
+  "blas_env": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": null,
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": null,
+    "numpy": "2.3.5"
+  },
+  "blas_threading_pinned": true,
+  "budget": "quick",
+  "criterion": {
+    "bragg_gate": 3.0,
+    "c6_gate": 0.1,
+    "c6_is_linear": "space_residual is the sine of the largest principal angle (tests/test_projection_convention.py:277), so R_C6(1) IS the relative first-order symmetry-breaking amplitude of the first SR update -- there is no square root",
+    "c6_is_not_an_order_parameter": "v = 0 (the filled LLL) is invariant under every rotation, so the liquid reads ~3e-14: a low C6 is also the liquid",
+    "contrast_gate": 2.0,
+    "energy_resolution": "14 snapshots/step, naive SEM, autocorrelation ignored and consecutive rows sharing the walker -> E_err is a LOWER bound; E is descriptive here and never decisive",
+    "force_is_jastrow_dominated": "d ln Psi/dc is O(10)-O(40) while d ln Psi/dv is O(1e-3) (sr_pilot_scale's docstring), so |f| -> 0 means the JASTROW converged; ||dv|| is the orbital-block answer",
+    "stage_a": "is the CLOSING state still a crystal (bragg ratio against the liquid measured in the same run, and real-space contrast)?  If not, its C6 residual names nothing.",
+    "stage_b": "the shape of the C6 trajectory.  SEED_NOT_C6 is checked first; STILL_RISING / PLATEAU_BROKEN / REGISTRY_DRIFT name the next experiment rather than an answer about (a)-(d)."
+  },
+  "extra_blocks": [],
+  "figure_stamp": "QUICK\nnot publication quality",
+  "force_floor": null,
+  "jobs": [
+    {
+      "arms": [
+        "joint"
+      ],
+      "equil": 13,
+      "idx": 0,
+      "nsweep": 40,
+      "rng_seed": 0,
+      "seed_index": 0,
+      "steps": 2,
+      "tag": "traj"
+    },
+    {
+      "arms": [
+        "joint"
+      ],
+      "equil": 13,
+      "idx": 1,
+      "nsweep": 40,
+      "rng_seed": 1,
+      "seed_index": 1,
+      "steps": 2,
+      "tag": "traj"
+    },
+    {
+      "arms": [
+        "joint"
+      ],
+      "equil": 13,
+      "idx": 2,
+      "nsweep": 40,
+      "rng_seed": 2,
+      "seed_index": 2,
+      "steps": 2,
+      "tag": "traj"
+    }
+  ],
+  "kappa": 63.63961030678927,
+  "layer1_seed_controls": {
+    "L0": 0.3,
+    "L0_source": "inits[0].L0 of quick",
+    "N": 9,
+    "base_rng_seed": 0,
+    "c6_correct": 0.45838573541196503,
+    "c6_correct_ctx2": 0.6393190217264298,
+    "c6_defect": 0.4513449499356903,
+    "c6_defect_ctx2": 0.7413119128029894,
+    "c6_gauge_shift": 5.551115123125783e-17,
+    "c6_gauge_value": 0.45838573541196503,
+    "c6_seed": 20261003,
+    "c6_seed2": 20261004,
+    "nbar_defect": 0.3463002733124987,
+    "nbar_seed": 0.3463002733124987,
+    "nmax": 1,
+    "nsp": 12,
+    "nsp2": 48,
+    "pinned_corner": "r_s = 75, n_max = 2 (tests/test_projection_convention.py)",
+    "rs": 90.0
+  },
+  "layer1_verdict": {
+    "controls_that_failed": 3,
+    "facts": {
+      "gauge_shift": 5.551115123125783e-17,
+      "min_separation": 1000000.0,
+      "separation": 0.9846400423653084
+    },
+    "ok": false,
+    "reason": "the corrected Gaussian seed reads c6 = 4.584e-01 > 0.1 at THIS operating point, so the seed is not C6-covariant here and SR cannot be blamed for leaving the sector; a second independent context (nsp=48, seed=20261004) reads 6.393e-01 where the first reads 4.584e-01; the conjugated-overlap control reads 4.513e-01 against 4.584e-01: a separation of 9.846e-01, which does not establish that this context resolves the gate (needs >1e+06 and the broken value above 0.01)"
+  },
+  "len_theta": 23,
+  "mode": "layers 1-2 -- the trajectory",
+  "n_bands": 2,
+  "nmax": 1,
+  "not_in_scope": [
+    "r_s continuation",
+    "n_max nesting",
+    "phase competition",
+    "reproduction/full",
+    "random-start ensemble"
+  ],
+  "protocol": {
+    "base_rng_seed": 0,
+    "equil": 13,
+    "nsweep": 40,
+    "s_equil": 150,
+    "s_every": 1,
+    "s_nsweeps": 400,
+    "s_seed": 17,
+    "s_sigma": 0.3,
+    "seed_index_rule": "raw = base_rng_seed + index, so index 0 IS the production reference for this budget",
+    "snapshot_every": 2,
+    "snapshots_per_step": 14,
+    "sr_sigma": 0.3,
+    "steps": 2,
+    "target_acc": 0.4,
+    "tau_schedule": "tau_i = tau / (1 + xi i / steps); at i = 0 this is tau for EVERY steps, which is why R_C6(1) is comparable across budgets and step counts while R_C6(t>1) is not"
+  },
+  "quality": "QUICK / not publication quality",
+  "question": "why does a C6-correct Gaussian seed leave the C6 sector under unconstrained joint SR?",
+  "recipe": "examples/phase_competition_2/crystal_c6_trajectory.py",
+  "result_dir": "results\\phase_competition_2\\c6_trajectory\\N9__ll_rotation__quick__rs90__nmax1__steps2__nsweep40",
+  "rs": 90.0,
+  "run_metadata_schema": "phase_competition_2/c6_trajectory/1",
+  "t0_floors": {},
+  "timestamp": "2026-10-04T14:12:56",
+  "wigner_vmc_version": "0.1.0"
+}

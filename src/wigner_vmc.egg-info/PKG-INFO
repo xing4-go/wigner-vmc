@@ -1,0 +1,216 @@
+Metadata-Version: 2.4
+Name: wigner-vmc
+Version: 0.1.0
+Summary: Variational Monte Carlo for the Wigner crystal / Hall liquid on a triangular torus
+License: Proprietary
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.24
+Requires-Dist: scipy>=1.10
+Requires-Dist: matplotlib>=3.7
+Requires-Dist: PyYAML>=6.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+
+# USER_GUIDE — running the VMC yourself
+
+Everything below runs from the project root:
+
+```powershell
+cd "E:\physics notes\condensed matter physics\quantum neural network\wigner_vmc_clean"
+$env:PYTHONIOENCODING = "utf-8"      # Chinese Windows console; once per shell
+```
+
+The interpreter is the Anaconda one: `D:\anaconda\python.exe` (Python 3.13.9).
+
+---
+
+## 1. Install (once)
+
+```powershell
+D:\anaconda\python.exe -m pip install -e .
+```
+
+`-e` means "editable": the package is used from `src/`, so an edit takes effect
+without reinstalling. After this, `import wigner_vmc` works from any directory,
+in any interpreter, with no `sys.path` line anywhere. If you ever see
+`ModuleNotFoundError: No module named 'wigner_vmc'`, re-run this command —
+do not add a path hack.
+
+## 2. VS Code: pick the interpreter
+
+`Ctrl+Shift+P` → **Python: Select Interpreter** → `D:\anaconda\python.exe`.
+
+That is the only setting. The Play button, the `# %%` cells, `F5` and the
+integrated terminal then all use the same interpreter the package was installed
+into, so none of them need a path — this is exactly why step 1 is required.
+
+## 3. Run the tests
+
+```powershell
+D:\anaconda\python.exe -m pytest -m behavior      # the physics firewall, ~165 s
+D:\anaconda\python.exe -m pytest                  # everything, ~4 min
+D:\anaconda\python.exe -m pytest -m contract      # API / CLI / figure contracts
+```
+
+`-m behavior` is the one that answers "did the VMC physics change?". If it is
+green, the conventions, the Hamiltonian, both wavefunctions, the nesting
+invariant, the sampler, the estimators and SR are all still doing what they did
+when the frozen records were reproduced.
+
+## 4. A quick liquid run
+
+```powershell
+D:\anaconda\python.exe scripts/run_vmc.py --phase liquid --rs 75 --budget quick
+```
+
+The liquid is the reference the crystal is compared against. It has no orbitals
+to grow, so `v = 0` and only the five Jastrow parameters are optimised.
+
+## 5. A quick crystal run
+
+```powershell
+D:\anaconda\python.exe scripts/run_vmc.py --phase crystal --rs 75 --nmax 1 --budget quick
+```
+
+Takes a few minutes. Both this and §4 print the resolved configuration first —
+`phase`, `N`/`r_s`, `n_max`, `kappa` and its convention, `init_id`, its `L0`, and
+`rng_seed` — so the summary always says what produced it.
+
+## 6. A production crystal run
+
+```powershell
+D:\anaconda\python.exe scripts/run_vmc.py --phase crystal --rs 75 --nmax 1 --budget production --init-id 0
+```
+
+Hours, not minutes: SR 120 × 400 sweeps plus a 1500-sweep production walk. The
+`production` budget is the frozen campaign's protocol; `quick` and `smoke` are
+the package's own and are **not converged**. A run on a non-production budget
+prints a warning saying so — believe it.
+
+`--init-id 0..4` selects one of the campaign's five starting widths
+(`L0 = 0.3, 0.45, 0.5, 0.6, 0.8`). It picks a *width*, not a random seed;
+`--rng-seed` is the separate SR stream.
+
+## 7. A nested run
+
+```powershell
+D:\anaconda\python.exe scripts/run_nested.py --rs 75 --nmax 1 --new-nmax 2 --budget quick
+```
+
+Runs the `nmax = 1` parent, then grows the truncation to `nmax = 2` by exact
+embedding and prints the energy gain. The embedding is checked before optimising
+and the script **refuses to continue** if the child is not the parent's
+wavefunction to the last bit (`head 0.000e+00  tail 0.000e+00`). There is no
+fallback to a fresh start: a re-initialised child would make the `nmax` trend
+unattributable.
+
+## 8. A scan over the starting points
+
+```powershell
+D:\anaconda\python.exe scripts/run_scan.py --rs 75 --budget smoke --new-nmax 2
+```
+
+One row per `init_id`: parent energy, nested energy, and the difference. If any
+parent fails, its row says `MISSING PARENT` and the process exits non-zero — it
+will not average over an incomplete set.
+
+## 9. Where results go
+
+**An API or CLI run does not write to disk.** It returns a `RunResult` and
+prints the summary; nothing is saved behind your back. That is deliberate: the
+`results/` directory holds the *verified frozen records* used by the regression
+tests (`results/bench_rs75/*.json`, `results/legacy_*/`), and a routine run must
+not be able to overwrite them.
+
+To keep one, use the package's own writer and your own directory:
+
+```python
+from wigner_vmc import VMC
+from wigner_vmc.io.results import write_json
+
+res = VMC(N=36, rs=75, phase="crystal", nmax=1).run(init_id=0, budget="quick")
+
+write_json("results/runs/crystal_rs75_quick.json", {
+    "config": res.config.__dict__,
+    "energy_per_particle": res.energy_per_particle,
+    "error": res.error,
+    "acceptance": res.acceptance,
+    "record": res.record,          # T, V, E, tau_E, cov_TV, ...
+})
+```
+
+`res.record` is the production record — no snapshots, small, JSON-ready.
+`res.state` is the end state and **is picklable**, so you can save it and call
+`nest` on it in a later session:
+
+```python
+import pickle
+with open("results/runs/state_rs75.pkl", "wb") as fh:
+    pickle.dump(res.state, fh)
+```
+
+## 10. Analyse a state
+
+```python
+res.state.ll_occupation()      # band weights P_n and <n>; see the caveat below
+res.state.structure_factor()   # S(q) on the production snapshots
+```
+
+`ll_occupation()` returns `P_n = mean_k |C[k,n]|^2` and `nbar = sum(n P_n)`.
+**These are not comparable across `nmax`**: a larger basis redistributes weight
+among more bands, so `nbar` at `nmax = 2` is not a refinement of `nbar` at
+`nmax = 1`. Compare `nbar` only between states at the same `nmax`.
+
+For anything else, `wigner_vmc.analysis.structure` and
+`wigner_vmc.analysis.ll_convergence` are the analysis layer, and
+`scripts/analyze_energy.py` reruns the liquid-vs-crystal scan and regresses it
+against the frozen legacy scan:
+
+```powershell
+D:\anaconda\python.exe scripts/analyze_energy.py
+```
+
+## 11. Make the figures
+
+```powershell
+D:\anaconda\python.exe scripts/make_figures.py --list           # names only
+D:\anaconda\python.exe scripts/make_figures.py --only fig02_validation_lll
+D:\anaconda\python.exe scripts/make_figures.py                  # all of them
+```
+
+Output goes to `wigner_vmc_clean/figures/`. Eleven of the fifteen official PNGs
+are rebuilt from the frozen results; the other four plotted arrays that were
+reduced inside a notebook cell and never written to disk, so they cannot be
+rebuilt without re-running VMC — which figure code is forbidden to do. They are
+listed as `legacy-only` in `FIGURE_MANIFEST.md`, and their original PNGs are
+kept exactly as they are.
+
+---
+
+## The Python API, without the CLI
+
+```python
+from wigner_vmc import VMC, run_vmc
+
+vmc = VMC(N=36, rs=75, phase="crystal", nmax=1)
+result = vmc.run(init_id=0, budget="quick")
+
+result.energy_per_particle     # the production number, PER ELECTRON
+result.energy_total            # == N * energy_per_particle, exactly
+result.error                   # its MC error, autocorrelation-corrected
+result.acceptance
+result.state, result.optimization
+
+child = vmc.nest(result, new_nmax=2)         # exact embedding, then optimise
+```
+
+There is no `result.energy`. It is the one name that does not say whether it
+means per particle or a total, and every reader would read it as the one they
+expected. `result.optimization.E_total` is the SR trace and **is a total** — it
+is not the production energy, and the optimiser is free to end above its own
+minimum.
+
+The starting point is computed by the package from `(N, r_s)` alone. **No run
+reads a checkpoint store or a legacy record**, which is also why a run cannot
+write to one.

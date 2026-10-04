@@ -1,0 +1,57 @@
+====================================================================================
+A8 -- r_s = 75 liquid, frozen protocol, PRODUCTION path, after the
+folding-frame fix
+====================================================================================
+  kappa  legacy-regression 53.033   physical 53.03300858899106
+  basis frame  |A1| = 2.693547  (primitive)   |L1| = 16.161284  (supercell)
+  protocol  1500 sweeps, equil 400, snapshot_every 1, sigma 0.4, seed 11, target_acc 0.4
+
+-- 1. trajectory: legacy sample vs clean sample --
+  [reused the cached series: E:\physics notes\condensed matter physics\quantum neural network\wigner_vmc_clean\logs\regress_a8_series.npz]
+  n      legacy 1100  clean 1100  record 1100
+  sigma  legacy 0.650729310  clean 0.650729310  record 0.650729310   delta +0.000e+00
+  acc    legacy 0.414000000  clean 0.414000000  record 0.414000000   delta +0.000e+00
+  snapshots that differ: 0 / 1100   max |dR| = 0.000e+00
+  max |T_legacy - T_clean| = 1.421e-14   (TOTALS, scale 102.7)
+  max |V_legacy - V_clean| = 0.000e+00   (scale 27.4)
+  max |E_legacy - E_clean| = 2.274e-13   (scale 1383.0)  relative 1.644e-16
+  RAW E SEQUENCE IDENTICAL: True
+  mean Im(T) = +5.813e-03   rms Im(T) = 3.154e-01   (record stores T already .real)
+
+-- 3. the production path against the frozen record --
+  production_walk in 388s
+  quantity        production          record        delta       z
+  ---------------------------------------------------------------
+  T/N            1.745972580     1.745972580    +0.00e+00    0.00
+  V/N           -0.744771530    -0.744771530    +0.00e+00    0.00
+  E/N          -37.751495951   -37.751495951    +0.00e+00    0.00
+  worst |production - record| over T/N, V/N, E/N = 0.000e+00
+
+-- 4. the error bar: a separate question (Blocker A-errorbar) --
+  E_err_naive   this walk 0.213983422125   record 0.213983422125   delta -2.776e-17
+  tau_int       legacy rule (first rho<=0) 3.329817   record 3.329817   delta +8.882e-16
+  E_err         legacy rule 0.390472371617   record 0.390472371617   delta +0.000e+00
+  tau_int       clean  rule (Sokal c=5)   3.066274  window 16   -> E_err 0.374701636110
+  the two rules differ by 0.921x on ONE sequence
+
+       c         tau         E_err     block         E_err
+     2.0      3.2603   0.386373782         5   0.327995849
+     3.0      3.3228   0.390058499        10   0.371535145
+     5.0      3.0663   0.374701636        20   0.386258674
+    10.0      2.5239   0.339951396        40   0.384751534
+  window truncation, sum_{t=1..W} rho_t with the legacy normalisation:
+    W=5:3.175  W=10:3.318  W=20:2.963  W=40:1.607  W=80:0.692  W=200:2.265
+  per particle: campaign rule 0.010846455   record 0.010846455   ratio 1.000000
+                production  0.010408379   (production uses the CLEAN rule; ratio to record 0.9596)
+  The block curve has no plateau below 40 samples and the window sum turns over at W=40,
+  so at n=1100 no estimator here is entitled to more than 2 decimals; the exactly-reproduced
+  number is E_err_naive, which depends on the sequence alone and not on any window rule.
+
+====================================================================================
+  trajectory identical .................. True
+  raw E sequence identical .............. True
+  production matches the record (T,V,E) . True
+  E_err_naive matches the record ........ True
+  E_err matches under the CAMPAIGN rule . True
+  A8: PASS
+====================================================================================

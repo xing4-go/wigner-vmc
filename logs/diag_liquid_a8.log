@@ -1,0 +1,49 @@
+==============================================================================
+PART 1 -- estimator identity on one fixed configuration
+==============================================================================
+  legacy  local_energy T = -2745.476876-0.655752j  (Im -6.557523e-01)
+          kinetic_parts  T_det=+18.000000  T_mix=-1387.482731  T_J=-1375.994145   sum=-2745.476876
+  clean   local_energy T = -2745.476876-0.655752j  (Im -6.557523e-01)
+          kinetic_parts  T_det=+18.000000  T_mix=-1387.482731  T_J=-1375.994145   sum=-2745.476876
+
+  |T_legacy - T_clean|          = 9.817e-12
+  |local_energy T - parts sum|  legacy 6.558e-01   clean 6.558e-01
+  T_det (LLL, pi^2 = 1 band 0): legacy 18.000000   clean 18.000000   (ne/2 = 18.0)
+
+==============================================================================
+PART 2 -- trajectory identity, first 200 attempts, seed 11
+==============================================================================
+  decision mismatches      : 0 / 200
+  max |r_new_legacy - clean| = 0.000e+00
+  max |acc_legacy - clean|   = 0.000e+00
+  max |R_legacy - clean|     = 0.000e+00
+  RNG state identical        : True
+  min acc seen 2.447916e-07   max 69890707.566320
+
+==============================================================================
+PART 3 -- production walk, legacy protocol (1500 sweeps, equil 400, sigma 0.4, seed 11)
+==============================================================================
+  clean   n=1100  acc=0.4129 sigma=0.616647
+  legacy  n=1100  acc=0.4140 sigma=0.650729
+  (inline series reproduces production_walk exactly on T, V, E)
+
+  quantity            clean         legacy        delta        z
+  --------------------------------------------------------------
+  T/N              1.744564       1.745973    -0.001409    -0.06
+  V/N             -0.745104      -0.744772    -0.000332    -0.71
+  E/N            -37.770524     -37.751496    -0.019028    -1.75
+
+  E_err  clean 0.011537  (production 0.011967)  legacy 0.390472
+  T_err  clean 0.031956   legacy 0.909408
+  tau_E  clean 3.8187  legacy 3.3298   tau_T clean 5.6911  legacy 4.0904
+  sigma final  clean 0.616647  legacy 0.650729
+
+  the pause's two anomalies, over this walk:
+    (1) T/N sign     clean +1.744564   legacy +1.745973   -> SAME SIGN
+    (2) complex T    mean Im(T) =     0.094070   rms Im(T) =     0.813456
+        (legacy stores T already .real, from kinetic_parts, so the record has no Im(T);
+         PART 1's fixed-configuration comparison is the legacy-side check.)
+
+==============================================================================
+trajectory decision mismatches in the first 200 attempts: 0
+==============================================================================

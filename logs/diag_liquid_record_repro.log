@@ -1,0 +1,30 @@
+walking the notebook wiring ...
+  done in 77s  sigma=0.650729310
+
+walking the in-tree  wiring ...
+  done in 78s  sigma=0.616647362
+
+============================================================================================
+r_s=75 liquid, frozen protocol (1500 sweeps, equil 400, sigma 0.4, seed 11), PER PARTICLE
+============================================================================================
+  quantity    frozen record   notebook wiring   in-tree wiring    delta(nb)  delta(tree)
+  --------------------------------------------------------------------------------------
+  T/N           1.745972580       1.745972580      1.744563686    -1.41e-10    -1.41e-03
+  V/N          -0.744771530      -0.744771530     -0.745103646    +0.00e+00    -3.32e-04
+  E/N         -37.751495951     -37.751502348    -37.770524374    -6.40e-06    -1.90e-02
+
+  E_err/N       0.010846455       0.010846456      0.011536683
+  T_err/N       0.025261339       0.025261339      0.031956032
+  V_err/N       0.000470590       0.000470590      0.000585919
+
+  tau_E         3.329816976       3.329817642      3.818745852
+  n                    1100              1100             1100
+  sigma         0.650729310       0.650729310      0.616647362
+
+  z = delta / frozen error, where meaningful
+    T/N     notebook    -0.00   in-tree    -0.06
+    V/N     notebook    +0.00   in-tree    -0.71
+    E/N     notebook    -0.00   in-tree    -1.75
+
+  worst |notebook - frozen| over T, V, E = 2.303e-04
+  VERDICT: the notebook wiring still differs -- look further

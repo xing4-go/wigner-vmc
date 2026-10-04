@@ -1,0 +1,41 @@
+clean walk done in 333s
+
+====================================================================================
+r_s=75 liquid, clean package, notebook frame pair, frozen protocol
+====================================================================================
+  n      clean 1100    frozen 1100    delta +0
+  sigma  clean 0.650729310  frozen 0.650729310  delta +0.000e+00
+  acc    clean 0.414000000  frozen 0.414000000  delta +0.000e+00
+  trajectory reproduced bit-for-bit: True
+
+  quantity              clean            frozen         delta        z
+  --------------------------------------------------------------------
+  T/N             1.745972580       1.745972580     -1.41e-10    -0.00
+  V/N            -0.744771530      -0.744771530     +0.00e+00     0.00
+  E/N           -37.751502348     -37.751495951     -6.40e-06    -0.00
+  E/N (k rec)     -37.751495951     -37.751495951     -1.41e-10    -0.00
+
+  E_err/N  clean 0.022792021   frozen 0.010846455
+
+  worst |clean - frozen| over T, V, E(record kappa) = 5.072e-09  (TOTALS)
+  VERDICT: the clean package reproduces the frozen record
+
+--------------------------------------------------------------------------------
+NOTE appended by hand 2026-10-02.  This file is a generated artifact; the note is
+not, and it is here so the line it names cannot be quoted.
+
+  The line "E_err/N  clean 0.022792021" above is WRONG.  The script computed
+  T.std(ddof=1)/sqrt(n) * sqrt(tau_int(T + kappa*V)) -- T's naive error on the mean
+  times the SQUARE ROOT OF E's tau, i.e. two different sequences multiplied
+  together.  It is not an estimator of anything, and its agreement in order of
+  magnitude with the frozen column was a coincidence.  The script is fixed.
+
+  The authoritative, corrected numbers are in logs/regress_a8_liquid.log (part 4),
+  and scripts/regress_a8_liquid.py supersedes this script: it drives the same
+  production path and, under the frozen campaign's own tau rule, reproduces the
+  record's E_err and E_err_naive exactly.
+
+  Every other number above stands.  In particular the "E/N (k rec)" row is the
+  kappa residual and it is the reason section D exists: at the record's rounded
+  kappa 53.033 the clean walk reproduces E/N to 1.41e-10, while at the clean
+  physical kappa 53.03300858899106 the difference is 6.40e-06 per electron.

@@ -1,0 +1,42 @@
+{
+  "acceptance": 0.6002083333333333,
+  "ansatz": "ll_rotation",
+  "budget": "quick",
+  "config_key": {
+    "N": 36,
+    "ansatz": "ll_rotation",
+    "budget": "quick",
+    "init_id": 0,
+    "nmax": 1,
+    "phase": "crystal",
+    "point_schema": 1,
+    "rs": "55.0"
+  },
+  "config_sha": "353d3171507d40fa",
+  "energy_per_particle": -26.81991820069536,
+  "error": 0.05594787314462952,
+  "init_L0": 0.3,
+  "init_id": 0,
+  "jastrow_sr": true,
+  "kappa": 38.89087296526011,
+  "kappa_mode": "physical",
+  "ll_indices": [
+    0,
+    1
+  ],
+  "n_bands": 2,
+  "n_snapshots": 250,
+  "nmax": 1,
+  "nmax_is_a_physical_parameter": true,
+  "optimized": "orbitals+jastrow",
+  "orbital_ansatz": "ll_rotation",
+  "orbital_sr": true,
+  "phase": "crystal",
+  "rng_seed": 0,
+  "rs": 55.0,
+  "seconds": 43.781635999679565,
+  "sr_seconds": 43.78143644332886,
+  "sr_steps": 10,
+  "walk_seed": 17,
+  "wigner_vmc_version": "0.1.0"
+}
